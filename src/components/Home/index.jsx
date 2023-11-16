@@ -1,7 +1,12 @@
 import React from "react";
+import Showcase from "../Showcase";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Showcase />
+    </div>
+  );
 };
 
 export default Home;

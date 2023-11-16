@@ -37,7 +37,7 @@ export const Left = styled.div`
   display: flex;
   align-items: center;
   gap: 23px;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   @media (max-width: 1100px) {
     gap: 10px;
   }

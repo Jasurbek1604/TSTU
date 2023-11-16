@@ -20,6 +20,7 @@ import {
   Wrap,
 } from "./style";
 import { navbar } from "../../utils/navbar";
+import Subbar from "../Subbar";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +79,10 @@ const Navbar = () => {
           </Right>
         </Wrapper>
       </Container>
+      <Subbar />
+      {/* <div style={{ transform: "translateY(60px)" }}> */}
       <Outlet />
+      {/* </div> */}
     </div>
   );
 };

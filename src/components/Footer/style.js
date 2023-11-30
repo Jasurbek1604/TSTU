@@ -40,7 +40,6 @@ export const Img = styled.img`
   top: 0;
   left: 0;
   z-index: -1;
-  /* object-fit: contain; */
 `;
 
 export const Left = styled.div`

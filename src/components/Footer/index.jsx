@@ -33,7 +33,6 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const a = window.innerWidth;
-  console.log(a);
   return (
     <Container>
       <Img src={a > 600 ? bg : mobil} />

@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
   padding: 0 110px;
   margin: 0 auto;
   @media (max-width: 1000px) {
-    padding: 0 20px;
+    padding: 0 17px;
   }
 `;
 
@@ -68,7 +68,7 @@ export const Img = styled.img`
   padding: ${({ last }) => last && "2px"};
   height: 38px;
   @media screen and (max-width: 500px) {
-    height: 25px;
+    height: 28px;
   }
 `;
 
@@ -117,6 +117,7 @@ export const Menus = styled.div`
 
 export const Menu = styled.img`
   cursor: pointer;
+  width: 25px;
 `;
 
 export const Lang = styled.div`
@@ -136,6 +137,7 @@ export const Icon = styled.img`
   display: ${({ x }) => x && "none"};
   @media screen and (max-width: 1000px) {
     display: ${({ x }) => x && "block"};
+    width: 18px;
   }
 `;
 
@@ -143,10 +145,7 @@ export const Select = styled.select`
   border: none;
   background: transparent;
   color: #fff;
-  font-size: 18px;
   outline: none;
   cursor: pointer;
-  @media screen and (max-width: 500px) {
-    font-size: 16px;
-  }
+  font-size: 16px;
 `;

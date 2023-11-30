@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 1px solid red;
   width: 100%;
   height: 372px;
   position: relative;
@@ -41,7 +40,7 @@ export const Img = styled.img`
   top: 0;
   left: 0;
   z-index: -1;
-  /* object-fit: cover; */
+  /* object-fit: contain; */
 `;
 
 export const Left = styled.div`

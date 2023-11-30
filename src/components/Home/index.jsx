@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
+import Header from "../Header";
 import Footer from "../Footer";
+import Showcase from "../Showcase";
 
 const Home = () => {
   return (
     <div>
       <Header />
-      <Sidebar />
+      <Showcase />
       <Footer />
     </div>
   );

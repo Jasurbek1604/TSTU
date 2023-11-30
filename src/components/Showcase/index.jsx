@@ -6,11 +6,13 @@ import { Container, Img, Wrapper, Title } from "./style";
 import Sidebar from "../Sidebar";
 
 const Showcase = () => {
+  const a = window.innerWidth;
   return (
     <Container>
+      <Sidebar />
       <Img src={bg} />
       <Wrapper>
-        <Title src={window.innerWidth > 600 ? title : mobiletitle} />
+        <Title src={a > 600 ? title : mobiletitle} />
       </Wrapper>
     </Container>
   );

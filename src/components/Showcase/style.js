@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 `;
 
 export const Img = styled.img`
@@ -20,6 +21,9 @@ export const Wrapper = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 110px;
+  @media screen and (max-width: 900px) {
+    padding: 0 70px;
+  }
 `;
 
 export const Title = styled.img`

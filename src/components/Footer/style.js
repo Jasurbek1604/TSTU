@@ -9,17 +9,29 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 850px) {
+    height: 100%;
+  }
 `;
 
 export const Wrapper = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  border: 1px solid blue;
+  padding: 0 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 100px;
+  @media (max-width: 1100px) {
+    gap: 50px;
+    padding: 0 50px;
+  }
+  @media (max-width: 850px) {
+    flex-direction: column;
+    padding: 20px 20px;
+    gap: 20px;
+  }
 `;
 
 export const Img = styled.img`
@@ -29,10 +41,14 @@ export const Img = styled.img`
   top: 0;
   left: 0;
   z-index: -1;
+  /* object-fit: cover; */
 `;
 
 export const Left = styled.div`
   width: 320px;
+  @media (max-width: 850px) {
+    width: 100%;
+  }
 `;
 export const Title = styled.div`
   color: #fff;
@@ -42,11 +58,18 @@ export const Title = styled.div`
   white-space: nowrap;
   line-height: normal;
   margin-bottom: 25px;
+  @media (max-width: 850px) {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
 `;
 export const Icons = styled.div`
   display: flex;
   gap: 8px;
   margin-bottom: 20px;
+  @media (max-width: 850px) {
+    margin-bottom: 15px;
+  }
 `;
 export const Icon = styled.img`
   height: 32px;
@@ -58,6 +81,7 @@ export const P = styled.p`
   font-weight: 400;
   line-height: 120%;
   margin-bottom: 12px;
+  max-width: 350px;
 `;
 export const Media = styled.div`
   display: flex;
@@ -76,13 +100,20 @@ export const Right = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 100px;
+  width: calc(100% - 300px);
+  gap: 20px;
+  @media (max-width: 850px) {
+    width: 100%;
+  }
 `;
 export const Row = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ first }) => (first ? "14px" : "8px")};
   width: 200px;
+  @media (max-width: 850px) {
+    gap: ${({ first }) => (first ? "10px" : "5px")};
+  }
 `;
 export const Link = styled(NavLink)`
   display: flex;
@@ -95,6 +126,9 @@ export const Link = styled(NavLink)`
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+  @media (max-width: 850px) {
+    font-size: 12px;
+  }
 `;
 export const T = styled.div`
   color: #fff;
@@ -103,6 +137,9 @@ export const T = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  @media (max-width: 850px) {
+    font-size: 14px;
+  }
 `;
 export const I = styled.img`
   width: 20px;

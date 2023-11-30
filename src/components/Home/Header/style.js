@@ -5,6 +5,7 @@ const flex = css`
   display: flex;
   align-items: center;
 `;
+
 export const Headers = styled.div`
   position: relative;
   background-color: #025f9b;
@@ -21,6 +22,13 @@ export const Wrapper = styled.div`
   ${flex}
   justify-content: space-between;
   height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 110px;
+  margin: 0 auto;
+  @media (max-width: 1000px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Bg = styled.div`

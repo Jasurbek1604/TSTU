@@ -10,6 +10,7 @@ import tel from "../../assets/icons/tel.svg";
 import email from "../../assets/icons/email.svg";
 import loc from "../../assets/icons/loc.svg";
 import loc2 from "../../assets/icons/loc2.svg";
+import mobil from "../../assets/images/mobilBg.png";
 import {
   Container,
   Wrapper,
@@ -31,15 +32,21 @@ import {
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
+  const a = window.innerWidth;
+  console.log(a);
   return (
     <Container>
-      <Img src={bg} />
+      <Img src={a > 600 ? bg : mobil} />
       <Wrapper>
         <Left>
           <Title>Transport Universiteti</Title>
           <Icons>
-            <Icon src={logo} />
-            <Icon src={logo1} />
+            <NavLink to="">
+              <Icon src={logo} />
+            </NavLink>
+            <NavLink to="">
+              <Icon src={logo1} />
+            </NavLink>
           </Icons>
           <P>
             Talaba – bizning asosiy kuchimiz. Shu bois universitetimizda biror

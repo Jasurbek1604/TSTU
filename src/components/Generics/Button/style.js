@@ -19,4 +19,5 @@ export const Container = styled.button`
   border: none;
   cursor: pointer;
   ${Color}
+  font-family: 'Poppins', sans-serif;
 `;

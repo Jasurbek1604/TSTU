@@ -66,7 +66,6 @@ export const Img = styled.img`
   background: ${({ last }) => last && "#fff"};
   border-radius: ${({ last }) => last && "5px"};
   padding: ${({ last }) => last && "2px"};
-  height: 38px;
   @media screen and (max-width: 500px) {
     height: 28px;
   }

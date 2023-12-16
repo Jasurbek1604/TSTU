@@ -18,7 +18,6 @@ import {
   Left,
   Title,
   Icons,
-  Icon,
   P,
   Media,
   Logo,
@@ -41,10 +40,10 @@ const Footer = () => {
           <Title>Transport Universiteti</Title>
           <Icons>
             <NavLink to="">
-              <Icon src={logo} />
+              <img src={logo} />
             </NavLink>
             <NavLink to="">
-              <Icon src={logo1} />
+              <img src={logo1} />
             </NavLink>
           </Icons>
           <P>

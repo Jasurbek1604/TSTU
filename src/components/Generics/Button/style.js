@@ -11,11 +11,12 @@ const Color = ({ type }) => {
 };
 
 export const Container = styled.button`
-  height: ${({ height }) => (height ? `${height}px` : "52px")};
-  width: ${({ width }) => (width ? `${width}px` : "126px")};
+  /* height: ${({ height }) => (height ? `${height}px` : "52px")};
+  width: ${({ width }) => (width ? `${width}px` : "126px")}; */
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "14px")};
   font-weight: ${({ weight }) => (weight ? weight : 500)};
-  border-radius: 5px;
+  padding: ${({ padding }) => (padding ? padding : "10px")};
+  border-radius: ${({ radius }) => (radius ? `${radius}px` : "5px")};
   border: none;
   cursor: pointer;
   ${Color}

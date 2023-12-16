@@ -69,9 +69,6 @@ export const Icons = styled.div`
     margin-bottom: 15px;
   }
 `;
-export const Icon = styled.img`
-  height: 32px;
-`;
 export const P = styled.p`
   color: #fff;
   font-size: 14.461px;

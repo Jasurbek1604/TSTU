@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Showcase from "../../components/Showcase";
@@ -14,6 +14,9 @@ import intIcon1 from "../../assets/icons/intIcon1.svg";
 import intIcon2 from "../../assets/icons/intIocn2.svg";
 import intIcon3 from "../../assets/icons/intIcon3.svg";
 import intIcon4 from "../../assets/icons/intIcon4.svg";
+import fakdark from "../../assets/icons/fakdark.png";
+import faklight from "../../assets/icons/faklight.png";
+import kafedra from "../../assets/images/kafedra.png";
 import bg from "../../assets/images/gridBg.jpg";
 import vr from "../../assets/images/vr.png";
 import { Button } from "../../components/Generics/";
@@ -39,9 +42,33 @@ import {
   NewsItem,
   Interaktive,
   InteraktiveCarts,
+  Fakultetlar,
+  Talim,
+  Faxriy,
+  Talaba,
+  Subtitle,
+  FakGrid,
 } from "./style";
 
 const HomePage = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHover = (e) => {
+    setIsHovered(true);
+  };
+
+  const handleLeave = (e) => {
+    setIsHovered(false);
+  };
+
+  const imageSource = isHovered ? faklight : fakdark;
+
+  let arr = [];
+
+  for (let i = 0; i < 30; i++) {
+    arr.push(i);
+  }
+
   return (
     <div>
       <Header />
@@ -554,6 +581,92 @@ const HomePage = () => {
           </InteraktiveCarts>
         </div>
       </Interaktive>
+      <Fakultetlar className="container">
+        <div className="wrapper">
+          <Top>
+            <TopTitle>Fakultet va kafedralar</TopTitle>
+            <TopButton>
+              Barchasini ko‘rish <div className="abs"></div>
+            </TopButton>
+          </Top>
+          <FakGrid>
+            <div className="fak-left">
+              <div className="fak-left__content">
+                {arr.map((e) => (
+                  <div
+                    key={e}
+                    onMouseEnter={(e) => handleHover(e)}
+                    onMouseLeave={(e) => handleLeave(e)}
+                    className="fak-left__content__item"
+                  >
+                    <img
+                      src={imageSource}
+                      alt=""
+                      className="fak-left__content__item__img"
+                    />
+                    <div className="fak-left__content__item__line"></div>
+                    <div className="fak-left__content__item__title">
+                      Transport tizimlari boshqaruvi fakulteti
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="wrap">
+              <div className="fak-right">
+                <div className="fak-right__title">Kafedralar</div>
+                <div className="fak-right__cards">
+                  {arr.map((e) => (
+                    <div key={e} className="fak-right__cards__card">
+                      <img
+                        src={kafedra}
+                        alt=""
+                        className="fak-right__cards__card__img"
+                      />
+                      <div className="fak-right__cards__card__min">
+                        Transport logistikasi
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </FakGrid>
+        </div>
+      </Fakultetlar>
+      <Talim className="container">
+        <div className="wrapper">
+          <Top>
+            <TopTitle>Ta’lim</TopTitle>
+            <TopButton>
+              Barchasini ko‘rish <div className="abs"></div>
+            </TopButton>
+          </Top>
+          <Subtitle>
+            Fikr agar yaxshi tarbiyat topsa, Xanjar, olmosday bo’lur o’tkir.
+          </Subtitle>
+        </div>
+      </Talim>
+      <Faxriy className="container">
+        <div className="wrapper">
+          <Top>
+            <TopTitle>Faxriy professor-o‘qituvchilar</TopTitle>
+          </Top>
+        </div>
+      </Faxriy>
+      <Talaba className="container">
+        <div className="wrapper">
+          <Top>
+            <TopTitle>Talabaning hayoti</TopTitle>
+            <TopTitle>Talabaning fikri</TopTitle>
+          </Top>
+          <Subtitle>
+            Universitetda talabalar o'z vaqtlarini mazmunli o'tkazishlari uchun
+            ko'plab sharoitlar yaratilgan
+          </Subtitle>
+        </div>
+      </Talaba>
+
       <Footer />
     </div>
   );

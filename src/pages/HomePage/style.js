@@ -1,4 +1,17 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const scrollStyle = css`
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #d2d2d2;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #0046b7;
+  }
+`;
 
 export const About = styled.div`
   background-color: #01426f;
@@ -53,7 +66,14 @@ export const Top = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  color: ${({ type }) => (type === "dark" ? "#FDFDFD" : "#202020")};
+  color: ${({ type }) => (type === "dark" ? "#FDFDFD" : "#01426F")};
+`;
+export const Subtitle = styled.div`
+  color: #01426f;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
 `;
 export const TopTitle = styled.div`
   font-size: 32px;
@@ -190,17 +210,7 @@ export const News = styled.div`
   overflow-y: scroll;
   height: 100%;
   padding-right: 17px;
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: #d2d2d2;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #0046b7;
-  }
+  ${scrollStyle}
 `;
 export const NewsItem = styled.div`
   padding: 13px 17px;
@@ -324,6 +334,114 @@ export const InteraktiveCarts = styled.div`
         font-style: normal;
         font-weight: 600;
         line-height: 119%;
+      }
+    }
+  }
+`;
+
+export const Fakultetlar = styled.div`
+  margin: 50px 0;
+`;
+export const Talim = styled.div`
+  margin: 50px 0;
+`;
+export const Faxriy = styled.div`
+  margin: 50px 0;
+`;
+export const Talaba = styled.div`
+  margin: 50px 0;
+`;
+
+export const FakGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 12px;
+  height: 530px;
+  margin: 30px 0;
+  .fak-left {
+    grid-column: 1 / 3;
+    overflow-y: auto;
+    direction: rtl;
+    margin: 0;
+    ${scrollStyle}
+    &__content {
+      direction: ltr;
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &__item {
+        transition: 0.3s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 13px 10px 13px 16px;
+        background: #cceeff80;
+        &__line {
+          background: #fff;
+          width: 2px;
+          height: 40px;
+        }
+        &__title {
+          transition: 0.3s;
+          color: #00237a;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 140%;
+        }
+        &:hover {
+          background: #0046b7;
+          .fak-left__content__item__title {
+            color: #fff;
+          }
+          .fak-left__content__item__img {
+            fill: red;
+          }
+        }
+      }
+    }
+  }
+  .wrap {
+    grid-column: 3 / 6;
+    overflow-y: auto;
+    padding-right: 17px;
+    ${scrollStyle}
+    .fak-right {
+      border-radius: 3px;
+      background: rgba(204, 238, 255, 0.5);
+      padding: 18px;
+      &__title {
+        margin-bottom: 20px;
+        color: #00237a;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        text-align: center;
+        line-height: 140%; /* 28px */
+      }
+      &__cards {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 15px;
+        &__card {
+          background: #fff;
+          border-radius: 2px;
+          &__min {
+            color: #364670;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+            padding: 10px 0 14px 0;
+          }
+          &__img {
+            width: 100%;
+          }
+        }
       }
     }
   }

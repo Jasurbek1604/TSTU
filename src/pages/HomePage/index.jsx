@@ -2,12 +2,18 @@ import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Showcase from "../../components/Showcase";
+import mackbook from "../../assets/images/Macbook.png";
+import iMac from "../../assets/images/iMac.png";
 import icon1 from "../../assets/icons/university-03.svg";
 import icon2 from "../../assets/icons/university-20.svg";
 import icon3 from "../../assets/icons/university-26.svg";
 import icon4 from "../../assets/icons/university-07.svg";
 import icon5 from "../../assets/icons/university-18.svg";
 import icon6 from "../../assets/icons/university-09.svg";
+import intIcon1 from "../../assets/icons/intIcon1.svg";
+import intIcon2 from "../../assets/icons/intIocn2.svg";
+import intIcon3 from "../../assets/icons/intIcon3.svg";
+import intIcon4 from "../../assets/icons/intIcon4.svg";
 import bg from "../../assets/images/gridBg.jpg";
 import vr from "../../assets/images/vr.png";
 import { Button } from "../../components/Generics/";
@@ -31,6 +37,8 @@ import {
   Bg,
   News,
   NewsItem,
+  Interaktive,
+  InteraktiveCarts,
 } from "./style";
 
 const HomePage = () => {
@@ -93,11 +101,11 @@ const HomePage = () => {
         <div className="wrapper">
           <Top>
             <TopTitle>Universitet yangiliklari</TopTitle>
-            <TopButton type="dark">
+            <TopButton>
               Barchasini ko‘rish <div className="abs"></div>
             </TopButton>
           </Top>
-          <Grid style={{ padding: "30px 0" }}>
+          <Grid style={{ margin: "30px 0" }}>
             <Item style={{ gridColumn: "1/3" }}>
               <Bg src={bg} />
               <div className="absolute">
@@ -181,7 +189,7 @@ const HomePage = () => {
             style={{
               gridTemplateColumns: "315px 1fr 1fr",
               gridTemplateRows: "repeat(2,260px)",
-              padding: "30px 0",
+              margin: "30px 0",
               gap: "8px",
             }}
           >
@@ -211,16 +219,277 @@ const HomePage = () => {
                 </div>
               </div>
             </Item>
-            <News style={{ gridRow: "1/3" }}>
-              <NewsItem></NewsItem>
-              <NewsItem></NewsItem>
-              <NewsItem></NewsItem>
-              <NewsItem></NewsItem>
-              <NewsItem></NewsItem>
-              <NewsItem></NewsItem>
-              <NewsItem></NewsItem>
-              <NewsItem></NewsItem>
-              <NewsItem></NewsItem>
+            <News style={{ gridRow: "1/3", cursor: "auto" }}>
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>{" "}
+              <NewsItem>
+                <div className="item-left">
+                  <div>10</div> <div className="dek">Dek</div>
+                </div>
+                <div className="item-center">
+                  <div className="item-center__title">
+                    "Olmaliq kon-metallurgiya talabalar kombinati"ga ekskursiya
+                  </div>
+                  <div className="item-center__subtitle">
+                    Okt 10, 2022 | TSTU Universiteti
+                  </div>
+                </div>
+                <div className="item-right">
+                  <a href="#" className="item-right__link">
+                    Barcha
+                  </a>
+                </div>
+              </NewsItem>
             </News>
             <Item style={{ gridRow: "2/3" }} little="little">
               <Bg src={bg} />
@@ -235,6 +504,56 @@ const HomePage = () => {
           </Grid>
         </div>
       </Layout>
+      <Interaktive className="container">
+        <div className="wrapper">
+          <Top type="dark">
+            <TopTitle type="dark">Interaktiv xizmatlar</TopTitle>
+            <TopButton>
+              Barchasini ko‘rish <div className="abs"></div>
+            </TopButton>
+          </Top>
+          <InteraktiveCarts>
+            <div className="first">
+              <div className="first__left">
+                <img src={intIcon4} alt="" className="first__left__img" />
+                <div className="first__left__title">
+                  Universitet interaktiv xizmatlaridan unumli foydalaning!
+                </div>
+              </div>
+              <div className="first__right">
+                <img src={mackbook} alt="" className="first__right__macbook" />
+                <img src={iMac} alt="" className="first__right__imac" />
+              </div>
+            </div>
+            <div className="second">
+              <div className="second__item">
+                <img src={intIcon1} className="second__item__img" alt="" />
+                <div className="second__item__title">
+                  Moodle masofaviy ta'lim
+                </div>
+              </div>
+              <div className="second__item">
+                <img src={intIcon2} className="second__item__img" alt="" />
+                <div className="second__item__title">
+                  Moodle masofaviy ta'lim
+                </div>
+              </div>
+              <div className="second__item">
+                <img src={intIcon3} className="second__item__img" alt="" />
+                <div className="second__item__title">
+                  Moodle masofaviy ta'lim
+                </div>
+              </div>
+              <div className="second__item">
+                <img src={intIcon1} className="second__item__img" alt="" />
+                <div className="second__item__title">
+                  Moodle masofaviy ta'lim
+                </div>
+              </div>
+            </div>
+          </InteraktiveCarts>
+        </div>
+      </Interaktive>
       <Footer />
     </div>
   );

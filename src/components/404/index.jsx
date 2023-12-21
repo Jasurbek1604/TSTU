@@ -15,7 +15,7 @@ const NotFound = () => {
         <Button
           type={"primary"}
           onClick={() => navigate("/home")}
-          padding={"16px 32px"}
+          $padding={"16px 32px"}
           fontSize={"14px"}
         >
           Asosiyga qaytish

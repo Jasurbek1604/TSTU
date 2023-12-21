@@ -1,4 +1,20 @@
 import styled, { css } from "styled-components";
+import icon1 from "../../assets/icons/university-03.svg?react";
+import icon2 from "../../assets/icons/university-20.svg?react";
+import icon3 from "../../assets/icons/university-26.svg?react";
+import icon4 from "../../assets/icons/university-07.svg?react";
+import icon5 from "../../assets/icons/university-18.svg?react";
+import icon6 from "../../assets/icons/university-09.svg?react";
+import intIcon1 from "../../assets/icons/intIcon1.svg?react";
+import intIcon2 from "../../assets/icons/intIocn2.svg?react";
+import intIcon3 from "../../assets/icons/intIcon3.svg?react";
+import intIcon4 from "../../assets/icons/intIcon4.svg?react";
+import bigDarkArrow from "../../assets/icons/darkArrow.svg?react";
+import lightArrow from "../../assets/icons/arrow-light.svg?react";
+import darkArrow from "../../assets/icons/arrow-dark.svg?react";
+import user from "../../assets/icons/user.svg?react";
+import calendar from "../../assets/icons/calendar.svg?react";
+import filter from "../../assets/images/filterBg.png";
 
 const scrollStyle = css`
   &::-webkit-scrollbar {
@@ -12,7 +28,6 @@ const scrollStyle = css`
     background: #0046b7;
   }
 `;
-
 export const About = styled.div`
   background-color: #01426f;
   color: #fff;
@@ -40,11 +55,43 @@ export const Boxes = styled.div`
   margin: 40px 0;
 `;
 export const Box = styled.div``;
-export const Icon = styled.img`
+
+export const Icons = styled.div``;
+
+const iconStyle = css`
   margin-bottom: 14px;
   width: 70px;
   height: 70px;
 `;
+
+Icons.Icon1 = styled(icon1)`
+  ${iconStyle}
+`;
+Icons.Icon2 = styled(icon2)`
+  ${iconStyle}
+`;
+Icons.Icon3 = styled(icon3)`
+  ${iconStyle}
+`;
+Icons.Icon4 = styled(icon4)`
+  ${iconStyle}
+`;
+Icons.Icon5 = styled(icon5)`
+  ${iconStyle}
+`;
+Icons.Icon6 = styled(icon6)`
+  ${iconStyle}
+`;
+Icons.LightArrow = styled(lightArrow)``;
+Icons.DarkArrow = styled(darkArrow)`
+  transform: translateY(5px);
+`;
+Icons.BigDarkArrow = styled(bigDarkArrow)`
+  transform: translateY(5px);
+`;
+Icons.Calendar = styled(calendar)``;
+Icons.Person = styled(user)``;
+
 export const Count = styled.div`
   color: #fff;
   font-size: 23.771px;
@@ -66,10 +113,10 @@ export const Top = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  color: ${({ type }) => (type === "dark" ? "#FDFDFD" : "#01426F")};
+  color: ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#01426F")};
 `;
 export const Subtitle = styled.div`
-  color: #01426f;
+  color: ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#01426F")};
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -82,7 +129,7 @@ export const TopTitle = styled.div`
   line-height: 46.8px;
   padding-left: 10px;
   border-left: 3px solid
-    ${({ type }) => (type === "dark" ? "#FDFDFD" : "#0046B7")};
+    ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#0046B7")};
 `;
 export const TopButton = styled.div`
   text-align: right;
@@ -114,11 +161,13 @@ export const Grid = styled.div`
 `;
 export const Item = styled.div`
   border-radius: 3px;
-  border: 1px solid #a6a6a6;
+  border: ${(props) => (props.$border ? "1px solid #a6a6a6" : "none")};
   background: #fdfdfd;
   position: relative;
   .absolute {
     position: absolute;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -132,23 +181,29 @@ export const Item = styled.div`
     padding: 20px;
     gap: 5px;
     .absTop {
-      font-style: normal;
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 10px;
       padding-bottom: 5px;
-
-      color: ${({ little }) => (little ? "#fff" : "#f8f8f8")};
-      font-weight: ${({ little }) => (little ? "400" : "600")};
-      font-size: ${({ little }) => (little ? "12px" : "15px")};
+      color: ${(props) => (props.$little ? "#fff" : "#f8f8f8")};
+      font-weight: ${(props) => (props.$little ? "400" : "600")};
+      font-size: ${(props) => (props.$little ? "12px" : "15px")};
+      span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
     }
     .asbTitle {
       font-size: 20px;
       font-style: normal;
       font-weight: 700;
+      display: flex;
+      align-items: center;
       color: #fdfdfd;
     }
     .absP {
+      padding-left: 10px;
       color: #fdfdfd;
       font-size: 16px;
       font-style: normal;
@@ -158,16 +213,72 @@ export const Item = styled.div`
       letter-spacing: -0.48px;
     }
   }
+  .next {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    background: #0046b7;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .student {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    &__img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 17px;
+    }
+    &__name {
+      color: #fff;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18.2px; /* 91% */
+    }
+    &__group {
+      color: #fff;
+      text-shadow: 0px 2px 12px #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18.2px; /* 113.75% */
+    }
+    &__p {
+      margin-top: 10px;
+      color: #fff;
+      text-shadow: 0px 2px 12px #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 18.2px;
+    }
+  }
 `;
 
 export const Img = styled.img`
   width: 100%;
   height: 60%;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 `;
 
 export const Bg = styled.img`
   width: 100%;
   height: 100%;
+  border-radius: 3px;
 `;
 
 export const Fart = styled.div`
@@ -270,10 +381,121 @@ export const NewsItem = styled.div`
   }
 `;
 
-export const Interaktive = styled.div`
+export const DarkSection = styled.div`
   padding: 50px 0 90px;
   background: #01426f;
+  .tadqiqot {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 70px;
+    &__item {
+      text-align: center;
+      width: 340px;
+      &__title {
+        color: #fdfdfd;
+        text-align: center;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 46.8px;
+        margin-bottom: 22px;
+      }
+      &__count {
+        margin-top: 22px;
+        color: #fdfdfd;
+        text-align: center;
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 46.8px; /* 126.486% */
+      }
+      &__p {
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18.2px; /* 101.111% */
+      }
+    }
+  }
+  .markaz {
+    display: flex;
+    justify-content: space-between;
+    height: 470px;
+    margin-top: 18px;
+    transition: 0.4s;
+    gap: 8px;
+    &__item {
+      transition: 0.4s;
+      width: 300px;
+      background: #fff;
+      position: relative;
+      height: 400px;
+      border-radius: 3px;
+      &__img {
+        width: 100%;
+        height: 225px;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+      }
+      &__title {
+        padding: 16px 16px 8px 16px;
+        color: #01426f;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 133%;
+      }
+      &__p {
+        color: #01426f;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        letter-spacing: -0.48px;
+        padding: 0 16px 16px 16px;
+      }
+      &__button {
+        position: absolute;
+        cursor: pointer;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 45px;
+        display: flex;
+        opacity: 0;
+        z-index: -1;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px 0px 3px 3px;
+        background: linear-gradient(88deg, #0075ff 0.33%, #00b2ff 99.41%);
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19px; /* 118.75% */
+        letter-spacing: -0.48px;
+      }
+      &:hover {
+        height: 100%;
+        .markaz__item__button {
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
+  }
 `;
+
+Icons.Int1 = styled(intIcon1)``;
+Icons.Int2 = styled(intIcon2)``;
+Icons.Int3 = styled(intIcon3)``;
+Icons.Int4 = styled(intIcon4)``;
+Icons.ArrowLight = styled(lightArrow)``;
+Icons.ArrowDark = styled(bigDarkArrow)``;
 
 export const InteraktiveCarts = styled.div`
   .first {
@@ -324,10 +546,6 @@ export const InteraktiveCarts = styled.div`
       display: flex;
       flex-direction: column;
       gap: 23px;
-      &__img {
-        width: 80px;
-        height: 80px;
-      }
       &__title {
         color: #01426f;
         font-size: 24px;
@@ -344,9 +562,34 @@ export const Fakultetlar = styled.div`
 `;
 export const Talim = styled.div`
   margin: 50px 0;
+  .slider {
+    margin: 30px 0;
+    &__item {
+      border-radius: 2.852px;
+      border: 1px solid #a6a6a6;
+      background: #fdfdfd;
+      max-width: 385px !important;
+      &__img {
+        width: 100%;
+        height: 215px;
+      }
+      &__title {
+        color: #01426f;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        margin: 21px;
+        cursor: pointer;
+      }
+    }
+  }
 `;
 export const Faxriy = styled.div`
-  margin: 50px 0;
+  background-image: url("../../assets/images/filterBg.png");
+  background-size: cover;
+  background-size: contain;
 `;
 export const Talaba = styled.div`
   margin: 50px 0;
@@ -445,4 +688,10 @@ export const FakGrid = styled.div`
       }
     }
   }
+`;
+
+export const Line = styled.div`
+  background: ${(prop) => (prop.$type === "dark" ? "#99d8ff" : "#01426F")};
+  height: 3px;
+  width: 100%;
 `;

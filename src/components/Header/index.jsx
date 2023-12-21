@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <Headers className="container">
       <Wrapper className="wrapper">
-        <Bg isopen={isOpen.toString()} onClick={() => setIsOpen(false)}></Bg>
+        <Bg $isopen={isOpen.toString()} onClick={() => setIsOpen(false)}></Bg>
         <Menus style={{ width: "70px" }}>
           <Menu src={menu} onClick={() => setIsOpen(true)} />
         </Menus>
@@ -45,11 +45,11 @@ const Header = () => {
               <Img src={logo3} />
             </Link>
             <Link to="https://www.4icu.org/uz/">
-              <Img src={logo4} last="true" />
+              <Img src={logo4} $last="true" />
             </Link>
           </Div>
         </Left>
-        <Right isopen={isOpen.toString()}>
+        <Right $isopen={isOpen.toString()}>
           <Link>Talaba</Link>
           <Link>Xodim</Link>
           <Link>Elektron kutubxona</Link>

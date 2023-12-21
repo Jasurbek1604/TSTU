@@ -66,7 +66,7 @@ const Footer = () => {
           </Media>
         </Left>
         <Right>
-          <Row first="true">
+          <Row $first="true">
             <Link to="tel:+998712990001">
               <I src={tel} />
               +998 71-299-00-01

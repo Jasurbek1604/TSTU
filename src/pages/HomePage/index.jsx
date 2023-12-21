@@ -47,6 +47,8 @@ import yoshlar from "../../assets/images/yoshlar.jpg";
 import filterSt from "../../assets/images/filterSt.png";
 import jasco from "../../assets/images/jasco.jpg";
 import run from "../../assets/images/run.jpg";
+import filter from "../../assets/images/filterBg.png";
+import ramatova from "../../assets/images/ramatova.jpg";
 
 const HomePage = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -81,6 +83,14 @@ const HomePage = () => {
     slidesToScroll: 3,
     prevArrow: <CustomArrow className="custom-prev-arrow" icon={"darkArrow"} />,
     nextArrow: <CustomArrow className="custom-next-arrow" icon={"darkArrow"} />,
+  };
+
+  const setting = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
   };
 
   return (
@@ -460,6 +470,7 @@ const HomePage = () => {
       </div>
 
       <Faxriy>
+        <img src={filter} alt="" className="faxriyAbs__img" />
         <div className="faxriyAbs">
           <div className="container">
             <div className="wrapper">
@@ -673,7 +684,7 @@ const HomePage = () => {
         </div>
       </DarkSection>
 
-      <div className="container">
+      <div style={{ marginTop: "48px" }} className="container">
         <div className="wrapper">
           <Top>
             <TopTitle>Faxriy bitiruvchilar</TopTitle>
@@ -692,16 +703,22 @@ const HomePage = () => {
       </div>
 
       <Faxriy>
+        <img
+          src={filter}
+          alt=""
+          style={{ height: "650px" }}
+          className="faxriyAbs__img"
+        />
         <div className="faxriyAbs">
           <div className="container">
             <div className="wrapper">
               <div className="content">
-                <img src={prof} alt="" className="content__img" />
+                <img src={ramatova} alt="" className="content__img" />
                 <div className="content__name">
-                  Mirsalixov Baxodir Abdusamatovich
+                  Ramatov Ochilboy Jumaniyazovich
                 </div>
                 <div className="content__sub">
-                  Dotsent , Fizika-matematika fanlari nomzodi
+                  O‘zbekiston Bosh vazirini birinchi o‘rinbosar
                 </div>
                 <div className="content__p">
                   Lorem ipsum dolor sit amet consectetur. Ullamcorper platea eu

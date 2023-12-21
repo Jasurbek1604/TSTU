@@ -14,7 +14,6 @@ import lightArrow from "../../assets/icons/arrow-light.svg?react";
 import darkArrow from "../../assets/icons/arrow-dark.svg?react";
 import user from "../../assets/icons/user.svg?react";
 import calendar from "../../assets/icons/calendar.svg?react";
-import filter from "../../assets/images/filterBg.png";
 
 const scrollStyle = css`
   &::-webkit-scrollbar {
@@ -586,10 +585,59 @@ export const Talim = styled.div`
     }
   }
 `;
-  export const Faxriy = styled.div`
-    background-image: url("../../assets/images/filterBg.png");
-    background-size: cover;
-    background-size: contain;
+export const Faxriy = styled.div`
+  position: relative;
+  transform: translateY(8px);
+  margin-top: 30px;
+  .faxriyAbs__img {
+    width: 100%;
+    min-height: 600px;
+  }
+  .faxriyAbs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 0;
+  }
+  .content {
+    text-align: center;
+    &__img {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      margin-bottom: 6px;
+    }
+    &__name {
+      color: #fff;
+      text-align: center;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 35px */
+    }
+    &__sub {
+      color: #fff;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%;
+    }
+    &__p {
+      padding: 10px 20px;
+      color: #fff;
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%; /* 28px */
+    }
+  }
 `;
 export const Talaba = styled.div`
   margin: 50px 0;

@@ -586,10 +586,10 @@ export const Talim = styled.div`
     }
   }
 `;
-export const Faxriy = styled.div`
-  background-image: url("../../assets/images/filterBg.png");
-  background-size: cover;
-  background-size: contain;
+  export const Faxriy = styled.div`
+    background-image: url("../../assets/images/filterBg.png");
+    background-size: cover;
+    background-size: contain;
 `;
 export const Talaba = styled.div`
   margin: 50px 0;

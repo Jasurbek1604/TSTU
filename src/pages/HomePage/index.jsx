@@ -12,15 +12,8 @@ import vr from "../../assets/images/vr.png";
 import { Button } from "../../components/Generics/";
 import {
   About,
-  Fart,
-  Grid,
-  Img,
-  Item,
   Layout,
   Top,
-  TopButton,
-  TopTitle,
-  Bg,
   News,
   NewsItem,
   DarkSection,
@@ -29,7 +22,6 @@ import {
   Talim,
   Faxriy,
   Talaba,
-  Subtitle,
   FakGrid,
   Icons,
   Line,
@@ -63,28 +55,12 @@ const HomePage = () => {
     arr.push(i);
   }
 
-  const CustomArrow = ({ className, onClick, icon }) => (
-    <div className={className} onClick={onClick}>
-      {icon}
-    </div>
-  );
-
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    prevArrow: <CustomArrow className="custom-prev-arrow" icon={"darkArrow"} />,
-    nextArrow: <CustomArrow className="custom-next-arrow" icon={"darkArrow"} />,
-  };
-
-  const setting = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
   };
 
   return (
@@ -144,17 +120,19 @@ const HomePage = () => {
         </div>
       </About>
 
-      {/* <Layout className="container">
+      <Layout className="container">
         <div className="wrapper">
           <Top>
-            <TopTitle>Universitet yangiliklari</TopTitle>
-            <TopButton>
-              Barchasini ko‘rish <div className="abs"></div>
-            </TopButton>
+            <div className="top">
+              <div className="top__title">Universitet yangiliklari</div>
+              <div className="top__button">
+                Barchasini ko‘rish<div className="abs"></div>
+              </div>
+            </div>
           </Top>
-          <Grid style={{ margin: "30px 0" }}>
-            <Item style={{ gridColumn: "1/3" }}>
-              <Bg src={bg} />
+          <div className="flex">
+            <div className="flex__large">
+              <img className="flex__large__img" src={bg} />
               <div className="absolute">
                 <div className="absTop">
                   <span>TOP istalgani </span>
@@ -164,76 +142,83 @@ const HomePage = () => {
                   Yangi avtomobil modeli o‘ylab topildi <Icons.LightArrow />
                 </div>
               </div>
-            </Item>
-            <Item $border="true" style={{ gridColumn: "3/4" }}>
-              <Img src={bg} />
-              <Fart>
-                <div className="divv">
-                  <span className="left">Ta'lim</span>
-                  <span className="date">TSTU | Yan 04, 2023</span>
+            </div>
+            <div className="flex__item">
+              <div className="flex__item__box">
+                <img className="flex__item__box__img" src={bg} />
+                <div className="flex__item__box__fart">
+                  <div className="divv">
+                    <span className="left">Ta'lim</span>
+                    <span className="date">TSTU | Yan 04, 2023</span>
+                  </div>
+                  <div className="fartTitle">
+                    Yangi avtomobil modeli o‘ylab topildi <Icons.DarkArrow />
+                  </div>
                 </div>
-                <div className="fartTitle">
-                  Yangi avtomobil modeli o‘ylab topildi <Icons.DarkArrow />
+              </div>
+              <div className="flex__item__box">
+                <img className="flex__item__box__img" src={bg} />
+                <div className="flex__item__box__fart">
+                  <div className="divv">
+                    <span className="left">Ta'lim</span>
+                    <span className="date">TSTU | Yan 04, 2023</span>
+                  </div>
+                  <div className="fartTitle">
+                    Yangi avtomobil modeli o‘ylab topildi <Icons.DarkArrow />
+                  </div>
                 </div>
-              </Fart>
-            </Item>
-            <Item $border="true" style={{ gridColumn: "4/5" }}>
-              <Img src={bg} />
-              <Fart>
-                <div className="divv">
-                  <span className="left">Ta'lim</span>
-                  <span className="date">TSTU | Yan 04, 2023</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex">
+            <div className="flex__item">
+              <div className="flex__item__box">
+                <img className="flex__item__box__img" src={bg} />
+                <div className="flex__item__box__fart">
+                  <div className="divv">
+                    <span className="left">Ta'lim</span>
+                    <span className="date">TSTU | Yan 04, 2023</span>
+                  </div>
+                  <div className="fartTitle">
+                    Yangi avtomobil modeli o‘ylab topildi <Icons.DarkArrow />
+                  </div>
                 </div>
-                <div className="fartTitle">
-                  Yangi avtomobil modeli o‘ylab topildi <Icons.DarkArrow />
+              </div>
+              <div className="flex__item__box">
+                <img className="flex__item__box__img" src={bg} />
+                <div className="flex__item__box__fart">
+                  <div className="divv">
+                    <span className="left">Ta'lim</span>
+                    <span className="date">TSTU | Yan 04, 2023</span>
+                  </div>
+                  <div className="fartTitle">
+                    Yangi avtomobil modeli o‘ylab topildi <Icons.DarkArrow />
+                  </div>
                 </div>
-              </Fart>
-            </Item>
-            <Item $border="true" style={{ gridColumn: "1/2" }}>
-              <Img src={bg} />
-              <Fart>
-                <div className="divv">
-                  <span className="left">Ta'lim</span>
-                  <span className="date">TSTU | Yan 04, 2023</span>
-                </div>
-                <div className="fartTitle">
-                  Yangi avtomobil modeli o‘ylab topildi <Icons.DarkArrow />
-                </div>
-              </Fart>
-            </Item>
-            <Item $border="true" style={{ gridColumn: "2/3" }}>
-              <Img src={bg} />
-              <Fart>
-                <div className="divv">
-                  <span className="left">Ta'lim</span>
-                  <span className="date">TSTU | Yan 04, 2023</span>
-                </div>
-                <div className="fartTitle">
-                  Yangi avtomobil modeli o‘ylab topildi <Icons.DarkArrow />
-                </div>
-              </Fart>
-            </Item>
-            <Item style={{ gridColumn: "3/5" }}>
-              <Bg src={bg} />
+              </div>
+            </div>
+            <div className="flex__large">
+              <img className="flex__large__img" src={bg} />
               <div className="absolute">
                 <div className="absTop">
                   <span>TOP istalgani </span>
                   <span>TSTU | Yan 04, 2023</span>
                 </div>
                 <div className="asbTitle">
-                  Yangi avtomobil modeli o‘ylab topildi
-                  <Icons.LightArrow />
+                  Yangi avtomobil modeli o‘ylab topildi <Icons.LightArrow />
                 </div>
               </div>
-            </Item>
-          </Grid>
-          <Top style={{ marginTop: "50px" }}>
-            <TopTitle>Kutilyotgan tadbirlar</TopTitle>
-            <TopButton>
-              Barcha tadbirlarni ko‘rish <div className="abs"></div>
-            </TopButton>
+            </div>
+          </div>
+          <Top>
+            <div className="top">
+              <div className="top__title">Kutilyotgan tadbirlar</div>
+              <div className="top__button">
+                Barcha tadbirlarni ko‘rish <div className="abs"></div>
+              </div>
+            </div>
           </Top>
-          <Grid
+          {/* <Grid
             style={{
               gridTemplateColumns: "315px 1fr 1fr",
               gridTemplateRows: "repeat(2,260px)",
@@ -319,9 +304,9 @@ const HomePage = () => {
                 </div>
               </div>
             </Item>
-          </Grid>
+          </Grid> */}
         </div>
-      </Layout> */}
+      </Layout>
 
       {/* <DarkSection className="container">
         <div className="wrapper">

@@ -21,11 +21,15 @@ body {
 
 .wrapper{
   max-width: 1200px;
-  width: 100%;
-  @media screen and (max-width:1100px) {
-    max-width: 90%;
+  width: 100%;  
+}
+@media screen and (max-width:1023px) {
+  .wrapper{
+    max-width: 94%;
   }
-  @media screen and (max-width:800px) {
-      max-width: 97%;
-  }
+}
+@media screen and (max-width:599px) {
+  .wrapper{
+    max-width: 97%;
+  } 
 }

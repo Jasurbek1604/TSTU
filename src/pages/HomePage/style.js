@@ -15,6 +15,45 @@ import darkArrow from "../../assets/icons/arrow-dark.svg?react";
 import user from "../../assets/icons/user.svg?react";
 import calendar from "../../assets/icons/calendar.svg?react";
 
+export const Icons = styled.div``;
+const iconStyle = css`
+  margin-bottom: 14px;
+  width: 70px;
+  height: 70px;
+  @media only screen and (min-width: 600px) and (max-width: 1023px) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0px;
+  }
+`;
+Icons.Icon1 = styled(icon1)`
+  ${iconStyle}
+`;
+Icons.Icon2 = styled(icon2)`
+  ${iconStyle}
+`;
+Icons.Icon3 = styled(icon3)`
+  ${iconStyle}
+`;
+Icons.Icon4 = styled(icon4)`
+  ${iconStyle}
+`;
+Icons.Icon5 = styled(icon5)`
+  ${iconStyle}
+`;
+Icons.Icon6 = styled(icon6)`
+  ${iconStyle}
+`;
+Icons.LightArrow = styled(lightArrow)``;
+Icons.DarkArrow = styled(darkArrow)`
+  transform: translateY(5px);
+`;
+Icons.BigDarkArrow = styled(bigDarkArrow)`
+  transform: translateY(5px);
+`;
+Icons.Calendar = styled(calendar)``;
+Icons.Person = styled(user)``;
+
 const scrollStyle = css`
   &::-webkit-scrollbar {
     width: 4px;
@@ -76,7 +115,7 @@ export const About = styled.div`
       padding: 7px 38px;
     }
   }
-  @media screen and (min-width: 600px) and (max-width: 1023px) {
+  @media only screen and (min-width: 600px) and (max-width: 1023px) {
     .about {
       &__desc {
         padding: 10px 15px;
@@ -92,7 +131,7 @@ export const About = styled.div`
       }
     }
   }
-  @media screen and (max-width: 599px) {
+  @media only screen and (max-width: 599px) {
     .about {
       display: flex;
       flex-direction: column;
@@ -133,252 +172,287 @@ export const About = styled.div`
   }
 `;
 
-export const Icons = styled.div``;
-
-const iconStyle = css`
-  margin-bottom: 14px;
-  width: 70px;
-  height: 70px;
-  @media only screen and (min-width: 600px) and (max-width: 1023px) {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 0px;
-  }
-`;
-
-Icons.Icon1 = styled(icon1)`
-  ${iconStyle}
-`;
-Icons.Icon2 = styled(icon2)`
-  ${iconStyle}
-`;
-Icons.Icon3 = styled(icon3)`
-  ${iconStyle}
-`;
-Icons.Icon4 = styled(icon4)`
-  ${iconStyle}
-`;
-Icons.Icon5 = styled(icon5)`
-  ${iconStyle}
-`;
-Icons.Icon6 = styled(icon6)`
-  ${iconStyle}
-`;
-Icons.LightArrow = styled(lightArrow)``;
-Icons.DarkArrow = styled(darkArrow)`
-  transform: translateY(5px);
-`;
-Icons.BigDarkArrow = styled(bigDarkArrow)`
-  transform: translateY(5px);
-`;
-Icons.Calendar = styled(calendar)``;
-Icons.Person = styled(user)``;
-
 export const Layout = styled.div`
-  padding: 30px 0;
-`;
-export const Top = styled.div`
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  color: ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#01426F")};
-`;
-export const Subtitle = styled.div`
-  color: ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#01426F")};
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-`;
-export const TopTitle = styled.div`
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 46.8px;
-  padding-left: 10px;
-  border-left: 3px solid
-    ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#0046B7")};
-`;
-export const TopButton = styled.div`
-  text-align: right;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18.2px;
-  position: relative;
-  padding: 3px 25px 3px 0;
-  z-index: 0;
-  cursor: pointer;
-  .abs {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 54px;
-    background: #007aff;
-    z-index: -1;
-  }
-`;
-
-export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 25px;
-  cursor: pointer;
-`;
-export const Item = styled.div`
-  border-radius: 3px;
-  border: ${(props) => (props.$border ? "1px solid #a6a6a6" : "none")};
-  background: #fdfdfd;
-  position: relative;
-  .absolute {
-    position: absolute;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: red;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(9, 0, 41, 0.7) 50%,
-      rgba(9, 0, 41, 1) 100%
-    );
-    padding: 20px;
-    gap: 5px;
-    .absTop {
+  margin: 40px 0 20px;
+  .flex {
+    display: flex;
+    margin: 20px 0;
+    gap: 20px;
+    &__item {
       display: flex;
-      align-items: center;
-      gap: 10px;
-      padding-bottom: 5px;
-      color: ${(props) => (props.$little ? "#fff" : "#f8f8f8")};
-      font-weight: ${(props) => (props.$little ? "400" : "600")};
-      font-size: ${(props) => (props.$little ? "12px" : "15px")};
-      span {
-        display: flex;
-        align-items: center;
-        gap: 5px;
+      width: 50%;
+      gap: 20px;
+      &__box {
+        border-radius: 3px;
+        border: 1px solid #a6a6a6;
+        background: #fdfdfd;
+        height: 100%;
+        &__img {
+          width: 100%;
+          height: 60%;
+          border-top-right-radius: 3px;
+          border-top-left-radius: 3px;
+        }
+        &__fart {
+          padding: 5px 18px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .divv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .left {
+              color: #0046b7;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 140%;
+            }
+            .date {
+              color: #797979;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 140%;
+            }
+          }
+          .fartTitle {
+            color: #01426f;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%;
+          }
+        }
       }
     }
-    .asbTitle {
-      font-size: 20px;
+    &__large {
+      width: 50%;
+      border-radius: 3px;
+      background: #fdfdfd;
+      position: relative;
+      &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+      }
+      .absolute {
+        position: absolute;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: red;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(9, 0, 41, 0.7) 50%,
+          rgba(9, 0, 41, 1) 100%
+        );
+        padding: 20px;
+        gap: 5px;
+        .absTop {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding-bottom: 5px;
+          color: #f8f8f8;
+          font-weight: 400;
+          font-size: 15px;
+          span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+        }
+        .asbTitle {
+          font-size: 19px;
+          font-style: normal;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          color: #fdfdfd;
+        }
+        .absP {
+          padding-left: 10px;
+          color: #fdfdfd;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          font-family: "Poppins", sans-serif;
+          line-height: 120%;
+          letter-spacing: -0.48px;
+        }
+      }
+      .next {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        background: #0046b7;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .student {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        &__img {
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
+          margin-bottom: 17px;
+        }
+        &__name {
+          color: #fff;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 18.2px; /* 91% */
+        }
+        &__group {
+          color: #fff;
+          text-shadow: 0px 2px 12px #000;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 18.2px; /* 113.75% */
+        }
+        &__p {
+          margin-top: 10px;
+          color: #fff;
+          text-shadow: 0px 2px 12px #000;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 18.2px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1023px) {
+    .flex {
+      flex-wrap: wrap;
+      &__item {
+        order: 2;
+        width: 100%;
+        justify-content: space-between;
+      }
+      &__large {
+        order: 1;
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 599px) {
+    .flex {
+      flex-wrap: wrap;
+      &__item {
+        order: 2;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 15px;
+        &__box {
+          display: flex;
+          &__img {
+            width: 35%;
+            height: 100%;
+          }
+        }
+      }
+      &__large {
+        order: 1;
+        width: 100%;
+        .absolute {
+          .absTop {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+`;
+export const Top = styled.div`
+  .top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#01426F")};
+    &__title {
+      font-size: 32px;
       font-style: normal;
       font-weight: 700;
-      display: flex;
-      align-items: center;
-      color: #fdfdfd;
-    }
-    .absP {
+      line-height: 46.8px;
       padding-left: 10px;
-      color: #fdfdfd;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      font-family: "Poppins", sans-serif;
-      line-height: 120%;
-      letter-spacing: -0.48px;
+      border-left: 3px solid
+        ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#0046B7")};
     }
-  }
-  .next {
-    position: absolute;
-    right: 0;
-    bottom: 20px;
-    background: #0046b7;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .student {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    &__img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      margin-bottom: 17px;
-    }
-    &__name {
-      color: #fff;
-      font-size: 20px;
+    &__button {
+      text-align: right;
+      font-size: 17px;
       font-style: normal;
-      font-weight: 600;
-      line-height: 18.2px; /* 91% */
-    }
-    &__group {
-      color: #fff;
-      text-shadow: 0px 2px 12px #000;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 18.2px; /* 113.75% */
-    }
-    &__p {
-      margin-top: 10px;
-      color: #fff;
-      text-shadow: 0px 2px 12px #000;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 18.2px;
+      position: relative;
+      padding: 3px 25px 3px 0;
+      z-index: 0;
+      cursor: pointer;
+      .abs {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 54px;
+        background: #007aff;
+        z-index: -1;
+      }
     }
   }
-`;
-
-export const Img = styled.img`
-  width: 100%;
-  height: 60%;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-`;
-
-export const Bg = styled.img`
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-`;
-
-export const Fart = styled.div`
-  padding: 5px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  .divv {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .left {
-      color: #0046b7;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 140%;
-    }
-    .date {
-      color: #797979;
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 140%;
-    }
-  }
-  .fartTitle {
-    color: #01426f;
+  .subtitle {
+    color: ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#01426F")};
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
+  }
+  @media screen and (max-width: 1023px) {
+    .top {
+      &__title {
+        font-size: 25px;
+      }
+      &__button {
+        font-size: 15px;
+      }
+    }
+    .subtitle {
+      font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    .top {
+      &__title {
+        font-size: 22px;
+      }
+      &__button {
+        font-size: 14px;
+      }
+    }
+    .subtitle {
+      font-size: 14px;
+    }
   }
 `;
 

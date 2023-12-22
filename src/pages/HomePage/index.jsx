@@ -12,17 +12,11 @@ import vr from "../../assets/images/vr.png";
 import { Button } from "../../components/Generics/";
 import {
   About,
-  Box,
-  Boxes,
-  Count,
-  Description,
   Fart,
   Grid,
   Img,
   Item,
   Layout,
-  Min,
-  Title,
   Top,
   TopButton,
   TopTitle,
@@ -99,9 +93,9 @@ const HomePage = () => {
       <Showcase />
 
       <About className="container">
-        <div className="wrapper">
-          <Title>Transport universiteti haqida</Title>
-          <Description>
+        <div className="wrapper about">
+          <div className="about__title">Transport universiteti haqida</div>
+          <div className="about__desc">
             Lorem ipsum dolor sit amet consectetur. Ultricies sit et lacinia
             lorem at. A donec suspendisse tortor scelerisque sagittis nunc
             maecenas risus. Aliquam magna aliquam tincidunt hendrerit. Viverra
@@ -111,46 +105,46 @@ const HomePage = () => {
             faucibus nunc at vitae id cursus sit. Lacinia netus lorem eu vel
             enim ultrices semper lacus laoreet. Amet pellentesque leo netus
             tincidunt volutpat phasellus ut.
-          </Description>
-          <Boxes>
-            <Box>
+          </div>
+          <div className="about__boxes">
+            <div className="about__boxes__box">
               <Icons.Icon1 />
-              <Count>18.700+</Count>
-              <Min>talabalar soni</Min>
-            </Box>
-            <Box>
+              <div className="about__boxes__box__count">18.700+</div>
+              <div className="about__boxes__box__min">talabalar soni</div>
+            </div>
+            <div className="about__boxes__box">
               <Icons.Icon2 />
-              <Count>18.700+</Count>
-              <Min>talabalar soni</Min>
-            </Box>
-            <Box>
+              <div className="about__boxes__box__count">18.700+</div>
+              <div className="about__boxes__box__min">talabalar soni</div>
+            </div>
+            <div className="about__boxes__box">
               <Icons.Icon3 />
-              <Count>18.700+</Count>
-              <Min>talabalar soni</Min>
-            </Box>
-            <Box>
+              <div className="about__boxes__box__count">18.700+</div>
+              <div className="about__boxes__box__min">talabalar soni</div>
+            </div>
+            <div className="about__boxes__box">
               <Icons.Icon4 />
-              <Count>18.700+</Count>
-              <Min>talabalar soni</Min>
-            </Box>
-            <Box>
+              <div className="about__boxes__box__count">18.700+</div>
+              <div className="about__boxes__box__min">talabalar soni</div>
+            </div>
+            <div className="about__boxes__box">
               <Icons.Icon5 />
-              <Count>18.700+</Count>
-              <Min>talabalar soni</Min>
-            </Box>
-            <Box>
+              <div className="about__boxes__box__count">18.700+</div>
+              <div className="about__boxes__box__min">talabalar soni</div>
+            </div>
+            <div className="about__boxes__box">
               <Icons.Icon6 />
-              <Count>18.700+</Count>
-              <Min>talabalar soni</Min>
-            </Box>
-          </Boxes>
-          <Button type="primary" fontSize={16} radius={7} padding={"7px 38px"}>
+              <div className="about__boxes__box__count">18.700+</div>
+              <div className="about__boxes__box__min">talabalar soni</div>
+            </div>
+          </div>
+          <Button type="primary" className="about__button">
             Yanada ko‘proq bilish
           </Button>
         </div>
       </About>
 
-      <Layout className="container">
+      {/* <Layout className="container">
         <div className="wrapper">
           <Top>
             <TopTitle>Universitet yangiliklari</TopTitle>
@@ -327,9 +321,9 @@ const HomePage = () => {
             </Item>
           </Grid>
         </div>
-      </Layout>
+      </Layout> */}
 
-      <DarkSection className="container">
+      {/* <DarkSection className="container">
         <div className="wrapper">
           <Top $type="dark">
             <TopTitle $type="dark">Interaktiv xizmatlar</TopTitle>
@@ -379,9 +373,9 @@ const HomePage = () => {
             </div>
           </InteraktiveCarts>
         </div>
-      </DarkSection>
+      </DarkSection> */}
 
-      <Fakultetlar className="container">
+      {/* <Fakultetlar className="container">
         <div className="wrapper">
           <Top>
             <TopTitle>Fakultet va kafedralar</TopTitle>
@@ -433,9 +427,9 @@ const HomePage = () => {
             </div>
           </FakGrid>
         </div>
-      </Fakultetlar>
+      </Fakultetlar> */}
 
-      <Talim className="container">
+      {/* <Talim className="container">
         <div className="wrapper">
           <Top>
             <TopTitle>Ta’lim</TopTitle>
@@ -459,17 +453,17 @@ const HomePage = () => {
             </Slider>
           </div>
         </div>
-      </Talim>
+      </Talim> */}
 
-      <div className="container">
+      {/* <div className="container">
         <div className="wrapper">
           <Top>
             <TopTitle>Faxriy professor-o‘qituvchilar</TopTitle>
           </Top>
         </div>
-      </div>
+      </div> */}
 
-      <Faxriy>
+      {/* <Faxriy>
         <img src={filter} alt="" className="faxriyAbs__img" />
         <div className="faxriyAbs">
           <div className="container">
@@ -497,9 +491,9 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </Faxriy>
+      </Faxriy> */}
 
-      <Talaba className="container">
+      {/* <Talaba className="container">
         <div className="wrapper">
           <Top>
             <TopTitle>Talabaning hayoti</TopTitle>
@@ -570,9 +564,9 @@ const HomePage = () => {
             </Item>
           </Grid>
         </div>
-      </Talaba>
+      </Talaba> */}
 
-      <DarkSection className="container">
+      {/* <DarkSection className="container">
         <div className="wrapper">
           <Top $type="dark">
             <TopTitle $type="dark">Tadqiqotlar</TopTitle>
@@ -682,8 +676,8 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </DarkSection>
-
+      </DarkSection> */}
+      {/* 
       <div style={{ marginTop: "48px" }} className="container">
         <div className="wrapper">
           <Top>
@@ -700,9 +694,9 @@ const HomePage = () => {
             yirik kompaniyalarida muvaffaqiyatli faoliyat yuritmoqdalar
           </Subtitle>
         </div>
-      </div>
+      </div> */}
 
-      <Faxriy>
+      {/* <Faxriy>
         <img
           src={filter}
           alt=""
@@ -735,7 +729,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </Faxriy>
+      </Faxriy> */}
 
       <Footer />
     </div>

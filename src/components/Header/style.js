@@ -34,12 +34,14 @@ export const Wrapper = styled.div`
 export const Bg = styled.div`
   display: none;
   @media screen and (max-width: 1000px) {
-    display: ${({ isopen }) => (isopen === "false" ? "none" : "block")};
-    position: absolute;
+    display: ${({ $isopen }) => ($isopen === "false" ? "none" : "block")};
+    position: fixed;
     background: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    min-height: 100vh;
+    bottom: 0;
+    right: 0;
+    height: 100%;
     width: 100%;
     z-index: 1;
   }
@@ -63,9 +65,9 @@ export const Div = styled.div`
   }
 `;
 export const Img = styled.img`
-  background: ${({ last }) => last && "#fff"};
-  border-radius: ${({ last }) => last && "5px"};
-  padding: ${({ last }) => last && "2px"};
+  background: ${(props) => props.$last && "#fff"};
+  border-radius: ${(props) => props.$last && "5px"};
+  padding: ${(props) => props.$last && "2px"};
   @media screen and (max-width: 500px) {
     height: 28px;
   }
@@ -79,19 +81,19 @@ export const Right = styled.div`
   }
   @media screen and (max-width: 1000px) {
     transition: 0.5s;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     background: #025f9b;
     top: 0;
     left: 0;
-    min-height: 100vh;
-    width: 60%;
+    height: 100%;
+    width: 70%;
     align-items: flex-start;
     padding: 20px;
     gap: 20px;
     z-index: 2;
-    transform: ${({ isopen }) =>
-      isopen === "false" ? "translateX(-100%)" : "translateX(0)"};
+    transform: ${({ $isopen }) =>
+      $isopen === "false" ? "translateX(-100%)" : "translateX(0)"};
   }
 `;
 export const Link = styled(NavLink)`

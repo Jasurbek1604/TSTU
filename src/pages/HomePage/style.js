@@ -32,28 +32,106 @@ export const About = styled.div`
   color: #fff;
   text-align: center;
   padding: 37px 0 30px;
+  .about {
+    &__title {
+      color: #fdfdfd;
+      text-align: center;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+    }
+    &__desc {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 20px 160px 0;
+      color: #fdfdfd;
+    }
+    &__boxes {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px 0;
+      gap: 80px;
+      &__box {
+        &__count {
+          color: #fff;
+          font-size: 23.771px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%;
+        }
+        &__min {
+          font-size: 12.678px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+    }
+    &__button {
+      font-size: 16px;
+      border-radius: 7px;
+      padding: 7px 38px;
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 1023px) {
+    .about {
+      &__desc {
+        padding: 10px 15px;
+      }
+      &__boxes {
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 0;
+        &__box {
+          width: 30%;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 599px) {
+    .about {
+      display: flex;
+      flex-direction: column;
+      &__title {
+        text-align: start;
+        border-left: 3px solid #fdfdfd;
+        padding-left: 8px;
+        font-size: 22px;
+        order: 1;
+      }
+      &__desc {
+        text-align: start;
+        order: 2;
+        padding: 0;
+        font-size: 16px;
+        padding-top: 10px;
+      }
+      &__boxes {
+        flex-wrap: wrap;
+        margin: 0;
+        order: 4;
+        gap: 0;
+        &__box {
+          text-align: center;
+          width: 50%;
+          margin: 15px 0;
+        }
+      }
+      &__button {
+        order: 3;
+        display: inline-block;
+        width: 165px;
+        font-size: 12px;
+        padding: 5px;
+        margin-top: 20px;
+      }
+    }
+  }
 `;
-export const Title = styled.div`
-  color: #fdfdfd;
-  text-align: center;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-`;
-export const Description = styled.p`
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  padding: 20px 160px 0;
-`;
-export const Boxes = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 40px 0;
-`;
-export const Box = styled.div``;
 
 export const Icons = styled.div``;
 
@@ -61,6 +139,11 @@ const iconStyle = css`
   margin-bottom: 14px;
   width: 70px;
   height: 70px;
+  @media only screen and (min-width: 600px) and (max-width: 1023px) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0px;
+  }
 `;
 
 Icons.Icon1 = styled(icon1)`
@@ -90,20 +173,6 @@ Icons.BigDarkArrow = styled(bigDarkArrow)`
 `;
 Icons.Calendar = styled(calendar)``;
 Icons.Person = styled(user)``;
-
-export const Count = styled.div`
-  color: #fff;
-  font-size: 23.771px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%;
-`;
-export const Min = styled.div`
-  font-size: 12.678px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-`;
 
 export const Layout = styled.div`
   padding: 30px 0;

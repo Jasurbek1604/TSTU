@@ -732,13 +732,14 @@ export const InteraktiveCarts = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
+    width: 100%;
+    gap: 22px;
     &__item {
-      background: #fff;
-      width: 293px;
+      width: 25%;
       height: 243px;
-      border-radius: 3px;
       padding: 38px 24px 41px 45px;
+      background: #fff;
+      border-radius: 3px;
       display: flex;
       flex-direction: column;
       gap: 23px;
@@ -752,14 +753,65 @@ export const InteraktiveCarts = styled.div`
     }
   }
   @media only screen and (max-width: 1023px) {
+    .first {
+      padding: 20px;
+      &__left {
+        padding: 0;
+        width: 40%;
+        &__title {
+          font-size: 25px;
+          margin-top: 10px;
+        }
+      }
+      &__right {
+        padding: 0;
+        width: 60%;
+        &__macbook {
+          width: 40%;
+          height: auto;
+        }
+        &__imac {
+          width: 60%;
+          height: auto;
+        }
+      }
+    }
     .second {
       flex-wrap: wrap;
+      gap: 0;
       &__item {
-        width: 49%;
+        margin: 10px 0;
+        width: 48%;
       }
     }
   }
   @media only screen and (max-width: 599px) {
+    .first {
+      flex-wrap: wrap;
+      height: auto;
+      gap: 30px;
+      &__left {
+        width: 100%;
+        display: flex;
+        height: auto;
+        gap: 20px;
+        &__title {
+          font-size: 20px;
+        }
+      }
+      &__right {
+        width: 100%;
+      }
+    }
+    .second {
+      &__item {
+        padding: 22px 19px;
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
   }
 `;
 export const Fakultetlar = styled.div`

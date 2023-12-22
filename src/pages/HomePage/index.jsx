@@ -369,7 +369,9 @@ const HomePage = () => {
             </div>
             <div className="second">
               <div className="second__item">
-                <Icons.Int1 />
+                <div>
+                  <Icons.Int1 />
+                </div>
                 <div className="second__item__title">
                   Moodle masofaviy ta'lim <Icons.DarkArrow />
                 </div>
@@ -397,7 +399,7 @@ const HomePage = () => {
         </div>
       </DarkSection>
 
-      <Fakultetlar className="container">
+      {/* <Fakultetlar className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
@@ -451,9 +453,9 @@ const HomePage = () => {
             </div>
           </FakGrid>
         </div>
-      </Fakultetlar>
+      </Fakultetlar> */}
 
-      <Talim className="container">
+      {/* <Talim className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
@@ -479,9 +481,9 @@ const HomePage = () => {
             </Slider>
           </div>
         </div>
-      </Talim>
+      </Talim> */}
 
-      <div className="container">
+      {/* <div className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
@@ -489,9 +491,9 @@ const HomePage = () => {
             </div>
           </Top>
         </div>
-      </div>
+      </div> */}
 
-      <Faxriy>
+      {/* <Faxriy>
         <img src={filter} alt="" className="faxriyAbs__img" />
         <div className="faxriyAbs">
           <div className="container">
@@ -519,14 +521,18 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </Faxriy>
+      </Faxriy> */}
 
-      <Talaba className="container">
+      {/* <Talaba className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
               <div className="top__title">Talabaning hayoti</div>
-              <div className="top_button">Talabaning fikri</div>
+              {window.innerWidth > 1023 && (
+                <div className="top__title" style={{ width: "430px" }}>
+                  Talabaning fikri
+                </div>
+              )}
             </div>
             <div className="subtitle">
               Universitetda talabalar o'z vaqtlarini mazmunli o'tkazishlari
@@ -598,9 +604,9 @@ const HomePage = () => {
             </div>
           </Layout>
         </div>
-      </Talaba>
+      </Talaba> */}
 
-      <DarkSection className="container">
+      {/* <DarkSection className="container">
         <div className="wrapper">
           <Top $type="dark">
             <div className="top">
@@ -714,9 +720,9 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </DarkSection>
+      </DarkSection> */}
 
-      <div style={{ marginTop: "48px" }} className="container">
+      {/* <div style={{ marginTop: "48px" }} className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
@@ -734,9 +740,9 @@ const HomePage = () => {
             </div>
           </Top>
         </div>
-      </div>
+      </div> */}
 
-      <Faxriy>
+      {/* <Faxriy>
         <img
           src={filter}
           alt=""
@@ -769,7 +775,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </Faxriy>
+      </Faxriy> */}
 
       <Footer />
     </div>

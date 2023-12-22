@@ -14,8 +14,6 @@ import {
   About,
   Layout,
   Top,
-  News,
-  NewsItem,
   DarkSection,
   InteraktiveCarts,
   Fakultetlar,
@@ -125,9 +123,11 @@ const HomePage = () => {
           <Top>
             <div className="top">
               <div className="top__title">Universitet yangiliklari</div>
-              <div className="top__button">
-                Barchasini ko‘rish<div className="abs"></div>
-              </div>
+              {window.innerWidth > 600 && (
+                <div className="top__button">
+                  Barchasini ko‘rish<div className="abs"></div>
+                </div>
+              )}
             </div>
           </Top>
           <div className="flex">
@@ -212,38 +212,71 @@ const HomePage = () => {
           </div>
           <Top>
             <div className="top">
-              <div className="top__title">Kutilyotgan tadbirlar</div>
-              <div className="top__button">
-                Barcha tadbirlarni ko‘rish <div className="abs"></div>
-              </div>
+              {window.innerWidth < 600 && (
+                <div className="top__button">
+                  Barchasini ko‘rish<div className="abs"></div>
+                </div>
+              )}
             </div>
           </Top>
-          {/* <Grid
-            style={{
-              gridTemplateColumns: "315px 1fr 1fr",
-              gridTemplateRows: "repeat(2,260px)",
-              margin: "30px 0",
-              gap: "8px",
-            }}
-          >
-            <Item style={{ gridRow: "1/2" }} $little="little">
-              <Bg src={bg} />
-              <div className="absolute">
-                <div className="absTop">
-                  <span>
-                    <Icons.Calendar /> 18:00, Dek 10, 2023
-                  </span>
-                  <span>
-                    <Icons.Person /> Pedagog
-                  </span>
+        </div>
+      </Layout>
+
+      <Layout className="container">
+        <div className="wrapper">
+          <Top>
+            <div className="top">
+              <div className="top__title">Kutilyotgan tadbirlar</div>
+              {window.innerWidth > 600 && (
+                <div className="top__button">
+                  Barcha tadbirlarni ko‘rish <div className="abs"></div>
                 </div>
-                <div className="asbTitle">
-                  Xalqaro seminar <Icons.LightArrow />
+              )}
+            </div>
+          </Top>
+          <div className="grid">
+            <div
+              style={{ order: window.innerWidth < 1013 && 2 }}
+              className="grid__item"
+            >
+              <div className="grid__item__box">
+                <img className="grid__item__box__img" src={bg} />
+                <div className="absolute">
+                  <div className="absTop">
+                    <span>
+                      <Icons.Calendar /> 18:00, Dek 10, 2023
+                    </span>
+                    <span>
+                      <Icons.Person /> Pedagog
+                    </span>
+                  </div>
+                  <div className="asbTitle">
+                    Xalqaro seminar <Icons.LightArrow />
+                  </div>
                 </div>
               </div>
-            </Item>
-            <Item style={{ gridRow: "1/3" }} $little="little">
-              <Bg src={vr} />
+              <div className="grid__item__box">
+                <img className="grid__item__box__img" src={bg} />
+                <div className="absolute">
+                  <div className="absTop">
+                    <span>
+                      <Icons.Calendar /> 18:00, Dek 10, 2023
+                    </span>
+                    <span>
+                      <Icons.Person /> Pedagog
+                    </span>
+                  </div>
+                  <div className="asbTitle">
+                    Xalqaro seminar <Icons.LightArrow />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style={{ order: window.innerWidth < 1013 && 1 }}
+              className="grid__large"
+            >
+              <img className="grid__large__img" src={vr} />
               <div className="absolute">
                 <div className="absTop">
                   <span>
@@ -264,47 +297,45 @@ const HomePage = () => {
               <div className="next">
                 <Icons.LightArrow />
               </div>
-            </Item>
-            <News style={{ gridRow: "1/3", cursor: "auto" }}>
-              {arr.map((e) => (
-                <NewsItem key={e}>
-                  <div className="item-left">
-                    <div>10</div> <div className="dek">Dek</div>
-                  </div>
-                  <div className="item-center">
-                    <div className="item-center__title">
-                      "Olmaliq kon-metallurgiya talabalar kombinati"ga
-                      ekskursiya
+            </div>
+            <div
+              style={{ order: window.innerWidth < 1013 && 3 }}
+              className="grid__large"
+            >
+              <div className="grid__large__news">
+                {arr.map((e) => (
+                  <div key={e} className="grid__large__news__item">
+                    <div className="item-left">
+                      <div>10</div> <div className="dek">Dek</div>
                     </div>
-                    <div className="item-center__subtitle">
-                      Okt 10, 2022 | TSTU Universiteti
+                    <div className="item-center">
+                      <div className="item-center__title">
+                        "Olmaliq kon-metallurgiya talabalar kombinati"ga
+                        ekskursiya
+                      </div>
+                      <div className="item-center__subtitle">
+                        Okt 10, 2022 | TSTU Universiteti
+                      </div>
+                    </div>
+                    <div className="item-right">
+                      <a href="#" className="item-right__link">
+                        Barcha
+                      </a>
                     </div>
                   </div>
-                  <div className="item-right">
-                    <a href="#" className="item-right__link">
-                      Barcha
-                    </a>
-                  </div>
-                </NewsItem>
-              ))}
-            </News>
-            <Item style={{ gridRow: "2/3" }} $little="little">
-              <Bg src={bg} />
-              <div className="absolute">
-                <div className="absTop">
-                  <span>
-                    <Icons.Calendar /> 18:00, Dek 10, 2023
-                  </span>
-                  <span>
-                    <Icons.Person /> Pedagog
-                  </span>
-                </div>
-                <div className="asbTitle">
-                  Xalqaro seminar <Icons.LightArrow />
-                </div>
+                ))}
               </div>
-            </Item>
-          </Grid> */}
+            </div>
+          </div>
+          <Top>
+            <div className="top">
+              {window.innerWidth < 600 && (
+                <div className="top__button">
+                  Barcha tadbirlarni ko‘rish <div className="abs"></div>
+                </div>
+              )}
+            </div>
+          </Top>
         </div>
       </Layout>
 

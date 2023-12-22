@@ -396,10 +396,19 @@ const HomePage = () => {
               </div>
             </div>
           </InteraktiveCarts>
+          <Top>
+            <div className="top">
+              {window.innerWidth < 600 && (
+                <div className="top__button">
+                  Barcha tadbirlarni ko‘rish <div className="abs"></div>
+                </div>
+              )}
+            </div>
+          </Top>
         </div>
       </DarkSection>
 
-      {/* <Fakultetlar className="container">
+      <Fakultetlar className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
@@ -453,7 +462,7 @@ const HomePage = () => {
             </div>
           </FakGrid>
         </div>
-      </Fakultetlar> */}
+      </Fakultetlar>
 
       {/* <Talim className="container">
         <div className="wrapper">

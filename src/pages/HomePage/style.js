@@ -692,6 +692,9 @@ export const DarkSection = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 599px) {
+    padding: 20px 0 30px;
+  }
 `;
 export const InteraktiveCarts = styled.div`
   .first {
@@ -701,10 +704,10 @@ export const InteraktiveCarts = styled.div`
     margin: 50px 0 18px;
     display: flex;
     justify-content: space-between;
+    padding: 20px;
     &__left {
       width: 390px;
       height: 225px;
-      padding: 57px 0 64px 45px;
 
       &__title {
         color: #01426f;
@@ -717,13 +720,12 @@ export const InteraktiveCarts = styled.div`
     &__right {
       display: flex;
       align-items: flex-end;
-      padding: 0 40px 15px 0;
       &__macbook {
-        max-width: 350px;
+        max-width: 340px;
         max-height: 200px;
       }
       &__imac {
-        max-width: 415px;
+        max-width: 400px;
         max-height: 350px;
       }
     }
@@ -790,6 +792,7 @@ export const InteraktiveCarts = styled.div`
       flex-wrap: wrap;
       height: auto;
       gap: 30px;
+      margin: 25px 0 10px;
       &__left {
         width: 100%;
         display: flex;
@@ -804,6 +807,7 @@ export const InteraktiveCarts = styled.div`
       }
     }
     .second {
+      margin-bottom: 20px;
       &__item {
         padding: 22px 19px;
         height: auto;

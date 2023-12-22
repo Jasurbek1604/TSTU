@@ -344,9 +344,11 @@ const HomePage = () => {
           <Top $type="dark">
             <div className="top">
               <div className="top__title">Interaktiv xizmatlar</div>
-              <div className="top__button">
-                Barchasini ko‘rish <div className="abs"></div>
-              </div>
+              {window.innerWidth > 600 && (
+                <div className="top__button">
+                  Barchasini ko‘rish <div className="abs"></div>
+                </div>
+              )}
             </div>
           </Top>
           <InteraktiveCarts>
@@ -396,7 +398,7 @@ const HomePage = () => {
               </div>
             </div>
           </InteraktiveCarts>
-          <Top>
+          <Top $type="dark">
             <div className="top">
               {window.innerWidth < 600 && (
                 <div className="top__button">

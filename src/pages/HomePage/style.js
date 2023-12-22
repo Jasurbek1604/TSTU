@@ -998,6 +998,41 @@ export const FakGrid = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 1023px) {
+    height: 750px;
+    grid-template-columns: 1fr;
+    .fak-left {
+      grid-column: 1/2;
+    }
+    .wrap {
+      grid-column: 1/2;
+    }
+  }
+  @media only screen and (max-width: 599px) {
+    .fak-left {
+      &__content {
+        padding-left: 5px;
+        &__item {
+          &__title {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .wrap {
+      padding-right: 5px;
+      .fak-right {
+        &__cards {
+          grid-template-columns: repeat(2, 1fr);
+          &__card {
+            &__min {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const Line = styled.div`

@@ -415,9 +415,11 @@ const HomePage = () => {
           <Top>
             <div className="top">
               <div className="top__title">Fakultet va kafedralar</div>
-              <div className="top__button">
-                Barchasini ko‘rish <div className="abs"></div>
-              </div>
+              {window.innerWidth > 600 && (
+                <div className="top__button">
+                  Barchasini ko‘rish <div className="abs"></div>
+                </div>
+              )}
             </div>
           </Top>
           <FakGrid>
@@ -463,6 +465,15 @@ const HomePage = () => {
               </div>
             </div>
           </FakGrid>
+          {window.innerWidth < 600 && (
+            <Top>
+              <div className="top">
+                <div className="top__button">
+                  Barchasini ko‘rish <div className="abs"></div>
+                </div>
+              </div>
+            </Top>
+          )}
         </div>
       </Fakultetlar>
 

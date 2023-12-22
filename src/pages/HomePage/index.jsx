@@ -339,21 +339,27 @@ const HomePage = () => {
         </div>
       </Layout>
 
-      {/* <DarkSection className="container">
+      <DarkSection className="container">
         <div className="wrapper">
           <Top $type="dark">
-            <TopTitle $type="dark">Interaktiv xizmatlar</TopTitle>
-            <TopButton>
-              Barchasini ko‘rish <div className="abs"></div>
-            </TopButton>
+            <div className="top">
+              <div className="top__title">Interaktiv xizmatlar</div>
+              <div className="top__button">
+                Barchasini ko‘rish <div className="abs"></div>
+              </div>
+            </div>
           </Top>
           <InteraktiveCarts>
             <div className="first">
               <div className="first__left">
-                <img src={Icons.intIcon4} alt="" className="first__left__img" />
+                <Icons.Int4 />
                 <div className="first__left__title">
                   Universitet interaktiv xizmatlaridan unumli foydalaning!{" "}
-                  <Icons.BigDarkArrow />
+                  {window.innerWidth < 1023 ? (
+                    <Icons.DarkArrow />
+                  ) : (
+                    <Icons.BigDarkArrow />
+                  )}
                 </div>
               </div>
               <div className="first__right">
@@ -389,15 +395,17 @@ const HomePage = () => {
             </div>
           </InteraktiveCarts>
         </div>
-      </DarkSection> */}
+      </DarkSection>
 
-      {/* <Fakultetlar className="container">
+      <Fakultetlar className="container">
         <div className="wrapper">
           <Top>
-            <TopTitle>Fakultet va kafedralar</TopTitle>
-            <TopButton>
-              Barchasini ko‘rish <div className="abs"></div>
-            </TopButton>
+            <div className="top">
+              <div className="top__title">Fakultet va kafedralar</div>
+              <div className="top__button">
+                Barchasini ko‘rish <div className="abs"></div>
+              </div>
+            </div>
           </Top>
           <FakGrid>
             <div className="fak-left">
@@ -443,19 +451,21 @@ const HomePage = () => {
             </div>
           </FakGrid>
         </div>
-      </Fakultetlar> */}
+      </Fakultetlar>
 
-      {/* <Talim className="container">
+      <Talim className="container">
         <div className="wrapper">
           <Top>
-            <TopTitle>Ta’lim</TopTitle>
-            <TopButton>
-              Barchasini ko‘rish <div className="abs"></div>
-            </TopButton>
+            <div className="top">
+              <div className="top__title">Ta’lim</div>
+              <div className="top__button">
+                Barchasini ko‘rish <div className="abs"></div>
+              </div>
+            </div>
+            <div className="subtitle">
+              Fikr agar yaxshi tarbiyat topsa, Xanjar, olmosday bo’lur o’tkir.
+            </div>
           </Top>
-          <Subtitle>
-            Fikr agar yaxshi tarbiyat topsa, Xanjar, olmosday bo’lur o’tkir.
-          </Subtitle>
           <div>
             <Slider className="slider" {...settings}>
               {arr.map((e) => (
@@ -469,17 +479,19 @@ const HomePage = () => {
             </Slider>
           </div>
         </div>
-      </Talim> */}
+      </Talim>
 
-      {/* <div className="container">
+      <div className="container">
         <div className="wrapper">
           <Top>
-            <TopTitle>Faxriy professor-o‘qituvchilar</TopTitle>
+            <div className="top">
+              <div className="top__title">Faxriy professor-o‘qituvchilar</div>
+            </div>
           </Top>
         </div>
-      </div> */}
+      </div>
 
-      {/* <Faxriy>
+      <Faxriy>
         <img src={filter} alt="" className="faxriyAbs__img" />
         <div className="faxriyAbs">
           <div className="container">
@@ -507,88 +519,96 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </Faxriy> */}
+      </Faxriy>
 
-      {/* <Talaba className="container">
+      <Talaba className="container">
         <div className="wrapper">
           <Top>
-            <TopTitle>Talabaning hayoti</TopTitle>
-            <TopTitle>Talabaning fikri</TopTitle>
+            <div className="top">
+              <div className="top__title">Talabaning hayoti</div>
+              <div className="top_button">Talabaning fikri</div>
+            </div>
+            <div className="subtitle">
+              Universitetda talabalar o'z vaqtlarini mazmunli o'tkazishlari
+              uchun ko'plab sharoitlar yaratilgan
+            </div>
           </Top>
-          <Subtitle>
-            Universitetda talabalar o'z vaqtlarini mazmunli o'tkazishlari uchun
-            ko'plab sharoitlar yaratilgan
-          </Subtitle>
-          <Grid
-            style={{
-              gridTemplateColumns: "315px 1fr 1fr",
-              gridTemplateRows: "repeat(2,260px)",
-              margin: "30px 0",
-              gap: "8px",
-            }}
-          >
-            <Item style={{ gridRow: "1/2" }} $little="little">
-              <Bg src={arm} />
-              <div className="absolute">
-                <div className="asbTitle">
-                  ARM o‘quv zallari <Icons.LightArrow />
+          <Layout>
+            <div className="grid">
+              <div
+                style={{ order: window.innerWidth < 1013 && 2 }}
+                className="grid__item"
+              >
+                <div className="grid__item__box">
+                  <img className="grid__item__box__img" src={arm} />
+                  <div className="absolute">
+                    <div className="asbTitle">
+                      ARM o‘quv zallari <Icons.LightArrow />
+                    </div>
+                  </div>
+                </div>
+                <div className="grid__item__box">
+                  <img className="grid__item__box__img" src={yoshlar} />
+                  <div className="absolute">
+                    <div className="asbTitle">
+                      Yoshlar ittifoqining boshlang‘ich tashkiloti{" "}
+                      <Icons.LightArrow />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </Item>
-            <Item style={{ gridRow: "1/3" }} $little="little">
-              <Bg src={run} />
-              <div className="absolute">
-                <div className="asbTitle">«Transportchilar» sport klubi</div>
-                <div className="absP">
-                  «Transportchilar» sport klubi Voleybol sport turi bo‘yicha
-                  Respublika oliy ligasida umumjamoa hisobida 5-o‘rinni
-                  egalladi.
+              <div
+                style={{ order: window.innerWidth < 1013 && 1 }}
+                className="grid__large"
+              >
+                <img className="grid__large__img" src={run} />
+                <div className="absolute">
+                  <div className="asbTitle">«Transportchilar» sport klubi</div>
+                  <div className="absP">
+                    «Transportchilar» sport klubi Voleybol sport turi bo‘yicha
+                    Respublika oliy ligasida umumjamoa hisobida 5-o‘rinni
+                    egalladi.
+                  </div>
+                </div>
+                <div className="next">
+                  <Icons.LightArrow />
                 </div>
               </div>
-              <div className="next">
-                <Icons.LightArrow />
-              </div>
-            </Item>
-            <Item style={{ gridRow: "1/3" }} $little="little">
-              <Bg src={filterSt} />
-              <div className="student">
-                <img src={jasco} alt="" className="student__img" />
-                <div className="student__name">O‘telbayev Jasurbek</div>
-                <div className="student__group">AT-3 gruh 3-kurs</div>
-                <div className="student__p">
-                  Lorem ipsum dolor sit amet consectetur. Odio mattis lorem
-                  adipiscing cursus in cursus enim mauris eget. Amet viverra sit
-                  sociis amet viverra velit a. A integer congue etiam
-                  condimentum penatibus at. Lectus magna facilisis maecenas
-                  scelerisque in eget. Ultrices quam vel commodo feugiat
-                  malesuada eget amet habitasse. Enim nullam neque in viverra.
-                  Aenean ut est venenatis id tempor habitasse morbi feugiat non.
-                  Purus amet nibh egestas vulputat
+              <div
+                style={{ order: window.innerWidth < 1013 && 1 }}
+                className="grid__large"
+              >
+                <img className="grid__large__img" src={filterSt} />
+                <div className="student">
+                  <img src={jasco} alt="" className="student__img" />
+                  <div className="student__name">O‘telbayev Jasurbek</div>
+                  <div className="student__group">AT-3 gruh 3-kurs</div>
+                  <div className="student__p">
+                    Lorem ipsum dolor sit amet consectetur. Odio mattis lorem
+                    adipiscing cursus in cursus enim mauris eget. Amet viverra
+                    sit sociis amet viverra velit a. A integer congue etiam
+                    condimentum penatibus at. Lectus magna facilisis maecenas
+                    scelerisque in eget. Ultrices quam vel commodo feugiat
+                    malesuada eget amet habitasse. Enim nullam neque in viverra.
+                    Aenean ut est venenatis id tempor habitasse morbi feugiat
+                    non. Purus amet nibh egestas vulputat
+                  </div>
                 </div>
               </div>
-            </Item>
-            <Item style={{ gridRow: "2/3" }} $little="little">
-              <Bg src={yoshlar} />
-              <div className="absolute">
-                <div className="asbTitle">
-                  Yoshlar ittifoqining boshlang‘ich tashkiloti{" "}
-                  <span>
-                    <Icons.LightArrow />
-                  </span>
-                </div>
-              </div>
-            </Item>
-          </Grid>
+            </div>
+          </Layout>
         </div>
-      </Talaba> */}
+      </Talaba>
 
-      {/* <DarkSection className="container">
+      <DarkSection className="container">
         <div className="wrapper">
           <Top $type="dark">
-            <TopTitle $type="dark">Tadqiqotlar</TopTitle>
-            <TopButton>
-              Barcha tadbirlarni ko‘rish<div className="abs"></div>
-            </TopButton>
+            <div className="top">
+              <div className="top__title">Tadqiqotlar</div>
+              <div className="top__button">
+                Barcha tadbirlarni ko‘rish<div className="abs"></div>
+              </div>
+            </div>
           </Top>
           <div style={{ margin: "54px 0" }}>
             <div className="tadqiqot">
@@ -628,15 +648,17 @@ const HomePage = () => {
             </div>
           </div>
           <Top $type="dark">
-            <TopTitle $type="dark">Ilmiy markazlar</TopTitle>
-            <TopButton>
-              Barcha ko‘rish<div className="abs"></div>
-            </TopButton>
+            <div className="top">
+              <div className="top__title">Ilmiy markazlar</div>
+              <div className="top__button">
+                Barcha ko‘rish<div className="abs"></div>
+              </div>
+            </div>
+            <div className="subtitle">
+              Kashfiyotlar qilish bizning dunyomiz, sog'ligimiz va intellektual
+              hayotimiz uchun muhimdir
+            </div>
           </Top>
-          <Subtitle $type="dark">
-            Kashfiyotlar qilish bizning dunyomiz, sog'ligimiz va intellektual
-            hayotimiz uchun muhimdir
-          </Subtitle>
           <div className="markaz">
             <div className="markaz__item">
               <img src={kafedra} alt="" className="markaz__item__img" />
@@ -692,27 +714,29 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </DarkSection> */}
-      {/* 
+      </DarkSection>
+
       <div style={{ marginTop: "48px" }} className="container">
         <div className="wrapper">
           <Top>
-            <TopTitle>Faxriy bitiruvchilar</TopTitle>
-            <TopButton>
-              Barchasini ko‘rish
-              <div className="abs"></div>
-            </TopButton>
+            <div className="top">
+              <div className="top__title">Faxriy bitiruvchilar</div>
+              <div className="top__button">
+                Barchasini ko‘rish
+                <div className="abs"></div>
+              </div>
+            </div>
+            <div className="subtitle">
+              Bugungi kunda universitetning ko'plab bitiruvchilari O'zbekiston
+              vazirliklari, idoralari va qonun chiqaruvchi organlarida rahbarlik
+              lavozimlarini egallab,dunyoning yetakchi xalqaro tashkilotlari va
+              yirik kompaniyalarida muvaffaqiyatli faoliyat yuritmoqdalar
+            </div>
           </Top>
-          <Subtitle>
-            Bugungi kunda universitetning ko'plab bitiruvchilari O'zbekiston
-            vazirliklari, idoralari va qonun chiqaruvchi organlarida rahbarlik
-            lavozimlarini egallab,dunyoning yetakchi xalqaro tashkilotlari va
-            yirik kompaniyalarida muvaffaqiyatli faoliyat yuritmoqdalar
-          </Subtitle>
         </div>
-      </div> */}
+      </div>
 
-      {/* <Faxriy>
+      <Faxriy>
         <img
           src={filter}
           alt=""
@@ -745,7 +769,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </Faxriy> */}
+      </Faxriy>
 
       <Footer />
     </div>

@@ -53,6 +53,12 @@ Icons.BigDarkArrow = styled(bigDarkArrow)`
 `;
 Icons.Calendar = styled(calendar)``;
 Icons.Person = styled(user)``;
+Icons.Int1 = styled(intIcon1)``;
+Icons.Int2 = styled(intIcon2)``;
+Icons.Int3 = styled(intIcon3)``;
+Icons.Int4 = styled(intIcon4)``;
+Icons.ArrowLight = styled(lightArrow)``;
+Icons.ArrowDark = styled(bigDarkArrow)``;
 
 const scrollStyle = css`
   &::-webkit-scrollbar {
@@ -66,6 +72,7 @@ const scrollStyle = css`
     background: #0046b7;
   }
 `;
+
 export const About = styled.div`
   background-color: #01426f;
   color: #fff;
@@ -171,7 +178,6 @@ export const About = styled.div`
     }
   }
 `;
-
 export const Layout = styled.div`
   margin: 40px 0 20px;
   .flex {
@@ -478,6 +484,7 @@ export const Layout = styled.div`
         gap: 15px;
         &__box {
           display: flex;
+          width: 100%;
           &__img {
             width: 35%;
             height: 100%;
@@ -578,7 +585,6 @@ export const Top = styled.div`
     }
   }
 `;
-
 export const DarkSection = styled.div`
   padding: 50px 0 90px;
   background: #01426f;
@@ -687,14 +693,6 @@ export const DarkSection = styled.div`
     }
   }
 `;
-
-Icons.Int1 = styled(intIcon1)``;
-Icons.Int2 = styled(intIcon2)``;
-Icons.Int3 = styled(intIcon3)``;
-Icons.Int4 = styled(intIcon4)``;
-Icons.ArrowLight = styled(lightArrow)``;
-Icons.ArrowDark = styled(bigDarkArrow)``;
-
 export const InteraktiveCarts = styled.div`
   .first {
     background: #fff;
@@ -753,8 +751,17 @@ export const InteraktiveCarts = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 1023px) {
+    .second {
+      flex-wrap: wrap;
+      &__item {
+        width: 49%;
+      }
+    }
+  }
+  @media only screen and (max-width: 599px) {
+  }
 `;
-
 export const Fakultetlar = styled.div`
   margin: 50px 0;
 `;

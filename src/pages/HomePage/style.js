@@ -14,6 +14,7 @@ import lightArrow from "../../assets/icons/arrow-light.svg?react";
 import darkArrow from "../../assets/icons/arrow-dark.svg?react";
 import user from "../../assets/icons/user.svg?react";
 import calendar from "../../assets/icons/calendar.svg?react";
+import filter from "../../assets/images/filterBg.png";
 
 export const Icons = styled.div``;
 const iconStyle = css`
@@ -463,10 +464,14 @@ export const Layout = styled.div`
     .grid {
       margin: 22px 0;
       grid-template-columns: auto;
-      grid-template-rows: 527px 260px 340px;
+      grid-template-rows: ${({ $type }) =>
+        $type === "talaba" ? " 260px 527px  460px" : "527px 260px 340px"};
       &__item {
         grid-column: 1 / 2;
         flex-direction: row;
+        &__box {
+          width: 50%;
+        }
       }
       &__large {
         grid-column: 1 / 2;
@@ -498,9 +503,13 @@ export const Layout = styled.div`
     }
     .grid {
       margin: 15px 0;
-      grid-template-rows: 520px 527px 340px;
+      grid-template-rows: ${({ $type }) =>
+        $type === "talaba" ? " 527px 527px  460px" : "520px 527px 340px"};
       &__item {
         flex-direction: column;
+        &__box {
+          width: 100%;
+        }
       }
       &__large {
         &__news {
@@ -511,6 +520,21 @@ export const Layout = styled.div`
     .absolute {
       .absTop {
         font-size: 14px;
+      }
+    }
+    .student {
+      padding: 20px;
+      &__img {
+      }
+      &__name {
+        font-size: 20px;
+      }
+      &__group {
+        font-size: 16px;
+      }
+      &__p {
+        margin-top: 10px;
+        font-size: 16px;
       }
     }
   }
@@ -821,51 +845,44 @@ export const InteraktiveCarts = styled.div`
 export const Fakultetlar = styled.div`
   margin: 50px 0;
 `;
-export const Talim = styled.div`
-  margin: 50px 0;
-  .slider {
-    margin: 30px 0;
-    &__item {
-      border-radius: 2.852px;
-      border: 1px solid #a6a6a6;
-      background: #fdfdfd;
-      max-width: 385px !important;
-      &__img {
-        width: 100%;
-        height: 215px;
-      }
-      &__title {
-        color: #01426f;
-        text-align: center;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 130%;
-        margin: 21px;
-        cursor: pointer;
-      }
-    }
-  }
-`;
+// export const Talim = styled.div`
+//   margin: 50px 0;
+//   .slider {
+//     margin: 30px 0;
+//     display: flex;
+//     align-items: center;
+//     gap: 20px;
+//     border: 1px solid red;
+//     &__item {
+//       border-radius: 2.852px;
+//       border: 1px solid #a6a6a6;
+//       background: #fdfdfd;
+//       max-width: 385px !important;
+//       &__img {
+//         width: 100%;
+//         height: 215px;
+//       }
+//       &__title {
+//         color: #01426f;
+//         text-align: center;
+//         font-size: 24px;
+//         font-style: normal;
+//         font-weight: 700;
+//         line-height: 130%;
+//         margin: 21px;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+// `;
 export const Faxriy = styled.div`
-  position: relative;
-  transform: translateY(8px);
+  background: url(filter);
+  background-color: red;
+  padding: 50px 0;
   margin-top: 30px;
   .faxriyAbs__img {
     width: 100%;
     min-height: 600px;
-  }
-  .faxriyAbs {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 0;
   }
   .content {
     text-align: center;
@@ -900,11 +917,54 @@ export const Faxriy = styled.div`
       line-height: 140%; /* 28px */
     }
   }
+  @media only screen and (max-width: 1023px) {
+    .faxriyAbs__img {
+      width: 100%;
+      min-height: 500px;
+    }
+    .content {
+      &__img {
+        width: 200px;
+        height: 200px;
+      }
+      &__name {
+        font-size: 22px;
+      }
+      &__sub {
+        font-size: 17px;
+      }
+      &__p {
+        font-size: 14px;
+      }
+    }
+  }
+  @media only screen and (max-width: 599px) {
+    padding: 20px 0;
+    .faxriyAbs__img {
+      width: 100%;
+      min-height: 470px;
+    }
+    .content {
+      &__img {
+        width: 156px;
+        height: 156px;
+      }
+      &__name {
+        font-size: 22px;
+      }
+      &__sub {
+        font-size: 17px;
+      }
+      &__p {
+        font-size: 14px;
+        padding: 0;
+      }
+    }
+  }
 `;
 export const Talaba = styled.div`
   margin: 50px 0;
 `;
-
 export const FakGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);

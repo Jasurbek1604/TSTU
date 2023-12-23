@@ -17,14 +17,14 @@ import {
   DarkSection,
   InteraktiveCarts,
   Fakultetlar,
-  Talim,
+  // Talim,
   Faxriy,
   Talaba,
   FakGrid,
   Icons,
   Line,
 } from "./style";
-import Slider from "react-slick";
+import { Carousel } from "antd";
 import prof from "../../assets/images/prof.jpg";
 import arm from "../../assets/images/arm.jpg";
 import yoshlar from "../../assets/images/yoshlar.jpg";
@@ -53,13 +53,7 @@ const HomePage = () => {
     arr.push(i);
   }
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-  };
+  const windowWidth = window.innerWidth;
 
   return (
     <div>
@@ -123,7 +117,7 @@ const HomePage = () => {
           <Top>
             <div className="top">
               <div className="top__title">Universitet yangiliklari</div>
-              {window.innerWidth > 600 && (
+              {windowWidth > 600 && (
                 <div className="top__button">
                   Barchasini ko‘rish<div className="abs"></div>
                 </div>
@@ -212,7 +206,7 @@ const HomePage = () => {
           </div>
           <Top>
             <div className="top">
-              {window.innerWidth < 600 && (
+              {windowWidth < 600 && (
                 <div className="top__button">
                   Barchasini ko‘rish<div className="abs"></div>
                 </div>
@@ -227,7 +221,7 @@ const HomePage = () => {
           <Top>
             <div className="top">
               <div className="top__title">Kutilyotgan tadbirlar</div>
-              {window.innerWidth > 600 && (
+              {windowWidth > 600 && (
                 <div className="top__button">
                   Barcha tadbirlarni ko‘rish <div className="abs"></div>
                 </div>
@@ -236,7 +230,7 @@ const HomePage = () => {
           </Top>
           <div className="grid">
             <div
-              style={{ order: window.innerWidth < 1013 && 2 }}
+              style={{ order: windowWidth < 1013 && 2 }}
               className="grid__item"
             >
               <div className="grid__item__box">
@@ -273,7 +267,7 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              style={{ order: window.innerWidth < 1013 && 1 }}
+              style={{ order: windowWidth < 1013 && 1 }}
               className="grid__large"
             >
               <img className="grid__large__img" src={vr} />
@@ -299,7 +293,7 @@ const HomePage = () => {
               </div>
             </div>
             <div
-              style={{ order: window.innerWidth < 1013 && 3 }}
+              style={{ order: windowWidth < 1013 && 3 }}
               className="grid__large"
             >
               <div className="grid__large__news">
@@ -329,7 +323,7 @@ const HomePage = () => {
           </div>
           <Top>
             <div className="top">
-              {window.innerWidth < 600 && (
+              {windowWidth < 600 && (
                 <div className="top__button">
                   Barcha tadbirlarni ko‘rish <div className="abs"></div>
                 </div>
@@ -344,7 +338,7 @@ const HomePage = () => {
           <Top $type="dark">
             <div className="top">
               <div className="top__title">Interaktiv xizmatlar</div>
-              {window.innerWidth > 600 && (
+              {windowWidth > 600 && (
                 <div className="top__button">
                   Barchasini ko‘rish <div className="abs"></div>
                 </div>
@@ -357,7 +351,7 @@ const HomePage = () => {
                 <Icons.Int4 />
                 <div className="first__left__title">
                   Universitet interaktiv xizmatlaridan unumli foydalaning!{" "}
-                  {window.innerWidth < 1023 ? (
+                  {windowWidth < 1023 ? (
                     <Icons.DarkArrow />
                   ) : (
                     <Icons.BigDarkArrow />
@@ -400,7 +394,7 @@ const HomePage = () => {
           </InteraktiveCarts>
           <Top $type="dark">
             <div className="top">
-              {window.innerWidth < 600 && (
+              {windowWidth < 600 && (
                 <div className="top__button">
                   Barcha tadbirlarni ko‘rish <div className="abs"></div>
                 </div>
@@ -415,7 +409,7 @@ const HomePage = () => {
           <Top>
             <div className="top">
               <div className="top__title">Fakultet va kafedralar</div>
-              {window.innerWidth > 600 && (
+              {windowWidth > 600 && (
                 <div className="top__button">
                   Barchasini ko‘rish <div className="abs"></div>
                 </div>
@@ -465,7 +459,7 @@ const HomePage = () => {
               </div>
             </div>
           </FakGrid>
-          {window.innerWidth < 600 && (
+          {windowWidth < 600 && (
             <Top>
               <div className="top">
                 <div className="top__button">
@@ -482,30 +476,29 @@ const HomePage = () => {
           <Top>
             <div className="top">
               <div className="top__title">Ta’lim</div>
-              <div className="top__button">
-                Barchasini ko‘rish <div className="abs"></div>
-              </div>
+              {windowWidth > 600 && (
+                <div className="top__button">
+                  Barchasini ko‘rish <div className="abs"></div>
+                </div>
+              )}
             </div>
             <div className="subtitle">
               Fikr agar yaxshi tarbiyat topsa, Xanjar, olmosday bo’lur o’tkir.
             </div>
           </Top>
-          <div>
-            <Slider className="slider" {...settings}>
-              {arr.map((e) => (
-                <div className="slider__item" key={e}>
-                  <img src={bg} className="slider__item__img" alt="" />
-                  <div className="slider__item__title">
-                    Kunduzgi ta’lim <Icons.DarkArrow />
-                  </div>
+          {windowWidth < 600 && (
+            <Top>
+              <div className="top">
+                <div className="top__button">
+                  Barchasini ko‘rish <div className="abs"></div>
                 </div>
-              ))}
-            </Slider>
-          </div>
+              </div>
+            </Top>
+          )}
         </div>
       </Talim> */}
 
-      {/* <div className="container">
+      <div className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
@@ -513,44 +506,41 @@ const HomePage = () => {
             </div>
           </Top>
         </div>
-      </div> */}
+      </div>
 
-      {/* <Faxriy>
-        <img src={filter} alt="" className="faxriyAbs__img" />
-        <div className="faxriyAbs">
-          <div className="container">
-            <div className="wrapper">
-              <div className="content">
-                <img src={prof} alt="" className="content__img" />
-                <div className="content__name">
-                  Mirsalixov Baxodir Abdusamatovich
-                </div>
-                <div className="content__sub">
-                  Dotsent , Fizika-matematika fanlari nomzodi
-                </div>
-                <div className="content__p">
-                  Lorem ipsum dolor sit amet consectetur. Ullamcorper platea eu
-                  vel enim ultrices lectus odio malesuada euismod. Amet dolor eu
-                  vitae gravida fermentum lectus ut rutrum etiam. Diam ut dui a
-                  mauris non aenean fermentum. Ultrices nisi pellentesque eu
-                  tortor posuere in tellus congue. Adipiscing a neque eget
-                  aliquam egestas arcu pharetra amet. Etiam vel tincidunt quis
-                  porta massa vitae scelerisque pellentesque sem. At purus nec
-                  ante commodo venenatis hac. Dui ultrices vitae pulvinar in.
-                  Proin pretium nullam orci massa lectus interdum nisl.
-                </div>
+      <Faxriy>
+        <div className="container">
+          <div className="wrapper">
+            <div className="content">
+              <img src={prof} alt="" className="content__img" />
+              <div className="content__name">
+                Mirsalixov Baxodir Abdusamatovich
+              </div>
+              <div className="content__sub">
+                Dotsent , Fizika-matematika fanlari nomzodi
+              </div>
+              <div className="content__p">
+                Lorem ipsum dolor sit amet consectetur. Ullamcorper platea eu
+                vel enim ultrices lectus odio malesuada euismod. Amet dolor eu
+                vitae gravida fermentum lectus ut rutrum etiam. Diam ut dui a
+                mauris non aenean fermentum. Ultrices nisi pellentesque eu
+                tortor posuere in tellus congue. Adipiscing a neque eget aliquam
+                egestas arcu pharetra amet. Etiam vel tincidunt quis porta massa
+                vitae scelerisque pellentesque sem. At purus nec ante commodo
+                venenatis hac. Dui ultrices vitae pulvinar in. Proin pretium
+                nullam orci massa lectus interdum nisl.
               </div>
             </div>
           </div>
         </div>
-      </Faxriy> */}
+      </Faxriy>
 
-      {/* <Talaba className="container">
+      <Talaba className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
               <div className="top__title">Talabaning hayoti</div>
-              {window.innerWidth > 1023 && (
+              {windowWidth > 1023 && (
                 <div className="top__title" style={{ width: "430px" }}>
                   Talabaning fikri
                 </div>
@@ -561,10 +551,10 @@ const HomePage = () => {
               uchun ko'plab sharoitlar yaratilgan
             </div>
           </Top>
-          <Layout>
+          <Layout $type="talaba">
             <div className="grid">
               <div
-                style={{ order: window.innerWidth < 1013 && 2 }}
+                style={{ order: windowWidth < 1013 && 1 }}
                 className="grid__item"
               >
                 <div className="grid__item__box">
@@ -586,7 +576,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div
-                style={{ order: window.innerWidth < 1013 && 1 }}
+                style={{ order: windowWidth < 1013 && 2 }}
                 className="grid__large"
               >
                 <img className="grid__large__img" src={run} />
@@ -603,7 +593,9 @@ const HomePage = () => {
                 </div>
               </div>
               <div
-                style={{ order: window.innerWidth < 1013 && 1 }}
+                style={{
+                  order: windowWidth < 1013 && 3,
+                }}
                 className="grid__large"
               >
                 <img className="grid__large__img" src={filterSt} />
@@ -626,7 +618,7 @@ const HomePage = () => {
             </div>
           </Layout>
         </div>
-      </Talaba> */}
+      </Talaba>
 
       {/* <DarkSection className="container">
         <div className="wrapper">

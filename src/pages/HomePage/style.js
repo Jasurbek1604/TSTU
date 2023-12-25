@@ -578,6 +578,7 @@ export const Top = styled.div`
   .subtitle {
     color: ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#01426F")};
     font-size: 20px;
+    margin-top: 15px;
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
@@ -716,8 +717,20 @@ export const DarkSection = styled.div`
       }
     }
   }
-  @media only screen and (max-width: 599px) {
+  @media only screen and (max-width: 776px) {
     padding: 20px 0 30px;
+    .tadqiqot {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+    }
+    .markaz {
+      flex-direction: column;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+    }
   }
 `;
 export const InteraktiveCarts = styled.div`
@@ -876,8 +889,9 @@ export const Fakultetlar = styled.div`
 //   }
 // `;
 export const Faxriy = styled.div`
-  background: url(filter);
-  background-color: red;
+  background: url(${filter});
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 50px 0;
   margin-top: 30px;
   .faxriyAbs__img {

@@ -620,7 +620,7 @@ const HomePage = () => {
         </div>
       </Talaba>
 
-      {/* <DarkSection className="container">
+      <DarkSection className="container">
         <div className="wrapper">
           <Top $type="dark">
             <div className="top">
@@ -734,9 +734,9 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </DarkSection> */}
+      </DarkSection>
 
-      {/* <div style={{ marginTop: "48px" }} className="container">
+      <div style={{ marginTop: "48px" }} className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
@@ -754,43 +754,34 @@ const HomePage = () => {
             </div>
           </Top>
         </div>
-      </div> */}
+      </div>
 
-      {/* <Faxriy>
-        <img
-          src={filter}
-          alt=""
-          style={{ height: "650px" }}
-          className="faxriyAbs__img"
-        />
-        <div className="faxriyAbs">
-          <div className="container">
-            <div className="wrapper">
-              <div className="content">
-                <img src={ramatova} alt="" className="content__img" />
-                <div className="content__name">
-                  Ramatov Ochilboy Jumaniyazovich
-                </div>
-                <div className="content__sub">
-                  O‘zbekiston Bosh vazirini birinchi o‘rinbosar
-                </div>
-                <div className="content__p">
-                  Lorem ipsum dolor sit amet consectetur. Ullamcorper platea eu
-                  vel enim ultrices lectus odio malesuada euismod. Amet dolor eu
-                  vitae gravida fermentum lectus ut rutrum etiam. Diam ut dui a
-                  mauris non aenean fermentum. Ultrices nisi pellentesque eu
-                  tortor posuere in tellus congue. Adipiscing a neque eget
-                  aliquam egestas arcu pharetra amet. Etiam vel tincidunt quis
-                  porta massa vitae scelerisque pellentesque sem. At purus nec
-                  ante commodo venenatis hac. Dui ultrices vitae pulvinar in.
-                  Proin pretium nullam orci massa lectus interdum nisl.
-                </div>
+      <Faxriy>
+        <div className="container">
+          <div className="wrapper">
+            <div className="content">
+              <img src={ramatova} alt="" className="content__img" />
+              <div className="content__name">
+                Ramatov Ochilboy Jumaniyazovich
+              </div>
+              <div className="content__sub">
+                O‘zbekiston Bosh vazirini birinchi o‘rinbosar
+              </div>
+              <div className="content__p">
+                Lorem ipsum dolor sit amet consectetur. Ullamcorper platea eu
+                vel enim ultrices lectus odio malesuada euismod. Amet dolor eu
+                vitae gravida fermentum lectus ut rutrum etiam. Diam ut dui a
+                mauris non aenean fermentum. Ultrices nisi pellentesque eu
+                tortor posuere in tellus congue. Adipiscing a neque eget aliquam
+                egestas arcu pharetra amet. Etiam vel tincidunt quis porta massa
+                vitae scelerisque pellentesque sem. At purus nec ante commodo
+                venenatis hac. Dui ultrices vitae pulvinar in. Proin pretium
+                nullam orci massa lectus interdum nisl.
               </div>
             </div>
           </div>
         </div>
-      </Faxriy> */}
-
+      </Faxriy>
       <Footer />
     </div>
   );

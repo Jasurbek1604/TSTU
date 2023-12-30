@@ -23,6 +23,7 @@ import {
   FakGrid,
   Icons,
   Line,
+  Talim,
 } from "./style";
 import { Carousel } from "antd";
 import prof from "../../assets/images/prof.jpg";
@@ -59,7 +60,6 @@ const HomePage = () => {
     <div>
       <Header />
       <Showcase />
-
       <About className="container">
         <div className="wrapper about">
           <div className="about__title">Transport universiteti haqida</div>
@@ -471,7 +471,7 @@ const HomePage = () => {
         </div>
       </Fakultetlar>
 
-      {/* <Talim className="container">
+      <Talim className="container">
         <div className="wrapper">
           <Top>
             <div className="top">
@@ -496,7 +496,7 @@ const HomePage = () => {
             </Top>
           )}
         </div>
-      </Talim> */}
+      </Talim>
 
       <div className="container">
         <div className="wrapper">

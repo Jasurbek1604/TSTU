@@ -15,6 +15,7 @@ import darkArrow from "../../assets/icons/arrow-dark.svg?react";
 import user from "../../assets/icons/user.svg?react";
 import calendar from "../../assets/icons/calendar.svg?react";
 import filter from "../../assets/images/filterBg.png";
+import bggg from "../../assets/images/bggggg.png";
 
 export const Icons = styled.div``;
 const iconStyle = css`
@@ -75,7 +76,7 @@ const scrollStyle = css`
 `;
 
 export const About = styled.div`
-  background-color: #01426f;
+  background: url(${bggg});
   color: #fff;
   text-align: center;
   padding: 37px 0 30px;
@@ -612,7 +613,9 @@ export const Top = styled.div`
 `;
 export const DarkSection = styled.div`
   padding: 50px 0 90px;
-  background: #01426f;
+  background: url(${bggg});
+  background-repeat: no-repeat;
+  background-size: cover;
   .tadqiqot {
     display: flex;
     align-items: flex-start;
@@ -858,36 +861,36 @@ export const InteraktiveCarts = styled.div`
 export const Fakultetlar = styled.div`
   margin: 50px 0;
 `;
-// export const Talim = styled.div`
-//   margin: 50px 0;
-//   .slider {
-//     margin: 30px 0;
-//     display: flex;
-//     align-items: center;
-//     gap: 20px;
-//     border: 1px solid red;
-//     &__item {
-//       border-radius: 2.852px;
-//       border: 1px solid #a6a6a6;
-//       background: #fdfdfd;
-//       max-width: 385px !important;
-//       &__img {
-//         width: 100%;
-//         height: 215px;
-//       }
-//       &__title {
-//         color: #01426f;
-//         text-align: center;
-//         font-size: 24px;
-//         font-style: normal;
-//         font-weight: 700;
-//         line-height: 130%;
-//         margin: 21px;
-//         cursor: pointer;
-//       }
-//     }
-//   }
-// `;
+export const Talim = styled.div`
+  margin: 50px 0;
+  .slider {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid red;
+    &__item {
+      border-radius: 2.852px;
+      border: 1px solid #a6a6a6;
+      background: #fdfdfd;
+      max-width: 385px !important;
+      &__img {
+        width: 100%;
+        height: 215px;
+      }
+      &__title {
+        color: #01426f;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        margin: 21px;
+        cursor: pointer;
+      }
+    }
+  }
+`;
 export const Faxriy = styled.div`
   background: url(${filter});
   background-repeat: no-repeat;

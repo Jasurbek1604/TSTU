@@ -14,17 +14,12 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 100px;
   @media (max-width: 1100px) {
-    gap: 50px;
-    padding: 0 50px;
+    gap: 0px;
   }
   @media (max-width: 850px) {
     flex-direction: column;
@@ -69,6 +64,7 @@ export const Icons = styled.div`
     margin-bottom: 15px;
   }
 `;
+
 export const P = styled.p`
   color: #fff;
   font-size: 14.461px;

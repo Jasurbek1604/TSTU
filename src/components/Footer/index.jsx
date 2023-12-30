@@ -33,9 +33,9 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   const a = window.innerWidth;
   return (
-    <Container>
+    <Container className="container">
       <Img src={a > 600 ? bg : mobil} />
-      <Wrapper>
+      <Wrapper className="wrapper">
         <Left>
           <Title>Transport Universiteti</Title>
           <Icons>

@@ -54,20 +54,27 @@ export const Div = styled.div`
   @media screen and (max-width: 1100px) {
     gap: 10px;
   }
+  @media screen and (max-width: 500px) {
+    img {
+      width: auto;
+      height: 28px;
+    }
+  }
 `;
 export const Img = styled.img`
   background: ${(props) => props.$last && "#fff"};
   border-radius: ${(props) => props.$last && "5px"};
   padding: ${(props) => props.$last && "2px"};
   @media screen and (max-width: 500px) {
-    height: 28px;
+    height: 32px;
+    width: 129px;
   }
 `;
 
 export const Right = styled.div`
   ${flex};
   gap: 30px;
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1200px) {
     gap: 10px;
   }
   @media screen and (max-width: 1000px) {

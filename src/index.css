@@ -23,9 +23,14 @@ body {
   max-width: 1200px;
   width: 100%;  
 }
+@media screen and (max-width:1300px) {
+  .wrapper{
+    max-width: 93%;
+  }
+}
 @media screen and (max-width:1023px) {
   .wrapper{
-    max-width: 94%;
+    max-width: 96%;
   }
 }
 @media screen and (max-width:599px) {

@@ -1,10 +1,17 @@
 import React from "react";
-import { Container, Wrapper } from "./style";
+import { Container, Content, Left, Right } from "./style";
 
 const Sidebar = () => {
   return (
     <Container>
-      <Wrapper>Sidebar</Wrapper>
+      <div className="container">
+        <div className="wrapper">
+          <Content>
+            <Left>left</Left>
+            <Right>right</Right>
+          </Content>
+        </div>
+      </div>
     </Container>
   );
 };

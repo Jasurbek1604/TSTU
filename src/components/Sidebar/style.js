@@ -7,9 +7,10 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const Wrapper = styled.div`
-  margin: 0 auto;
-  padding: 0 110px;
-  width: 100%;
-  max-width: 1440px;
+export const Content = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
+export const Left = styled.div``;
+export const Right = styled.div``;

@@ -12,8 +12,8 @@ import {
   Div,
   Img,
   Left,
+  Container,
   Wrapper,
-  Headers,
   Menus,
   Menu,
   Icon,
@@ -27,7 +27,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Headers className="container">
+    <Container className="container">
       <Wrapper className="wrapper">
         <Bg $isopen={isOpen.toString()} onClick={() => setIsOpen(false)}></Bg>
         <Menus style={{ width: "70px" }}>
@@ -71,7 +71,7 @@ const Header = () => {
           </Select>
         </Lang>
       </Wrapper>
-    </Headers>
+    </Container>
   );
 };
 

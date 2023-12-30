@@ -6,29 +6,20 @@ const flex = css`
   align-items: center;
 `;
 
-export const Headers = styled.div`
+export const Container = styled.div`
   position: relative;
-  background-color: #025f9b;
   ${flex}
+  background-color: #025f9b;
   height: 50px;
-  width: 100%;
-  @media screen and (max-width: 1000px) {
-    height: 100%;
-    padding: 10px 0;
+  @media (max-width: 1000px) {
+    height: auto;
+    padding: 11px 0;
   }
 `;
 
 export const Wrapper = styled.div`
   ${flex}
   justify-content: space-between;
-  height: 100%;
-  width: 100%;
-  max-width: 1440px;
-  padding: 0 110px;
-  margin: 0 auto;
-  @media (max-width: 1000px) {
-    padding: 0 17px;
-  }
 `;
 
 export const Bg = styled.div`

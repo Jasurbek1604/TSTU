@@ -17,7 +17,6 @@ import {
   DarkSection,
   InteraktiveCarts,
   Fakultetlar,
-  // Talim,
   Faxriy,
   Talaba,
   FakGrid,
@@ -82,28 +81,28 @@ const HomePage = () => {
             </div>
             <div className="about__boxes__box">
               <Icons.Icon2 />
-              <div className="about__boxes__box__count">18.700+</div>
-              <div className="about__boxes__box__min">talabalar soni</div>
+              <div className="about__boxes__box__count">1.190+</div>
+              <div className="about__boxes__box__min">professorlar</div>
             </div>
             <div className="about__boxes__box">
               <Icons.Icon3 />
-              <div className="about__boxes__box__count">18.700+</div>
-              <div className="about__boxes__box__min">talabalar soni</div>
+              <div className="about__boxes__box__count">140+</div>
+              <div className="about__boxes__box__min">doktorantlar</div>
             </div>
             <div className="about__boxes__box">
               <Icons.Icon4 />
-              <div className="about__boxes__box__count">18.700+</div>
-              <div className="about__boxes__box__min">talabalar soni</div>
+              <div className="about__boxes__box__count">57</div>
+              <div className="about__boxes__box__min">talim yo’nalishlari</div>
             </div>
             <div className="about__boxes__box">
               <Icons.Icon5 />
-              <div className="about__boxes__box__count">18.700+</div>
-              <div className="about__boxes__box__min">talabalar soni</div>
+              <div className="about__boxes__box__count">12</div>
+              <div className="about__boxes__box__min">qo’shma talim</div>
             </div>
             <div className="about__boxes__box">
               <Icons.Icon6 />
-              <div className="about__boxes__box__count">18.700+</div>
-              <div className="about__boxes__box__min">talabalar soni</div>
+              <div className="about__boxes__box__count">9</div>
+              <div className="about__boxes__box__min">fakultetlar</div>
             </div>
           </div>
           <Button type="primary" className="about__button">

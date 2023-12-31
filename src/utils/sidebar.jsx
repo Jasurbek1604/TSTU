@@ -7,5 +7,5 @@ export const sidebar = [
   { id: 6, content: "Xalqaro aloqalar", isSelect: true },
   { id: 7, content: "Ma'naviyat", isSelect: true },
   { id: 8, content: "Qabul", isSelect: true },
-  { id: 0, content: " Bitiruvchi", isSelect: true },
+  { id: 9, content: "Bitiruvchi", isSelect: true },
 ];

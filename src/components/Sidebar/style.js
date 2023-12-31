@@ -86,12 +86,36 @@ export const Item = styled.div`
   }
 `;
 
-export const HoverItem = styled.div`
+export const Hover = styled.div`
   background: #fff;
   padding: 22px;
-  height: 500px;
-  width: 500px;
   position: absolute;
   top: 40px;
   right: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+`;
+
+Hover.Item = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+Hover.Title = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #01426f;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+`;
+Hover.Sub = styled.div`
+  color: #a6a6a6;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 30px;
 `;

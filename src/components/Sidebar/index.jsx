@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { sidebar } from "../../utils/sidebar";
+import { sidebar, hoverContent } from "../../utils/sidebar";
 import {
   Container,
   Wrapper,
@@ -8,7 +8,7 @@ import {
   Right,
   Item,
   Icons,
-  HoverItem,
+  Hover,
 } from "./style";
 import { useNavigate } from "react-router-dom";
 
@@ -44,12 +44,31 @@ const Sidebar = () => {
                 </Item>
               </Right>
             </Content>
-            {sidebar.map(({ id, content, isSelect }) => {
-              return (
-                isSelect &&
-                hover === id && <HoverItem key={id}>{content}</HoverItem>
-              );
-            })}
+            {hoverContent.map(
+              (item) =>
+                item.id === hover && (
+                  <Hover key={item.id}>
+                    <Hover.Item>
+                      <Hover.Title>
+                        {item.icon} {item.title}
+                      </Hover.Title>
+                      <Hover.Sub>{item.desc}</Hover.Sub>
+                    </Hover.Item>
+                    <Hover.Item>
+                      <Hover.Title>
+                        {item.icon} {item.title}
+                      </Hover.Title>
+                      <Hover.Sub>{item.desc}</Hover.Sub>
+                    </Hover.Item>
+                    <Hover.Item>
+                      <Hover.Title>
+                        {item.icon} {item.title}
+                      </Hover.Title>
+                      <Hover.Sub>{item.desc}</Hover.Sub>
+                    </Hover.Item>
+                  </Hover>
+                )
+            )}
           </Wrapper>
         </div>
       </div>

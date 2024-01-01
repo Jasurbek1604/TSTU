@@ -45,6 +45,9 @@ const flex = css`
 export const Wrapper = styled.div`
   position: relative;
   transition: 30ms;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const Content = styled.div`

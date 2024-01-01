@@ -8,9 +8,9 @@ const flex = css`
 
 export const Container = styled.div`
   position: relative;
-  ${flex}
   background-color: #025f9b;
-  height: 50px;
+  min-height: 50px;
+  padding: 7px 0;
   @media (max-width: 1000px) {
     height: auto;
     padding: 11px 0;

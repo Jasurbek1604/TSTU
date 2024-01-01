@@ -1,5 +1,4 @@
 import React from "react";
-import bg from "../../assets/images/footer.png";
 import logo from "../../assets/icons/logo1.png";
 import logo1 from "../../assets/icons/logo2.png";
 import youtube from "../../assets/icons/youtube.svg";
@@ -10,11 +9,9 @@ import tel from "../../assets/icons/tel.svg";
 import email from "../../assets/icons/email.svg";
 import loc from "../../assets/icons/loc.svg";
 import loc2 from "../../assets/icons/loc2.svg";
-import mobil from "../../assets/images/mobilBg.png";
 import {
   Container,
   Wrapper,
-  Img,
   Left,
   Title,
   Icons,
@@ -34,7 +31,6 @@ const Footer = () => {
   const a = window.innerWidth;
   return (
     <Container className="container">
-      <Img src={a > 600 ? bg : mobil} />
       <Wrapper className="wrapper">
         <Left>
           <Title>Transport Universiteti</Title>

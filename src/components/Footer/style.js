@@ -1,13 +1,14 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import bg from "../../assets/images/footer.png";
+import mobil from "../../assets/images/mobilBg.png";
 
 export const Container = styled.div`
+  background: ${window.innerWidth > 600 ? `url(${bg})` : `url(${mobil})`};
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 372px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   @media (max-width: 850px) {
     height: 100%;
   }
@@ -26,15 +27,6 @@ export const Wrapper = styled.div`
     padding: 20px 20px;
     gap: 20px;
   }
-`;
-
-export const Img = styled.img`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
 `;
 
 export const Left = styled.div`

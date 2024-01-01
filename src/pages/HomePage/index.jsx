@@ -33,6 +33,7 @@ import jasco from "../../assets/images/jasco.jpg";
 import run from "../../assets/images/run.jpg";
 import filter from "../../assets/images/filterBg.png";
 import ramatova from "../../assets/images/ramatova.jpg";
+import { Outlet } from "react-router-dom";
 
 const HomePage = () => {
   const [isHovered, setIsHovered] = useState(false);

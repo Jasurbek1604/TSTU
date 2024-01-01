@@ -1,11 +1,9 @@
-import HomePage from "../pages/HomePage";
+import Faq from "../pages/Faq";
 
 export const navbar = [
   {
-    id: 1,
-    path: "/home",
-    element: <HomePage />,
-    hidden: false,
-    private: false,
+    id: 0,
+    path: "/faq",
+    element: <Faq />,
   },
 ];

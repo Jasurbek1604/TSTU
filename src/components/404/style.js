@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../Generics";
 
 export const Container = styled.div`
   display: flex;
@@ -10,11 +11,25 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   width: 773px;
   height: 628px;
-  border: 1px solid red;
   position: relative;
+  @media (max-width: 700px) {
+    width: 500px;
+    height: 400px;
+  }
+`;
+
+export const Wrap = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  @media (max-width: 700px) {
+    gap: 10px;
+  }
 `;
 
 export const Img = styled.img`
@@ -27,15 +42,28 @@ export const Img = styled.img`
 `;
 
 export const Status = styled.div`
-  display: inline-block;
-  height: auto;
   color: #032cbc;
-  font-size: 170px;
+  font-size: 178.942px;
+  font-style: normal;
   font-weight: 700;
-  border: 1px solid red;
+  line-height: normal;
+  height: 200px;
+  @media (max-width: 700px) {
+    font-size: 60px;
+    height: 60px;
+  }
 `;
 export const Desc = styled.div`
   font-size: 30px;
   color: #032cbc;
   font-weight: 600;
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
+`;
+
+export const Btn = styled(Button)`
+  @media (max-width: 700px) {
+    font-size: 10px;
+  }
 `;

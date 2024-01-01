@@ -11,6 +11,7 @@ const Button = ({
   fontSize,
   radius,
   className,
+  onClick,
 }) => {
   return (
     <Container
@@ -22,6 +23,7 @@ const Button = ({
       fontSize={fontSize}
       radius={radius}
       className={className}
+      onClick={onClick}
     >
       {children}
     </Container>

@@ -26,6 +26,47 @@ export const hoverContent = [
     icon: <Icons.Univer />,
     title: "Universitet",
     desc: "Toshkent davlat transport universiteti transport sohasi uchun oliy maʼlumotli mutaxassislar va ilmiy kadrlarni tayyorlash, qayta tayyorlash va ularning malakasini oshirish boʼyicha tayanch oliy taʼlim muassasasi hisoblanadi.",
+    items: [
+      {
+        id: 0,
+        title: "Biz haqimizda",
+        links: [
+          { id: 0, path: "/", link: "Strategik rivojlantirish dasturi" },
+          { id: 1, path: "/", link: "Barqaror rivojlanish maqsadlari" },
+          { id: 2, path: "/", link: "Tarix" },
+          { id: 3, path: "/", link: "Asosiy ma'lumotlar" },
+          { id: 4, path: "/", link: "Me’yoriy hujjatlar" },
+          { id: 5, path: "/", link: "Moliyaviy hisobotlar" },
+          { id: 6, path: "/", link: "Universitet nizomi" },
+          { id: 7, path: "/", link: "Korrupsiyaga qarshi kurashish" },
+        ],
+      },
+      {
+        id: 1,
+        title: "Tuzilma va boshqaruv organlari",
+        links: [
+          { id: 0, path: "/", link: "Tashkiliy tuzilma" },
+          { id: 1, path: "/", link: "Kuzatuv Kengashi" },
+          { id: 2, path: "/", link: "Universitet Kengashi" },
+          { id: 3, path: "/", link: "Jamoatchilik kengashi" },
+          { id: 4, path: "/", link: "Rektorat" },
+          { id: 5, path: "/", link: "Fakultetlar" },
+          { id: 6, path: "/", link: "Kafedralar" },
+          { id: 7, path: "/", link: "Boshqarma va bo'limlar" },
+          { id: 8, path: "/", link: "Markazlar" },
+          { id: 9, path: "/", link: "Muzey" },
+          { id: 10, path: "/", link: "Sport majmuasi" },
+        ],
+      },
+      {
+        id: 2,
+        links: [
+          { id: 0, path: "/", link: "Markazlar" },
+          { id: 1, path: "/", link: "Muzey" },
+          { id: 2, path: "/", link: "Sport majmuasi" },
+        ],
+      },
+    ],
   },
   {
     id: 5,

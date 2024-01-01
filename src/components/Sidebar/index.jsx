@@ -10,7 +10,7 @@ import {
   Icons,
   Hover,
 } from "./style";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const [hover, setHover] = useState(null);
@@ -46,26 +46,28 @@ const Sidebar = () => {
             </Content>
             {hoverContent.map(
               (item) =>
-                item.id === hover && (
-                  <Hover key={item.id}>
+                item?.id === hover && (
+                  <Hover
+                    key={item?.id}
+                    onMouseEnter={() => setHover(item.id)}
+                    onMouseLeave={() => setHover(null)}
+                  >
                     <Hover.Item>
                       <Hover.Title>
-                        {item.icon} {item.title}
+                        {item?.icon} {item?.title}
                       </Hover.Title>
-                      <Hover.Sub>{item.desc}</Hover.Sub>
+                      <Hover.Sub $top="true">{item?.desc}</Hover.Sub>
                     </Hover.Item>
-                    <Hover.Item>
-                      <Hover.Title>
-                        {item.icon} {item.title}
-                      </Hover.Title>
-                      <Hover.Sub>{item.desc}</Hover.Sub>
-                    </Hover.Item>
-                    <Hover.Item>
-                      <Hover.Title>
-                        {item.icon} {item.title}
-                      </Hover.Title>
-                      <Hover.Sub>{item.desc}</Hover.Sub>
-                    </Hover.Item>
+                    {item?.items?.map(({ id, title, links }) => (
+                      <Hover.Item key={id}>
+                        <Hover.Sub>{title}</Hover.Sub>
+                        {links.map(({ id, path, link }) => (
+                          <Hover.Link key={id} to={path}>
+                            {link}
+                          </Hover.Link>
+                        ))}
+                      </Hover.Item>
+                    ))}
                   </Hover>
                 )
             )}

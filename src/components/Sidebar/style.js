@@ -3,6 +3,7 @@ import arrowDown from "../../assets/icons/down.svg?react";
 import arrowUp from "../../assets/icons/up.svg?react";
 import earth from "../../assets/icons/earth.svg?react";
 import menu from "../../assets/icons/menu.svg?react";
+import { NavLink } from "react-router-dom";
 
 export const Icons = styled.div``;
 Icons.Down = styled(arrowDown)`
@@ -94,12 +95,14 @@ export const Hover = styled.div`
   right: 0;
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 25px;
 `;
 
 Hover.Item = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
 `;
 Hover.Title = styled.div`
   display: flex;
@@ -117,5 +120,20 @@ Hover.Sub = styled.div`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin-top: 30px;
+  margin-top: ${({ $top }) => $top && "30px"};
+`;
+
+Hover.Link = styled(NavLink)`
+  transition: 0.3s;
+  color: #004e7d;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  text-decoration: none;
+  padding: 0px 5px;
+  border-bottom: 1px solid #ededed;
+  &:hover {
+    background: #ededed;
+  }
 `;

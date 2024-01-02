@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Content, Left, Right, Btn, Inputs } from "./style";
+import { Select } from "../../components/Generics";
 
 const Contact = () => {
   useEffect(() => {
@@ -9,6 +10,16 @@ const Contact = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const st = {
+    color: "#363940",
+    fontSize: "16px",
+    fontStyle: "normal",
+    fontWeight: "400",
+    lineHeight: "140%",
+  };
+
+  const items = [{ id: 0, label: <p style={st}>none</p>, value: "none" }];
 
   return (
     <div className="container">
@@ -21,6 +32,12 @@ const Contact = () => {
               you achieve it.
             </Left.Desc>
             <Left.Form>
+              <Select
+                height={46}
+                defaultSelected={"none"}
+                options={items}
+                defaultValue={"none"}
+              />
               <Left.Div>
                 <Inputs placeholder="Your name" />
                 <Inputs placeholder="Email" />

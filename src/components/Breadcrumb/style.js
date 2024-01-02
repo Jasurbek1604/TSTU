@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.nav`
   position: absolute;
   bottom: 0;
-  transform: translateY(120%);
+  transform: translateY(30px);
   z-index: 0;
 `;
 
@@ -17,6 +17,7 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   list-style-position: inside;
   color: inherit;
+  white-space: nowrap;
 `;
 
 export const Link = styled(NavLink)`

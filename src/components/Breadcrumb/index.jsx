@@ -14,12 +14,6 @@ const Breadcrumb = ({ type }) => {
         <Li>
           <Link>Asosiy</Link>
         </Li>
-        <Li>
-          <Link>Asosiy</Link>
-        </Li>
-        <Li>
-          <Link>Asosiy</Link>
-        </Li>
       </Ul>
     </Container>
   );

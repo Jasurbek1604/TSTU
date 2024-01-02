@@ -1,4 +1,14 @@
+import Centers from "../pages/Centers";
+import Contact from "../pages/Contact";
+import Faculties from "../pages/Faculties";
 import Faq from "../pages/Faq";
+import Honorary from "../pages/Honorary";
+import News from "../pages/News";
+import OurHistory from "../pages/OurHistory";
+import Rector from "../pages/Rector";
+import Scientific from "../pages/Scientific";
+import Sport from "../pages/Sport";
+import Admisson from "../pages/Admisson";
 
 export const navbar = [
   {
@@ -6,65 +16,76 @@ export const navbar = [
     path: "/faq",
     element: <Faq />,
     isPrivate: false,
+    type: "dark",
   },
   {
     id: 1,
     path: "/contact",
-    element: <h1>Contact</h1>,
+    element: <Contact />,
     isPrivate: false,
+    type: "dark",
   },
   {
     id: 2,
     path: "/rector",
-    element: <h1>Rector</h1>,
+    element: <Rector />,
     isPrivate: false,
+    type: "dark",
   },
   {
     id: 3,
     path: "/scientific-center",
-    element: <h1>Ilmiy markazlar</h1>,
+    element: <Scientific />,
     isPrivate: false,
+    title: "Ilmiy markazlar",
   },
   {
     id: 4,
     path: "/history",
-    element: <h1>Bizning tarix</h1>,
+    element: <OurHistory />,
     isPrivate: false,
+    title: "Bizning tarix",
   },
   {
     id: 5,
     path: "/sport",
-    element: <h1>Sport majmuasi</h1>,
+    element: <Sport />,
     isPrivate: false,
+    title: "Sport majmuasi",
   },
   {
     id: 6,
     path: "/admisson",
-    element: <h1>Qabul komissiyasi</h1>,
+    element: <Admisson />,
     isPrivate: false,
+    title: "Qabul komissiyasi",
   },
   {
     id: 7,
     path: "/centers",
-    element: <h1>Markazlar</h1>,
+    element: <Centers />,
     isPrivate: false,
+    title: "Markazlar",
   },
   {
     id: 8,
     path: "/honorary",
-    element: <h1>Faxriy professor o‘qtuvchilar</h1>,
+    element: <Honorary />,
     isPrivate: false,
+    title: "Faxriy professor o‘qtuvchilar",
   },
   {
     id: 9,
     path: "/news",
-    element: <h1>Universitet yangiliklari</h1>,
+    element: <News />,
     isPrivate: false,
+    type: "dark",
   },
   {
     id: 10,
     path: "/faculties",
-    element: <h1>Fakultetlar</h1>,
+    element: <Faculties />,
     isPrivate: false,
+    type: "dark",
   },
 ];

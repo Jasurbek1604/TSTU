@@ -9,11 +9,11 @@ const Root = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Universal />}>
-          {navbar.map(({ id, path, element }) => (
-            <Route key={id} path={path} element={element} />
-          ))}
-        </Route>
+        {navbar.map((item) => (
+          <Route key={item.id} element={<Universal data={item} />}>
+            <Route path={item.path} element={item.element} />
+          </Route>
+        ))}
         <Route path={"/"} element={<Home />} />
         <Route path={"*"} element={<NotFoundPage />} />
       </Routes>

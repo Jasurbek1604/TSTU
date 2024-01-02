@@ -1,11 +1,11 @@
 import React from "react";
 import { Container } from "./style";
 
-const UniShowcase = (props) => {
+const UniShowcase = ({ data }) => {
   return (
     <Container className="container">
       <div className="wrapper">
-        <Container.Title>UniShowcase</Container.Title>
+        <Container.Title>{data?.title}</Container.Title>
       </div>
     </Container>
   );

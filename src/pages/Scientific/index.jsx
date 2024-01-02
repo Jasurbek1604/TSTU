@@ -1,13 +1,13 @@
 import React from "react";
 
-const Faq = () => {
+const Scientific = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <h1>Faq</h1>
+        <h1>Scientific</h1>
       </div>
     </div>
   );
 };
 
-export default Faq;
+export default Scientific;

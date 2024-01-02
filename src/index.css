@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Rubik:wght@400;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
 
 * {
   margin: 0;
@@ -37,18 +36,4 @@ body {
   .wrapper{
     max-width: 97%;
   } 
-}
-
-.slick-prev{
-  left:-15px !important;
-  z-index: 1;
-}
-.slick-next{
-  right:-15px !important;
-  z-index: 1;
-}
-.slick-prev:before,
-.slick-next:before {
-  color: #01426F  !important;
-  font-size: 30px !important;
 }

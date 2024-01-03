@@ -71,18 +71,18 @@ const scrollStyle = css`
     background: #d2d2d2;
   }
   &::-webkit-scrollbar-thumb {
-    background: #0046b7;
+    background: var(--bgHover);
   }
 `;
 
 export const About = styled.div`
   background: url(${bggg});
-  color: #fff;
+  color: var(--white);
   text-align: center;
   padding: 37px 0 30px;
   .about {
     &__title {
-      color: #fdfdfd;
+      color: var(--titleLight);
       text-align: center;
       font-size: 32px;
       font-style: normal;
@@ -94,7 +94,7 @@ export const About = styled.div`
       font-weight: 400;
       line-height: 20px;
       padding: 20px 160px 0;
-      color: #fdfdfd;
+      color: var(--titleLight);
     }
     &__boxes {
       display: flex;
@@ -104,7 +104,7 @@ export const About = styled.div`
       gap: 80px;
       &__box {
         &__count {
-          color: #fff;
+          color: var(--white);
           font-size: 23.771px;
           font-style: normal;
           font-weight: 500;
@@ -146,7 +146,7 @@ export const About = styled.div`
       flex-direction: column;
       &__title {
         text-align: start;
-        border-left: 3px solid #fdfdfd;
+        border-left: 3px solid var(--titleLight);
         padding-left: 8px;
         font-size: 22px;
         order: 1;
@@ -192,8 +192,8 @@ export const Layout = styled.div`
       gap: 20px;
       &__box {
         border-radius: 3px;
-        border: 1px solid #a6a6a6;
-        background: #fdfdfd;
+        border: 1px solid var(--date);
+        background: var(--titleLight);
         height: 100%;
         &__img {
           width: 100%;
@@ -211,14 +211,14 @@ export const Layout = styled.div`
             align-items: center;
             justify-content: space-between;
             .left {
-              color: #0046b7;
+              color: var(--bgHover);
               font-size: 14px;
               font-style: normal;
               font-weight: 600;
               line-height: 140%;
             }
             .date {
-              color: #797979;
+              color: var(--minDate);
               font-size: 14px;
               font-style: normal;
               font-weight: 600;
@@ -226,7 +226,7 @@ export const Layout = styled.div`
             }
           }
           .fartTitle {
-            color: #01426f;
+            color: var(--titleDark);
             font-size: 17px;
             font-style: normal;
             font-weight: 700;
@@ -238,7 +238,7 @@ export const Layout = styled.div`
     &__large {
       width: 50%;
       border-radius: 3px;
-      background: #fdfdfd;
+      background: var(--titleLight);
       position: relative;
       &__img {
         width: 100%;
@@ -288,13 +288,13 @@ export const Layout = styled.div`
           padding: 13px 17px;
           border-radius: 1px;
           border: 1px solid #e5e7eb;
-          background: #fbfbfb;
+          background: var(--grayBg);
           display: flex;
           justify-content: space-between;
           .item-left {
             display: flex;
             flex-direction: column;
-            color: #01426f;
+            color: var(--titleDark);
             text-align: center;
             font-feature-settings: "clig" off, "liga" off;
             font-style: normal;
@@ -302,7 +302,7 @@ export const Layout = styled.div`
             font-size: 24px;
             font-size: 24px;
             padding: 11px;
-            border-right: 1px solid #a6a6a6;
+            border-right: 1px solid var(--date);
 
             .dek {
               font-size: 15px;
@@ -314,14 +314,14 @@ export const Layout = styled.div`
             justify-content: space-around;
             padding-left: 15px;
             &__title {
-              color: #01426f;
+              color: var(--titleDark);
               font-size: 15px;
               font-style: normal;
               font-weight: 600;
               line-height: 140%;
             }
             &__subtitle {
-              color: #a6a6a6;
+              color: var(--date);
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
@@ -331,7 +331,7 @@ export const Layout = styled.div`
           }
           .item-right {
             &__link {
-              color: #0046b7;
+              color: var(--bgHover);
               font-size: 14px;
               font-style: normal;
               font-weight: 400;
@@ -351,7 +351,6 @@ export const Layout = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    background: red;
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0) 0%,
@@ -365,7 +364,7 @@ export const Layout = styled.div`
       align-items: center;
       gap: 10px;
       padding-bottom: 5px;
-      color: #f8f8f8;
+      color: var(--titleLight);
       font-weight: 400;
       font-size: 15px;
       span {
@@ -380,11 +379,11 @@ export const Layout = styled.div`
       font-weight: 700;
       display: flex;
       align-items: center;
-      color: #fdfdfd;
+      color: var(--titleLight);
     }
     .absP {
       padding-left: 10px;
-      color: #fdfdfd;
+      color: var(--titleLight);
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
@@ -397,7 +396,7 @@ export const Layout = styled.div`
     position: absolute;
     right: 0;
     bottom: 20px;
-    background: #0046b7;
+    background: var(--bgHover);
     width: 30px;
     height: 30px;
     display: flex;
@@ -422,15 +421,15 @@ export const Layout = styled.div`
       margin-bottom: 17px;
     }
     &__name {
-      color: #fff;
+      color: var(--white);
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
       line-height: 18.2px; /* 91% */
     }
     &__group {
-      color: #fff;
-      text-shadow: 0px 2px 12px #000;
+      color: var(--white);
+      text-shadow: 0px 2px 12px var(--black);
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -438,8 +437,8 @@ export const Layout = styled.div`
     }
     &__p {
       margin-top: 10px;
-      color: #fff;
-      text-shadow: 0px 2px 12px #000;
+      color: var(--white);
+      text-shadow: 0px 2px 12px var(--black);
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -545,7 +544,8 @@ export const Top = styled.div`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    color: ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#01426F")};
+    color: ${(props) =>
+      props.$type === "dark" ? "var(--titleLight)" : "var(--titleDark)"};
     &__title {
       font-size: 32px;
       font-style: normal;
@@ -553,7 +553,8 @@ export const Top = styled.div`
       line-height: 46.8px;
       padding-left: 10px;
       border-left: 3px solid
-        ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#0046B7")};
+        ${(props) =>
+          props.$type === "dark" ? "var(--titleLight)" : "var(--bgHover)"};
     }
     &__button {
       text-align: right;
@@ -571,13 +572,14 @@ export const Top = styled.div`
         top: 0;
         bottom: 0;
         width: 54px;
-        background: #007aff;
+        background: var(--btnBg);
         z-index: -1;
       }
     }
   }
   .subtitle {
-    color: ${(props) => (props.$type === "dark" ? "#FDFDFD" : "#01426F")};
+    color: ${(props) =>
+      props.$type === "dark" ? "var(--titleLight)" : "var(--titleDark)"};
     font-size: 20px;
     margin-top: 15px;
     font-style: normal;
@@ -625,7 +627,7 @@ export const DarkSection = styled.div`
       text-align: center;
       width: 340px;
       &__title {
-        color: #fdfdfd;
+        color: var(--titleLight);
         text-align: center;
         font-size: 30px;
         font-style: normal;
@@ -635,7 +637,7 @@ export const DarkSection = styled.div`
       }
       &__count {
         margin-top: 22px;
-        color: #fdfdfd;
+        color: var(--titleLight);
         text-align: center;
         font-size: 37px;
         font-style: normal;
@@ -643,7 +645,7 @@ export const DarkSection = styled.div`
         line-height: 46.8px; /* 126.486% */
       }
       &__p {
-        color: #fff;
+        color: var(--white);
         text-align: center;
         font-size: 18px;
         font-style: normal;
@@ -662,7 +664,7 @@ export const DarkSection = styled.div`
     &__item {
       transition: 0.4s;
       width: 300px;
-      background: #fff;
+      background: var(--white);
       position: relative;
       height: 400px;
       border-radius: 3px;
@@ -674,14 +676,14 @@ export const DarkSection = styled.div`
       }
       &__title {
         padding: 16px 16px 8px 16px;
-        color: #01426f;
+        color: var(--titleDark);
         font-size: 22px;
         font-style: normal;
         font-weight: 600;
         line-height: 133%;
       }
       &__p {
-        color: #01426f;
+        color: var(--titleDark);
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -703,7 +705,7 @@ export const DarkSection = styled.div`
         justify-content: center;
         border-radius: 0px 0px 3px 3px;
         background: linear-gradient(88deg, #0075ff 0.33%, #00b2ff 99.41%);
-        color: #fff;
+        color: var(--white);
         text-align: center;
         font-size: 16px;
         font-style: normal;
@@ -738,7 +740,7 @@ export const DarkSection = styled.div`
 `;
 export const InteraktiveCarts = styled.div`
   .first {
-    background: #fff;
+    background: var(--white);
     border-radius: 3px;
     height: 345px;
     margin: 50px 0 18px;
@@ -750,7 +752,7 @@ export const InteraktiveCarts = styled.div`
       height: 225px;
 
       &__title {
-        color: #01426f;
+        color: var(--titleDark);
         font-size: 36px;
         font-style: normal;
         font-weight: 600;
@@ -780,13 +782,13 @@ export const InteraktiveCarts = styled.div`
       width: 25%;
       height: 243px;
       padding: 38px 24px 41px 45px;
-      background: #fff;
+      background: var(--white);
       border-radius: 3px;
       display: flex;
       flex-direction: column;
       gap: 23px;
       &__title {
-        color: #01426f;
+        color: var(--titleDark);
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
@@ -871,15 +873,15 @@ export const Talim = styled.div`
     border: 1px solid red;
     &__item {
       border-radius: 2.852px;
-      border: 1px solid #a6a6a6;
-      background: #fdfdfd;
+      border: 1px solid var(--date);
+      background: var(--titleLight);
       max-width: 385px !important;
       &__img {
         width: 100%;
         height: 215px;
       }
       &__title {
-        color: #01426f;
+        color: var(--titleDark);
         text-align: center;
         font-size: 24px;
         font-style: normal;
@@ -910,7 +912,7 @@ export const Faxriy = styled.div`
       margin-bottom: 6px;
     }
     &__name {
-      color: #fff;
+      color: var(--white);
       text-align: center;
       font-size: 25px;
       font-style: normal;
@@ -918,7 +920,7 @@ export const Faxriy = styled.div`
       line-height: 140%; /* 35px */
     }
     &__sub {
-      color: #fff;
+      color: var(--white);
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -926,7 +928,7 @@ export const Faxriy = styled.div`
     }
     &__p {
       padding: 10px 20px;
-      color: #fff;
+      color: var(--white);
       text-align: center;
       font-size: 20px;
       font-style: normal;
@@ -1007,24 +1009,24 @@ export const FakGrid = styled.div`
         align-items: center;
         gap: 12px;
         padding: 13px 10px 13px 16px;
-        background: #cceeff80;
+        background: var(--fakBg);
         &__line {
-          background: #fff;
+          background: var(--white);
           width: 2px;
           height: 40px;
         }
         &__title {
           transition: 0.3s;
-          color: #00237a;
+          color: var(--fakColor);
           font-size: 20px;
           font-style: normal;
           font-weight: 700;
           line-height: 140%;
         }
         &:hover {
-          background: #0046b7;
+          background: var(--bgHover);
           .fak-left__content__item__title {
-            color: #fff;
+            color: var(--white);
           }
           .fak-left__content__item__img {
             fill: red;
@@ -1040,11 +1042,11 @@ export const FakGrid = styled.div`
     ${scrollStyle}
     .fak-right {
       border-radius: 3px;
-      background: rgba(204, 238, 255, 0.5);
+      background: var(--fakBg);
       padding: 18px;
       &__title {
         margin-bottom: 20px;
-        color: #00237a;
+        color: var(--fakColor);
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -1057,10 +1059,10 @@ export const FakGrid = styled.div`
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 15px;
         &__card {
-          background: #fff;
+          background: var(--white);
           border-radius: 2px;
           &__min {
-            color: #364670;
+            color: var(--kafColor);
             text-align: center;
             font-size: 16px;
             font-style: normal;
@@ -1113,7 +1115,8 @@ export const FakGrid = styled.div`
 `;
 
 export const Line = styled.div`
-  background: ${(prop) => (prop.$type === "dark" ? "#99d8ff" : "#01426F")};
+  background: ${(prop) =>
+    prop.$type === "dark" ? "#99d8ff" : "var(--titleDark)"};
   height: 3px;
   width: 100%;
 `;

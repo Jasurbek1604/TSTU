@@ -189,7 +189,12 @@ const Rector = () => {
                   <Btn type="primary">Yuborish</Btn>
                 </form>
               )}
-              {check && <h1>Check</h1>}
+              {check && (
+                <div className="content__right__form">
+                  <Input placeholder={"Email"} type="text" />
+                  <Btn type="primary">Yuborish</Btn>
+                </div>
+              )}
               {oferma && <h1>Oferma</h1>}
             </div>
           </div>

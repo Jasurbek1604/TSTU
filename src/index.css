@@ -11,7 +11,6 @@ body {
   font-family: 'Source Sans 3', sans-serif;
 }
 
-
 .container{
   display: flex;
   align-items:center;
@@ -36,4 +35,28 @@ body {
   .wrapper{
     max-width: 97%;
   } 
+}
+
+:root{
+  --darkBg:#0868A2;
+  --bgSidebar:#025F9B;
+  --bgHover:#0046B7;
+  --grayBg:#FBFBFB;
+
+  --white:#FFFFFF;
+
+  --titleDark:#01426F;
+  --titleLight:#FDFDFD;
+  --minDate:#797979;
+  --date:#A6A6A6;
+
+  --fakColor:#00237A;
+  --kafColor:#364670;
+  --fakBg:#cceeff80;
+
+  --btnBg:#007AFF;
+
+  --textDark:#03356C;
+
+  --black:black;
 }

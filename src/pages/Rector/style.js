@@ -5,12 +5,10 @@ export const Content = styled.div`
   margin: 50px 0;
   .content {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     &__left {
       width: 40%;
       height: 650px;
-      border: 1px solid red;
       display: flex;
       flex-direction: column;
       align-items: center;

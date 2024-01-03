@@ -5,7 +5,7 @@ const Color = ({ type }) => {
     case "primary":
       return {
         background: "#507CFF",
-        color: "#fff",
+        color: "var(--white)",
       };
   }
 };

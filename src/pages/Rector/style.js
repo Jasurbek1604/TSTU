@@ -14,14 +14,14 @@ export const Content = styled.div`
       align-items: center;
       justify-content: center;
       &__title {
-        color: #000;
+        color: var(--black);
         font-size: 25.794px;
         font-style: normal;
         font-weight: 400;
         line-height: 140%;
         margin-bottom: 30px;
         &__span {
-          color: #01426f;
+          color: var(--titleDark);
         }
       }
       &__img {
@@ -38,7 +38,7 @@ export const Content = styled.div`
         align-items: "center";
         justify-content: space-between;
         &__item {
-          color: #01426f;
+          color: var(--titleDark);
           font-size: 20px;
           font-style: normal;
           font-weight: 700;
@@ -47,7 +47,7 @@ export const Content = styled.div`
         }
       }
       &__desc {
-        color: #a6a6a6;
+        color: var(--date);
         font-size: 16px;
         font-style: normal;
         font-weight: 600;

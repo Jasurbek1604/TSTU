@@ -20,7 +20,7 @@ export const Container = styled.div`
 `;
 
 Container.Title = styled.div`
-  color: #fff;
+  color: var(--white);
   font-size: 70px;
   font-style: normal;
   font-weight: 600;

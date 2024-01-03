@@ -19,7 +19,7 @@ export const Left = styled.div`
   }
 `;
 Left.Title = styled.div`
-  color: #363940;
+  color: var(--faq);
   font-size: 32px;
   font-style: normal;
   font-weight: 700;

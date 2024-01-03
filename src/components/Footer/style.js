@@ -36,7 +36,7 @@ export const Left = styled.div`
   }
 `;
 export const Title = styled.div`
-  color: #fff;
+  color: var(--white);
   font-size: 30.445px;
   font-style: normal;
   font-weight: 600;
@@ -58,7 +58,7 @@ export const Icons = styled.div`
 `;
 
 export const P = styled.p`
-  color: #fff;
+  color: var(--white);
   font-size: 14.461px;
   font-style: normal;
   font-weight: 400;
@@ -103,7 +103,7 @@ export const Link = styled(NavLink)`
   align-items: center;
   gap: 4px;
 
-  color: #fff;
+  color: var(--white);
   font-size: 16.068px;
   font-style: normal;
   font-weight: 400;
@@ -114,7 +114,7 @@ export const Link = styled(NavLink)`
   }
 `;
 export const T = styled.div`
-  color: #fff;
+  color: var(--white);
   margin-bottom: 7px;
   font-size: 19.281px;
   font-style: normal;
@@ -134,7 +134,7 @@ export const Btn = styled.button`
   align-items: center;
   background: transparent;
   border-radius: 4.017px;
-  border: 0.803px solid #fff;
+  border: 0.803px solid var(--white);
   width: 160px;
   height: 30px;
   padding: 5px 30px 5px 12px;
@@ -143,7 +143,7 @@ export const Btn = styled.button`
   white-space: nowrap;
   flex-shrink: 0;
 
-  color: #fff;
+  color: var(--white);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

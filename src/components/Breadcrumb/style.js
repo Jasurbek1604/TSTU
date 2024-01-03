@@ -12,7 +12,8 @@ export const Ul = styled.ul`
   display: flex;
   align-items: center;
   gap: 10px;
-  color: ${({ $type }) => ($type === "dark" ? "#a6a6a6" : "#fdfdfd")};
+  color: ${({ $type }) =>
+    $type === "dark" ? "var(--date)" : "var(--titleLight)"};
 `;
 export const Li = styled.li`
   list-style-position: inside;

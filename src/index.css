@@ -42,6 +42,7 @@ body {
   --bgSidebar:#025F9B;
   --bgHover:#0046B7;
   --grayBg:#FBFBFB;
+  --sidebarLink:#004E7D;
 
   --white:#FFFFFF;
 
@@ -59,4 +60,10 @@ body {
   --textDark:#03356C;
 
   --black:black;
+
+  --statusColor:#032CBC;
+
+  --faq:#363940;
+
+  --faqBorder:#e1e5ee
 }

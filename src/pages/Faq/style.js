@@ -1,10 +1,9 @@
-import { Collapse } from "antd";
 import styled from "styled-components";
 
 export const Content = styled.div`
   margin: 27px 0 50px;
   .title {
-    color: #363940;
+    color: var(--faq);
     text-align: center;
     font-size: 36px;
     font-style: normal;
@@ -18,19 +17,19 @@ export const Content = styled.div`
     margin-top: 40px;
     &__left {
       border-radius: 4px;
-      border: 1px solid #e1e5ee;
+      border: 1px solid var(--faqBorder);
       width: 35%;
       padding: 30px;
       min-height: 365px;
     }
     &__right {
       border-radius: 4px;
-      border: 1px solid #e1e5ee;
+      border: 1px solid var(--faqBorder);
       width: 65%;
       padding: 30px;
       min-height: 365px;
       &__title {
-        color: #363940;
+        color: var(--faq);
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -38,7 +37,7 @@ export const Content = styled.div`
         margin-bottom: 14px;
       }
       &__p {
-        color: #363940;
+        color: var(--faq);
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
@@ -48,7 +47,7 @@ export const Content = styled.div`
     }
   }
   .pp {
-    color: #363940;
+    color: var(--faq);
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

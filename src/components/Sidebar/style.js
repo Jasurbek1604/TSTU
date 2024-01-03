@@ -68,7 +68,7 @@ export const Right = styled.div`
 `;
 export const Item = styled.div`
   transition: 0.3s;
-  color: #fff;
+  color: var(--white);
   font-size: 18.147px;
   font-style: normal;
   font-weight: 600;
@@ -80,9 +80,10 @@ export const Item = styled.div`
   border-bottom: 2px solid transparent;
   gap: 10px;
   &:hover {
-    background-color: ${({ $select }) => $select === "true" && "#fff"};
-    color: ${({ $select }) => $select === "true" && "#01426f"};
-    border-bottom: ${({ $select }) => $select === "false" && "2px solid #fff"};
+    background-color: ${({ $select }) => $select === "true" && "var(--white)"};
+    color: ${({ $select }) => $select === "true" && "var(--titleDark)"};
+    border-bottom: ${({ $select }) =>
+      $select === "false" && "2px solid var(--white)"};
   }
   @media (max-width: 1250px) {
     font-size: 16px;
@@ -92,7 +93,7 @@ export const Item = styled.div`
 `;
 
 export const Hover = styled.div`
-  background: #fff;
+  background: var(--white);
   padding: 22px;
   position: absolute;
   top: 40px;
@@ -112,14 +113,14 @@ Hover.Title = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #01426f;
+  color: var(--titleDark);
   font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 `;
 Hover.Sub = styled.div`
-  color: #a6a6a6;
+  color: var(--date);
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -129,7 +130,7 @@ Hover.Sub = styled.div`
 
 Hover.Link = styled(NavLink)`
   transition: 0.3s;
-  color: #004e7d;
+  color: var(--sidebarLink);
   font-size: 18px;
   font-style: normal;
   font-weight: 600;

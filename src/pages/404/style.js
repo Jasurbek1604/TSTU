@@ -42,7 +42,7 @@ export const Img = styled.img`
 `;
 
 export const Status = styled.div`
-  color: #032cbc;
+  color: var(--statusColor);
   font-size: 178.942px;
   font-style: normal;
   font-weight: 700;
@@ -55,7 +55,7 @@ export const Status = styled.div`
 `;
 export const Desc = styled.div`
   font-size: 30px;
-  color: #032cbc;
+  color: var(--statusColor);
   font-weight: 600;
   @media (max-width: 700px) {
     font-size: 16px;

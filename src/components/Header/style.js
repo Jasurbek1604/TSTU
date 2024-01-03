@@ -8,7 +8,7 @@ const flex = css`
 
 export const Container = styled.div`
   position: relative;
-  background-color: #025f9b;
+  background-color: var(--bgSidebar);
   min-height: 50px;
   padding: 7px 0;
   @media (max-width: 1000px) {
@@ -62,7 +62,7 @@ export const Div = styled.div`
   }
 `;
 export const Img = styled.img`
-  background: ${(props) => props.$last && "#fff"};
+  background: ${(props) => props.$last && "var(--white)"};
   border-radius: ${(props) => props.$last && "5px"};
   padding: ${(props) => props.$last && "2px"};
   @media screen and (max-width: 500px) {
@@ -81,7 +81,7 @@ export const Right = styled.div`
     transition: 0.5s;
     position: fixed;
     flex-direction: column;
-    background: #025f9b;
+    background: var(--bgSidebar);
     top: 0;
     left: 0;
     height: 100%;
@@ -99,7 +99,7 @@ export const Link = styled(NavLink)`
   gap:4px;
   font-weight: 400;
   font-size: 18px;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
   @media screen and (max-width: 1100px) {
     font-size: 16px;
@@ -143,7 +143,7 @@ export const Icon = styled.img`
 export const Select = styled.select`
   border: none;
   background: transparent;
-  color: #fff;
+  color: var(--white);
   outline: none;
   cursor: pointer;
   font-size: 16px;

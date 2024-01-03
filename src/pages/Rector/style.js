@@ -1,13 +1,20 @@
 import styled from "styled-components";
+import { Button } from "../../components/Generics";
 
 export const Content = styled.div`
   margin: 50px 0;
   .content {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     &__left {
       width: 40%;
+      height: 650px;
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       &__title {
         color: #000;
         font-size: 25.794px;
@@ -20,7 +27,7 @@ export const Content = styled.div`
         }
       }
       &__img {
-        width: 93%;
+        width: 100%;
         img {
           width: 100%;
         }
@@ -38,6 +45,7 @@ export const Content = styled.div`
           font-style: normal;
           font-weight: 700;
           line-height: 140%;
+          cursor: pointer;
         }
       }
       &__desc {
@@ -60,4 +68,13 @@ export const Content = styled.div`
       }
     }
   }
+`;
+
+export const Btn = styled(Button)`
+  width: 126px;
+  padding: 16px 32px;
+`;
+
+export const Item = styled.div`
+  opacity: ${({ type }) => (type === "true" ? 1 : 0.7)};
 `;

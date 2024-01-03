@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import callCenter from "../../assets/images/callRector.png";
-import { Content } from "./style";
-import { Select, Input, Button } from "../../components/Generics";
+import { Content, Btn, Item } from "./style";
+import { Select, Input } from "../../components/Generics";
 
 const Rector = () => {
+  const [send, setSend] = useState(true);
+  const [check, setCheck] = useState(false);
+  const [oferma, setOferma] = useState(false);
+
+  const onItemClick = ({ target: { id } }) => {
+    switch (id) {
+      case "send":
+        setSend(true);
+        setCheck(false);
+        setOferma(false);
+        break;
+      case "check":
+        setSend(false);
+        setCheck(true);
+        setOferma(false);
+        break;
+      case "oferma":
+        setSend(false);
+        setCheck(false);
+        setOferma(true);
+        break;
+    }
+  };
+
   const uz = {
     color: "#01426F",
     fontSize: "16px",
@@ -74,57 +98,99 @@ const Rector = () => {
             </div>
             <div className="content__right">
               <div className="content__right__top">
-                <div className="content__right__top__item">
+                <Item
+                  type={send.toString()}
+                  className="content__right__top__item"
+                  onClick={onItemClick}
+                  id={"send"}
+                >
                   Murojat yuborish
-                </div>
-                <div className="content__right__top__item">
+                </Item>
+                <Item
+                  type={check.toString()}
+                  className="content__right__top__item"
+                  onClick={onItemClick}
+                  id={"check"}
+                >
                   Murojatni tekshirish
-                </div>
-                <div className="content__right__top__item">Ommaviy offerta</div>
+                </Item>
+                <Item
+                  type={oferma.toString()}
+                  className="content__right__top__item"
+                  onClick={onItemClick}
+                  id={"oferma"}
+                >
+                  Ommaviy offerta
+                </Item>
               </div>
               <div className="content__right__desc">
-                Sizda hal etilmagan masalalar, muammolar, ariza, shikoyat yoki
-                takliflar bormi? U holda murojaatingizni to‘g‘ridan-to‘g‘ri
-                Toshkent davlat transport universiteti rektoriga yuborishingiz
-                mumkin.
+                {send &&
+                  "Sizda hal etilmagan masalalar, muammolar, ariza, shikoyat yoki takliflar bormi? U holda murojaatingizni to‘g‘ridan-to‘g‘ri Toshkent davlat transport universiteti rektoriga yuborishingiz mumkin."}
+                {check &&
+                  "Murojatni tekshirish uchun elektron pochta manjilingizni kiriting"}
+                {oferma && ""}
               </div>
-              <form className="content__right__form">
-                <div className="content__right__form__item">
-                  <Select defaultValue={"O‘zbekiston"} options={country} />
-                  <Select defaultValue={"Viloyat"} options={region} />
-                </div>
-                <div className="content__right__form__item">
-                  <Select defaultValue={"Tuman"} options={tuman} />
-                  <Select defaultValue={"Mahalla"} options={mahalla} />
-                </div>
-                <Input type="text" placeholder={"Manzil:"} />
-                <div className="content__right__form__item">
-                  <Input type={"text"} placeholder={"F.I.O"} />
-                  <Input type={"date"} style={def} />
-                </div>
-                <div className="content__right__form__item">
-                  <Select defaultValue={"Jinsi"} options={sex} />
-                  <Select defaultValue={"Bandligi"} />
-                </div>
-                <div className="content__right__form__item">
-                  <Input
-                    type="text"
-                    placeholder={"Telefon raqami:+99899 999 99 99"}
-                  />
-                  <Input
-                    type="text"
-                    placeholder={"Qo‘shimcha telefon raqami:+99899 999 99 99"}
-                  />
-                </div>
-                <div className="content__right__form__item">
-                  <Input type={"text"} placeholder={"Email"} />
-                  <Input
-                    type={"file"}
-                    placeholder={"Yuborish uchun faylni tanlang"}
-                  />
-                </div>
-                <Button type="primary">Yuborish</Button>
-              </form>
+              {send && (
+                <form className="content__right__form">
+                  <div className="content__right__form__item">
+                    <Select defaultValue={"O‘zbekiston"} options={country} />
+                    <Select defaultValue={"Viloyat"} options={region} />
+                  </div>
+                  <div className="content__right__form__item">
+                    <Select defaultValue={"Tuman"} options={tuman} />
+                    <Select defaultValue={"Mahalla"} options={mahalla} />
+                  </div>
+                  <Input type="text" placeholder={"Manzil:"} />
+                  <div className="content__right__form__item">
+                    <Input type={"text"} placeholder={"F.I.O"} />
+                    <Input type={"date"} style={def} />
+                  </div>
+                  <div className="content__right__form__item">
+                    <Select defaultValue={"Jinsi"} options={sex} />
+                    <Select defaultValue={"Bandligi"} />
+                  </div>
+                  <div className="content__right__form__item">
+                    <Input
+                      type="text"
+                      placeholder={"Telefon raqami:+99899 999 99 99"}
+                    />
+                    <Input
+                      type="text"
+                      placeholder={"Qo‘shimcha telefon raqami:+99899 999 99 99"}
+                    />
+                  </div>
+                  <div className="content__right__form__item">
+                    <Input type={"text"} placeholder={"Email"} />
+                    <Input
+                      type={"file"}
+                      placeholder={"Yuborish uchun faylni tanlang"}
+                    />
+                  </div>
+                  <div className="content__right__form__item">
+                    <textarea
+                      name=""
+                      id=""
+                      style={{
+                        width: "100%",
+                        padding: "12px 19px",
+                        color: "black",
+                        fontSize: " 16px",
+                        fontStyle: "normal",
+                        fontWeight: "400",
+                        lineHeight: "140%",
+                        outline: "none",
+                        border: "1px solid #CECECE",
+                        borderRadius: "4px",
+                        height: "113px",
+                      }}
+                      placeholder="Murojat yo‘llash"
+                    ></textarea>
+                  </div>
+                  <Btn type="primary">Yuborish</Btn>
+                </form>
+              )}
+              {check && <h1>Check</h1>}
+              {oferma && <h1>Oferma</h1>}
             </div>
           </div>
         </Content>

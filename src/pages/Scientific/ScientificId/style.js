@@ -20,11 +20,21 @@ Content.P = styled.div`
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  margin: 10px 0;
 `;
 
 Content.Flex = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 15px;
-  margin: 8px 0;
+  margin: 15px 0;
+`;
+
+Content.Li = styled.li`
+  color: #173261;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 10px 0;
 `;

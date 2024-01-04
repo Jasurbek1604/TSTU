@@ -10,6 +10,8 @@ import Scientific from "../pages/Scientific";
 import Sport from "../pages/Sport";
 import Admisson from "../pages/Admisson";
 import ScientificId from "../pages/Scientific/ScientificId";
+import HonoraryId from "../pages/Honorary/HonoraryId";
+import CentersId from "../pages/Centers/CenterId";
 
 export const navbar = [
   {
@@ -77,20 +79,34 @@ export const navbar = [
   },
   {
     id: 9,
+    path: "/centers/:id",
+    element: <CentersId />,
+    isPrivate: false,
+    title: "Markaz",
+  },
+  {
+    id: 10,
     path: "/honorary",
     element: <Honorary />,
     isPrivate: false,
     title: "Faxriy professor o‘qtuvchilar",
   },
   {
-    id: 10,
+    id: 11,
+    path: "/honorary/:id",
+    element: <HonoraryId />,
+    isPrivate: false,
+    title: "Faxriy professor o‘qtuvchi",
+  },
+  {
+    id: 12,
     path: "/news",
     element: <News />,
     isPrivate: false,
     type: "dark",
   },
   {
-    id: 11,
+    id: 13,
     path: "/faculties",
     element: <Faculties />,
     isPrivate: false,

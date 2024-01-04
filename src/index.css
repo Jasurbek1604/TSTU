@@ -67,3 +67,14 @@ body {
 
   --faqBorder:#e1e5ee
 }
+
+.slick-dots {
+  margin: 13px 0 !important;
+}
+
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+  font-size: 25px !important;
+}

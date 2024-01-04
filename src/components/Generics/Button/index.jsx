@@ -17,7 +17,7 @@ const Button = ({
     <Container
       width={width}
       height={height}
-      $padding={padding}
+      padding={padding}
       margin={margin}
       type={type}
       fontSize={fontSize}

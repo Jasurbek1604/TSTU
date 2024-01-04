@@ -40,11 +40,11 @@ const Header = ({ children }) => {
               <Menu src={menu} onClick={() => setIsOpen(true)} />
             </Menus>
             <Left>
-              <Link to="/home">
+              <Link to="/">
                 <Img src={logo1} />
               </Link>
               <Div>
-                <Link to="/endwomen">
+                <Link to="/">
                   <Img src={logo2} />
                 </Link>
                 <Link to="https://www.timeshighereducation.com/world-university-rankings/tashkent-state-transport-university">
@@ -56,8 +56,8 @@ const Header = ({ children }) => {
               </Div>
             </Left>
             <Right $isopen={isOpen.toString()}>
-              <Link>Talaba</Link>
-              <Link>Xodim</Link>
+              <Link to="https://student.tstu.uz/dashboard/login">Talaba</Link>
+              <Link to="https://hemis.tstu.uz/dashboard/login">Xodim</Link>
               <Link>Elektron kutubxona</Link>
               <Link>Alumni</Link>
               <Link>

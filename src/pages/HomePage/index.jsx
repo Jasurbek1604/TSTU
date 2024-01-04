@@ -33,12 +33,13 @@ import jasco from "../../assets/images/jasco.jpg";
 import run from "../../assets/images/run.jpg";
 import filter from "../../assets/images/filterBg.png";
 import ramatova from "../../assets/images/ramatova.jpg";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import IlmiyMarkazCart from "../../components/IlmiyMarkazCart";
 
 const HomePage = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [hoverd, setHovered] = useState(null);
+  const navigate = useNavigate();
 
   const handleHover = (e) => {
     setHovered(e);
@@ -54,6 +55,8 @@ const HomePage = () => {
   for (let i = 0; i < 30; i++) {
     arr.push(i);
   }
+
+  let ilm = [1, 2, 3, 4];
 
   const windowWidth = window.innerWidth;
 
@@ -681,10 +684,12 @@ const HomePage = () => {
             </div>
           </Top>
           <div className="markaz">
-            <IlmiyMarkazCart />
-            <IlmiyMarkazCart />
-            <IlmiyMarkazCart />
-            <IlmiyMarkazCart />
+            {ilm.map((e) => (
+              <IlmiyMarkazCart
+                key={e}
+                onClick={() => navigate(`/scientific-center/${e}`)}
+              />
+            ))}
           </div>
         </div>
       </DarkSection>

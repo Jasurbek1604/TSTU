@@ -3,7 +3,7 @@ import { Contianer } from "./style";
 import { Icons } from "../../pages/HomePage/style";
 import kafedra from "../../assets/images/kafedra.png";
 
-const IlmiyMarkazCart = ({ img, title, p, border }) => {
+const IlmiyMarkazCart = ({ img, title, p, border, onClick }) => {
   return (
     <Contianer border={border}>
       <div className="item">
@@ -15,7 +15,7 @@ const IlmiyMarkazCart = ({ img, title, p, border }) => {
           {p ||
             "Markaz professor-o‘qituvchilarning ilmiy-texnikaviy faoliyatinatijalarini tijoratlashtirishning samarali....."}
         </div>
-        <div className="item__button">
+        <div className="item__button" onClick={onClick}>
           Ko‘proq malumot olish <Icons.LightArrow />
         </div>
       </div>

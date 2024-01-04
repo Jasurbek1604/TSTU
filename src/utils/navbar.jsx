@@ -9,6 +9,7 @@ import Rector from "../pages/Rector";
 import Scientific from "../pages/Scientific";
 import Sport from "../pages/Sport";
 import Admisson from "../pages/Admisson";
+import ScientificId from "../pages/Scientific/ScientificId";
 
 export const navbar = [
   {
@@ -38,6 +39,13 @@ export const navbar = [
     element: <Scientific />,
     isPrivate: false,
     title: "Ilmiy markazlar",
+  },
+  {
+    id: 3,
+    path: "/scientific-center/:id",
+    element: <ScientificId />,
+    isPrivate: false,
+    title: "Temir yo‘l transporti ilmiy tadqiqot markazi",
   },
   {
     id: 4,

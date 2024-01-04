@@ -34,6 +34,7 @@ import run from "../../assets/images/run.jpg";
 import filter from "../../assets/images/filterBg.png";
 import ramatova from "../../assets/images/ramatova.jpg";
 import { Outlet } from "react-router-dom";
+import IlmiyMarkazCart from "../../components/IlmiyMarkazCart";
 
 const HomePage = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -680,58 +681,10 @@ const HomePage = () => {
             </div>
           </Top>
           <div className="markaz">
-            <div className="markaz__item">
-              <img src={kafedra} alt="" className="markaz__item__img" />
-              <div className="markaz__item__title">
-                Temir yo‘l transporti ilmiy tadqiqot markazi
-              </div>
-              <div className="markaz__item__p">
-                Markaz professor-o‘qituvchilarning ilmiy-texnikaviy faoliyati
-                natijalarini tijoratlashtirishning samarali.....
-              </div>
-              <div className="markaz__item__button">
-                Ko‘proq malumot olish <Icons.LightArrow />
-              </div>
-            </div>
-            <div className="markaz__item">
-              <img src={kafedra} alt="" className="markaz__item__img" />
-              <div className="markaz__item__title">
-                Temir yo‘l transporti ilmiy tadqiqot markazi
-              </div>
-              <div className="markaz__item__p">
-                Markaz professor-o‘qituvchilarning ilmiy-texnikaviy faoliyati
-                natijalarini tijoratlashtirishning samarali.....
-              </div>
-              <div className="markaz__item__button">
-                Ko‘proq malumot olish <Icons.LightArrow />
-              </div>
-            </div>
-            <div className="markaz__item">
-              <img src={kafedra} alt="" className="markaz__item__img" />
-              <div className="markaz__item__title">
-                Temir yo‘l transporti ilmiy tadqiqot markazi
-              </div>
-              <div className="markaz__item__p">
-                Markaz professor-o‘qituvchilarning ilmiy-texnikaviy faoliyati
-                natijalarini tijoratlashtirishning samarali.....
-              </div>
-              <div className="markaz__item__button">
-                Ko‘proq malumot olish <Icons.LightArrow />
-              </div>
-            </div>
-            <div className="markaz__item">
-              <img src={kafedra} alt="" className="markaz__item__img" />
-              <div className="markaz__item__title">
-                Temir yo‘l transporti ilmiy tadqiqot markazi
-              </div>
-              <div className="markaz__item__p">
-                Markaz professor-o‘qituvchilarning ilmiy-texnikaviy faoliyati
-                natijalarini tijoratlashtirishning samarali.....
-              </div>
-              <div className="markaz__item__button">
-                Ko‘proq malumot olish <Icons.LightArrow />
-              </div>
-            </div>
+            <IlmiyMarkazCart />
+            <IlmiyMarkazCart />
+            <IlmiyMarkazCart />
+            <IlmiyMarkazCart />
           </div>
         </div>
       </DarkSection>

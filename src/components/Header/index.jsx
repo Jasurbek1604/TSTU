@@ -58,7 +58,7 @@ const Header = ({ children }) => {
             <Right $isopen={isOpen.toString()}>
               <Link to="https://student.tstu.uz/dashboard/login">Talaba</Link>
               <Link to="https://hemis.tstu.uz/dashboard/login">Xodim</Link>
-              <Link>Elektron kutubxona</Link>
+              <Link to="/arm">Elektron kutubxona</Link>
               <Link>Alumni</Link>
               <Link>
                 <Icon src={search} width={24} />

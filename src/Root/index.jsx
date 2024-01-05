@@ -4,7 +4,8 @@ import NotFoundPage from "../pages/404";
 import Home from "../pages/HomePage";
 import { navbar } from "../utils/navbar";
 import Universal from "../components/Universal";
-import Arm from "../pages/Arm";
+import Arm from "../pages/Galereya";
+import Galereya from "../pages/Galereya";
 
 const Root = () => {
   return (
@@ -18,6 +19,7 @@ const Root = () => {
         <Route path={"/"} element={<Home />} />
         <Route path={"*"} element={<NotFoundPage />} />
         <Route path={"/arm"} element={<Arm />} />
+        <Route path={"/galereya"} element={<Galereya />} />
       </Routes>
     </BrowserRouter>
   );

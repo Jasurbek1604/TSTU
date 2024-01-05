@@ -12,6 +12,9 @@ import Admisson from "../pages/Admisson";
 import ScientificId from "../pages/Scientific/ScientificId";
 import HonoraryId from "../pages/Honorary/HonoraryId";
 import CentersId from "../pages/Centers/CenterId";
+import Rectorat from "../pages/Rectorat";
+import Departments from "../pages/Departments";
+import InteractiveServices from "../pages/Interactive";
 
 export const navbar = [
   {
@@ -111,5 +114,26 @@ export const navbar = [
     element: <Faculties />,
     isPrivate: false,
     type: "dark",
+  },
+  {
+    id: 14,
+    path: "/rectorat",
+    element: <Rectorat />,
+    isPrivate: false,
+    title: "REKTORAT",
+  },
+  {
+    id: 15,
+    path: "/departments",
+    element: <Departments />,
+    isPrivate: false,
+    title: "Bo‘limlar va boshqarmalar",
+  },
+  {
+    id: 16,
+    path: "/interactive-services",
+    element: <InteractiveServices />,
+    isPrivate: false,
+    title: "Interaktiv xizmatlari",
   },
 ];

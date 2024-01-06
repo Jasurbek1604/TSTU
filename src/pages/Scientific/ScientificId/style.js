@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  margin: 35px 0;
+  padding: 35px 0;
 `;
 Content.Title = styled.div`
   color: ${({ $first }) => ($first ? "var(--black)" : "var(--titleDark)")};

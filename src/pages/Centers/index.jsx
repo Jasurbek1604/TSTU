@@ -9,7 +9,7 @@ const Centers = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <Content>
+        <Content data-aos="fade-up">
           {arr.map((e) => (
             <Content.Item key={e} onClick={() => naviagte(`${e}`)}>
               <Content.Img src={center} />

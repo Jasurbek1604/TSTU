@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const NotFound = () => {
   const navigate = useNavigate();
   return (
-    <Container>
+    <Container data-aos="zoom-in">
       <Wrapper>
         <Img src={none} />
         <Wrap>

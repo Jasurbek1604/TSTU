@@ -7,7 +7,7 @@ const SignIn = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <Content>
+        <Content data-aos="fade-up">
           <Content.Left>
             <Content.Title>Welcome back!</Content.Title>
             <Content.SubTitle>Meet the good taste today</Content.SubTitle>

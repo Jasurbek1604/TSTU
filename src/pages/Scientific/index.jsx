@@ -9,7 +9,7 @@ const Scientific = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <Content>
+        <Content data-aos="fade-up">
           {arr.map((e) => (
             <IlmiyMarkazCart
               key={e}

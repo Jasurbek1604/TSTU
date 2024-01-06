@@ -82,7 +82,7 @@ const Rector = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <Content>
+        <Content data-aos="fade-up">
           <div className="content">
             <div className="content__left">
               <div className="content__left__title">
@@ -131,7 +131,7 @@ const Rector = () => {
                 {oferma && ""}
               </div>
               {send && (
-                <form className="content__right__form">
+                <form className="content__right__form" data-aos="fade-up">
                   <div className="content__right__form__item">
                     <Select defaultValue={"O‘zbekiston"} options={country} />
                     <Select defaultValue={"Viloyat"} options={region} />
@@ -190,7 +190,7 @@ const Rector = () => {
                 </form>
               )}
               {check && (
-                <div className="content__right__form">
+                <div className="content__right__form" data-aos="fade-up">
                   <Input placeholder={"Email"} type="text" />
                   <Btn type="primary">Yuborish</Btn>
                 </div>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  margin: 63px 0;
+  padding: 63px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 9px;

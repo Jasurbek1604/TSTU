@@ -10,7 +10,7 @@ const HonoraryId = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <Content>
+        <Content data-aos="fade-up">
           <Content.Flex style={{ gap: "50px", margin: "50px 0" }}>
             <div style={{ width: "50%" }}>
               <Carousel img={[prof, prof, prof]} />

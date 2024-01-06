@@ -51,7 +51,7 @@ const Faq = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <Content>
+        <Content data-aos="fade-up">
           <div className="title">FAQ</div>
           <div className="content">
             <div className="content__left">

@@ -9,7 +9,7 @@ const Sport = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <Content>
+        <Content data-aos="fade-up">
           <Content.Title $first="true">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
           </Content.Title>

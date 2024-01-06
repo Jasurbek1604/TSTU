@@ -7,7 +7,7 @@ const SignUp = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <Content>
+        <Content data-aos="fade-up">
           <Content.Left>
             <Content.Title>Create your account</Content.Title>
             <Content.SubTitle>It’s free and easy</Content.SubTitle>

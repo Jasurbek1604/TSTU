@@ -24,7 +24,7 @@ const Contact = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <Content>
+        <Content data-aos="fade-up">
           <Left>
             <Left.Title>Contact us</Left.Title>
             <Left.Desc>

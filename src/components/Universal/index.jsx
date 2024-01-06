@@ -13,7 +13,7 @@ const Universal = ({ data }) => {
       <Header>
         <Line />
         <UniversalSidebr />
-        <Breadcrumb type={data?.type} />
+        <Breadcrumb breadcrumb={data?.breadcrumb} />
       </Header>
       {data?.title && <UniShowcase data={data} />}
       <Outlet />

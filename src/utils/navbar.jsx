@@ -15,6 +15,8 @@ import CentersId from "../pages/Centers/CenterId";
 import Rectorat from "../pages/Rectorat";
 import Departments from "../pages/Departments";
 import InteractiveServices from "../pages/Interactive";
+import SignUp from "../pages/SignUp";
+import SignIn from "../pages/SignIn";
 
 export const navbar = [
   {
@@ -22,21 +24,21 @@ export const navbar = [
     path: "/faq",
     element: <Faq />,
     isPrivate: false,
-    type: "dark",
+    breadcrumb: "dark",
   },
   {
     id: 1,
     path: "/contact",
     element: <Contact />,
     isPrivate: false,
-    type: "dark",
+    breadcrumb: "dark",
   },
   {
     id: 2,
     path: "/rector",
     element: <Rector />,
     isPrivate: false,
-    type: "dark",
+    breadcrumb: "dark",
   },
   {
     id: 3,
@@ -106,14 +108,14 @@ export const navbar = [
     path: "/news",
     element: <News />,
     isPrivate: false,
-    type: "dark",
+    breadcrumb: "dark",
   },
   {
     id: 13,
     path: "/faculties",
     element: <Faculties />,
     isPrivate: false,
-    type: "dark",
+    breadcrumb: "dark",
   },
   {
     id: 14,
@@ -135,5 +137,19 @@ export const navbar = [
     element: <InteractiveServices />,
     isPrivate: false,
     title: "Interaktiv xizmatlari",
+  },
+  {
+    id: 17,
+    path: "/signin",
+    element: <SignIn />,
+    isPrivate: false,
+    breadcrumb: "primary",
+  },
+  {
+    id: 18,
+    path: "/signup",
+    element: <SignUp />,
+    isPrivate: false,
+    breadcrumb: "primary",
   },
 ];

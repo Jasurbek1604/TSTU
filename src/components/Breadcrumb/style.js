@@ -1,6 +1,15 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+const setColor = (type) => {
+  const obj = {
+    dark: "var(--date)",
+    light: "var(--titleLight)",
+    primary: "var(--titleDark)",
+  };
+  return obj[type] || obj.light;
+};
+
 export const Container = styled.nav`
   position: absolute;
   bottom: 0;
@@ -12,8 +21,7 @@ export const Ul = styled.ul`
   display: flex;
   align-items: center;
   gap: 10px;
-  color: ${({ $type }) =>
-    $type === "dark" ? "var(--date)" : "var(--titleLight)"};
+  color: ${(props) => setColor(props?.$breadcrumb)};
 `;
 export const Li = styled.li`
   list-style-position: inside;

@@ -62,7 +62,11 @@ const Sidebar = () => {
                       <Hover.Item key={id}>
                         <Hover.Sub>{title}</Hover.Sub>
                         {links.map(({ id, path, link }) => (
-                          <Hover.Link key={id} to={path}>
+                          <Hover.Link
+                            key={id}
+                            to={path}
+                            onClick={() => setHover(null)}
+                          >
                             {link}
                           </Hover.Link>
                         ))}
@@ -125,7 +129,11 @@ export const UniversalSidebr = () => {
                 <Hover.Item key={id}>
                   <Hover.Sub>{title}</Hover.Sub>
                   {links.map(({ id, path, link }) => (
-                    <Hover.Link key={id} to={path}>
+                    <Hover.Link
+                      key={id}
+                      to={path}
+                      onClick={() => setHover(null)}
+                    >
                       {link}
                     </Hover.Link>
                   ))}

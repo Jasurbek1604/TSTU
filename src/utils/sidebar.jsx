@@ -85,7 +85,6 @@ export const hoverContent = [
           { id: 5, path: "/sport", link: "Sport majmuasi" },
           { id: 6, path: "/admisson", link: "Qabul komissiyasi" },
           { id: 7, path: "/honorary", link: "Faxriy professor o‘qtuvchilar" },
-          { id: 8, path: "/centers", link: "Markazlar" },
         ],
       },
       {
@@ -99,10 +98,25 @@ export const hoverContent = [
           { id: 5, path: "/arm", link: "Axborot Resuslari markazi" },
           { id: 6, path: "/galereya", link: "Galereya" },
           { id: 7, path: "/departments", link: "Bo‘limlar va boshqarmalar" },
+        ],
+      },
+      {
+        id: 0,
+        links: [
           {
-            id: 8,
+            id: 0,
             path: "/interactive-services",
             link: "Interaktiv xizmatlari",
+          },
+          {
+            id: 1,
+            path: "/signup",
+            link: "Registratsiya",
+          },
+          {
+            id: 2,
+            path: "/signin",
+            link: "Kirish",
           },
         ],
       },

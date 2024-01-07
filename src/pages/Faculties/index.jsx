@@ -2,7 +2,7 @@ import React from "react";
 import { Content } from "./style";
 import fak from "../../assets/icons/fakdark.png";
 import back from "../../assets/images/bggggg.png";
-import FacultyCart from "../../components/FacultyCart";
+import FacultyCart from "../../components/Faculties/FacultyCart";
 import { useNavigate } from "react-router-dom";
 
 const Faculties = () => {

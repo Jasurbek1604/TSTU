@@ -52,6 +52,7 @@ Content.Back = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  cursor: pointer;
   img {
     position: absolute;
     top: 0;

@@ -14,7 +14,7 @@ const NotFound = () => {
           <Desc>sahifa topilmadi</Desc>
           <Btn
             type={"primary"}
-            onClick={() => navigate("/home")}
+            onClick={() => navigate("/")}
             $padding={"16px 32px"}
             fontSize={"14px"}
           >

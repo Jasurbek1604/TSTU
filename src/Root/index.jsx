@@ -1,11 +1,7 @@
 import React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import NotFoundPage from "../pages/404";
-import Home from "../pages/HomePage";
-import { navbar } from "../utils/navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { navbar, routes } from "../utils/navbar";
 import Universal from "../components/Universal";
-import Arm from "../pages/Galereya";
-import Galereya from "../pages/Galereya";
 
 const Root = () => {
   return (
@@ -16,10 +12,9 @@ const Root = () => {
             <Route path={item.path} element={item.element} />
           </Route>
         ))}
-        <Route path={"/"} element={<Home />} />
-        <Route path={"*"} element={<NotFoundPage />} />
-        <Route path={"/arm"} element={<Arm />} />
-        <Route path={"/galereya"} element={<Galereya />} />
+        {routes.map(({ id, path, element }) => (
+          <Route key={id} path={path} element={element} />
+        ))}
       </Routes>
     </BrowserRouter>
   );

@@ -3,6 +3,7 @@ import { Content } from "./style";
 import fak from "../../assets/icons/fakdark.png";
 import back from "../../assets/images/bggggg.png";
 import FacultyCart from "../../components/FacultyCart";
+import { useNavigate } from "react-router-dom";
 
 const Faculties = () => {
   const arr = [
@@ -62,6 +63,8 @@ const Faculties = () => {
     },
   ];
 
+  const naviagte = useNavigate();
+
   return (
     <div className="container">
       <div className="wrapper">
@@ -69,7 +72,15 @@ const Faculties = () => {
           <div className="title">Fakultetlar</div>
           <Content.Body>
             {arr.map(({ id, img, title, bg }) => {
-              return <FacultyCart img={img} title={title} back={bg} key={id} />;
+              return (
+                <FacultyCart
+                  img={img}
+                  title={title}
+                  back={bg}
+                  key={id}
+                  onClick={() => naviagte(`${id}`)}
+                />
+              );
             })}
           </Content.Body>
         </Content>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Content } from "./style";
 
-const FacultyCart = ({ img, title, back }) => {
+const FacultyCart = ({ img, title, back, onClick }) => {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <Content>
         <Content.Front>
           <Content.Icon src={img} />

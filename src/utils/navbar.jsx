@@ -17,6 +17,11 @@ import Departments from "../pages/Departments";
 import InteractiveServices from "../pages/Interactive";
 import SignUp from "../pages/SignUp";
 import SignIn from "../pages/SignIn";
+import FacultiesId from "../pages/Faculties/FacultiesId";
+import HomePage from "../pages/HomePage";
+import NotFound from "../pages/404";
+import Galereya from "../pages/Galereya";
+import Arm from "../pages/Arm";
 
 export const navbar = [
   {
@@ -152,4 +157,12 @@ export const navbar = [
     isPrivate: false,
     breadcrumb: "primary",
   },
+];
+
+export const routes = [
+  { id: 0, path: "/", element: <HomePage />, isPrivate: false },
+  { id: 1, path: "*", element: <NotFound />, isPrivate: false },
+  { id: 2, path: "/arm", element: <Arm />, isPrivate: false },
+  { id: 3, path: "/galereya", element: <Galereya />, isPrivate: false },
+  { id: 4, path: "/faculties/:id", element: <FacultiesId />, isPrivate: false },
 ];

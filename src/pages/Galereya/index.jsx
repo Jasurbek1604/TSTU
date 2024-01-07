@@ -40,7 +40,7 @@ const Galereya = () => {
   return (
     <div
       className="container"
-      style={{ background: "var(--white)", padding: "50px 0" }}
+      style={{ background: "var(--white)", padding: "20px 0" }}
     >
       <div className="wrapper">
         <Header data-aos="fade-down">

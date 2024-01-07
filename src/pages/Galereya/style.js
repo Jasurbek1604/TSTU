@@ -49,7 +49,7 @@ export const Showcase = styled.div`
 `;
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: ${({ grid }) => `repeat(${grid}, 1fr)`};
   gap: 10px;
 `;
 Grid.Item = styled.img`
@@ -65,7 +65,6 @@ export const Absolute = styled.div`
   left: 0;
   width: 55%;
 `;
-
 Absolute.Title = styled.div`
   color: #033787;
   font-size: 70px;

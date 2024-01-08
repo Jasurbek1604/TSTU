@@ -34,6 +34,7 @@ Content.Position = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
+  width: 250px;
 `;
 Content.Media = styled.div`
   display: flex;

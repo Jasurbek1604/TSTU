@@ -25,7 +25,7 @@ const Dekans = ({ img, name, position, phone, email, li, button }) => {
         </Dekan.Contact>
         <Dekan.Ul>
           {li.map((e) => (
-            <Dekan.Li>{e}</Dekan.Li>
+            <Dekan.Li key={e}> {e}</Dekan.Li>
           ))}
         </Dekan.Ul>
         <Dekan.Btn type="primary" onClick={() => naviagte(`${button}`)}>

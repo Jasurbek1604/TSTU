@@ -6,8 +6,132 @@ import Dekans from "../../../components/Faculties/Dekan";
 import dekan from "../../../assets/Faculties/rustam.png";
 import { Top } from "../../HomePage/style";
 import { Grid } from "./style";
+import DekanCart from "../../../components/Faculties/DekanCart";
 
 const Kafedra = () => {
+  const data = [
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+    {
+      id: 1,
+      img: dekan,
+      name: "Nigay Rоdion Pavlovich",
+      position: "Dotsent, Texnika fanlari nomzodi, Dotsent",
+      links: [
+        "https://instagram.com",
+        "https://instagram.com",
+        "https://instagram.com",
+      ],
+    },
+  ];
   return (
     <div>
       <Header />
@@ -42,7 +166,17 @@ const Kafedra = () => {
               </div>
             </div>
           </Top>
-          <Grid></Grid>
+          <Grid>
+            {data.map(({ id, img, name, position, links }) => (
+              <DekanCart
+                key={id}
+                img={img}
+                name={name}
+                position={position}
+                links={links}
+              />
+            ))}
+          </Grid>
         </div>
       </div>
     </div>

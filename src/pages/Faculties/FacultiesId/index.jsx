@@ -14,6 +14,7 @@ import kaf1 from "../../../assets/Faculties/kaf1.png";
 import kaf2 from "../../../assets/Faculties/kaf2.png";
 import kaf3 from "../../../assets/Faculties/kaf3.png";
 import Dekans from "../../../components/Faculties/Dekan";
+import Footer from "../../../components/Faculties/Footer";
 
 const FacultiesId = () => {
   const naviagte = useNavigate();
@@ -243,6 +244,7 @@ const FacultiesId = () => {
           </IlmiyMarkaz>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -7,6 +7,7 @@ import dekan from "../../../assets/Faculties/rustam.png";
 import { Top } from "../../HomePage/style";
 import { Grid } from "./style";
 import DekanCart from "../../../components/Faculties/DekanCart";
+import Footer from "../../../components/Faculties/Footer";
 
 const Kafedra = () => {
   const data = [
@@ -179,6 +180,7 @@ const Kafedra = () => {
           </Grid>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

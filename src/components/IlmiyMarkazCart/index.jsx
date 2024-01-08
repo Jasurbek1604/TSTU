@@ -3,9 +3,9 @@ import { Contianer } from "./style";
 import { Icons } from "../../pages/HomePage/style";
 import kafedra from "../../assets/images/kafedra.png";
 
-const IlmiyMarkazCart = ({ img, title, p, border, onClick }) => {
+const IlmiyMarkazCart = ({ img, title, p, $border, onClick }) => {
   return (
-    <Contianer border={border}>
+    <Contianer $border={$border}>
       <div className="item">
         <img src={img || kafedra} alt="" className="item__img" />
         <div className="item__title">

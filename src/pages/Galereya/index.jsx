@@ -87,7 +87,7 @@ const Galereya = () => {
             <Grid.Item src={img6} $col={"3/5"} $row={"4/5"} />
           </Grid>
         </Showcase>
-        <Top border={"none"}>
+        <Top $border={"none"}>
           <div className="top">
             <div className="top__title">Sara rasmlar</div>
             <div className="top__button">
@@ -108,7 +108,7 @@ const Galereya = () => {
           <Grid.Item src={img27} $col={"2/3"} $row={"3/4"} />
           <Grid.Item src={img28} $col={"3/5"} $row={"3/4"} />
         </Grid>
-        <Top border={"none"}>
+        <Top $border={"none"}>
           <div className="top">
             <div className="top__title">Sara rasmlar</div>
             <div className="top__button">
@@ -130,7 +130,7 @@ const Galereya = () => {
           <Grid.Item src={img17} $col={"3/4"} $row={"5/6"} />
           <Grid.Item src={img18} $col={"4/5"} $row={"5/6"} />
         </Grid>
-        <Top border={"none"}>
+        <Top $border={"none"}>
           <div className="top">
             <div className="top__title">3D rasm</div>
             <div className="top__button">
@@ -150,7 +150,7 @@ const Galereya = () => {
           style={{ textAlign: "center", margin: "25px 0" }}
           total={30}
         />
-        <Top border={"none"}>
+        <Top $border={"none"}>
           <div className="top">
             <div className="top__title">Tadbirlardan</div>
             <div className="top__button">
@@ -164,7 +164,7 @@ const Galereya = () => {
           <Grid.Item src={img53} $col={"1/2"} $row={"2/3"} />
           <Grid.Item src={img54} $col={"2/4"} $row={"2/3"} />
         </Grid>
-        <Top border={"none"}>
+        <Top $border={"none"}>
           <div className="top">
             <div className="top__title">Umumiy</div>
             <div className="top__button">

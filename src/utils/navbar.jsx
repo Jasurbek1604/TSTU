@@ -22,6 +22,7 @@ import HomePage from "../pages/HomePage";
 import NotFound from "../pages/404";
 import Galereya from "../pages/Galereya";
 import Arm from "../pages/Arm";
+import Kafedra from "../pages/Faculties/Kafedra";
 
 export const navbar = [
   {
@@ -165,4 +166,10 @@ export const routes = [
   { id: 2, path: "/arm", element: <Arm />, isPrivate: false },
   { id: 3, path: "/galereya", element: <Galereya />, isPrivate: false },
   { id: 4, path: "/faculties/:id", element: <FacultiesId />, isPrivate: false },
+  {
+    id: 4,
+    path: "/faculties/:id/:id",
+    element: <Kafedra />,
+    isPrivate: false,
+  },
 ];

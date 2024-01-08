@@ -540,7 +540,7 @@ export const Layout = styled.div`
   }
 `;
 export const Top = styled.div`
-  margin: ${({ border }) => border && "20px 0"};
+  margin: ${({ $border }) => $border && "20px 0"};
   .top {
     display: flex;
     align-items: flex-end;
@@ -552,11 +552,11 @@ export const Top = styled.div`
       font-style: normal;
       font-weight: 700;
       line-height: 46.8px;
-      padding-left: ${({ border }) => (border === "none" ? 0 : "10px")};
-      border-left: ${({ $type, border }) =>
+      padding-left: ${({ $border }) => ($border === "none" ? 0 : "10px")};
+      border-left: ${({ $type, $border }) =>
         $type === "dark"
-          ? `${border === "none" ? "0" : "3px"} solid var(--titleLight)`
-          : `${border === "none" ? "0" : "3px"} solid var(--bgHover)`};
+          ? `${$border === "none" ? "0" : "3px"} solid var(--titleLight)`
+          : `${$border === "none" ? "0" : "3px"} solid var(--bgHover)`};
     }
     &__button {
       text-align: right;

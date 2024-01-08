@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Content } from "../Footer/style";
-import logo from "../../../assets/ARM/logo.png";
+import logo1 from "../../../assets/ARM/logo.png";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -12,7 +12,7 @@ const Header = () => {
         <div className="wrapper">
           <Content type={"header"}>
             {width <= 1000 && <Content.Menu />}
-            <Content.Logo src={logo} />
+            <Content.Logo src={logo1} />
             <Content.Right>
               {width > 1000 && (
                 <div>

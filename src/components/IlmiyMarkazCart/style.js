@@ -15,7 +15,7 @@ export const Contianer = styled.div`
     background: var(--white);
     position: relative;
     border-radius: 4px;
-    border: ${({ border }) => border && `1px solid ${border}`};
+    border: ${({ $border }) => $border && `1px solid ${$border}`};
     &__img {
       width: 100%;
       height: 225px;

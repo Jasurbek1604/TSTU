@@ -35,6 +35,7 @@ import icon from "../../assets/Galereya/btn.png";
 import { Top } from "../../pages/HomePage/style";
 import { Absolute, Grid, Header, Showcase } from "./style";
 import { NavLink } from "react-router-dom";
+import Pagination from "../../components/Pagination";
 
 const Galereya = () => {
   return (
@@ -144,6 +145,11 @@ const Galereya = () => {
           <Grid.Item src={img42} $col={"3/4"} $row={"3/4"} />
           <Grid.Item src={img42} $col={"4/5"} $row={"3/4"} />
         </Grid>
+        <Pagination
+          current={1}
+          style={{ textAlign: "center", margin: "25px 0" }}
+          total={30}
+        />
         <Top border={"none"}>
           <div className="top">
             <div className="top__title">Tadbirlardan</div>
